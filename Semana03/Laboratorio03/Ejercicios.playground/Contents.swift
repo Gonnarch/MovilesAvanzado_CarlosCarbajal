@@ -151,3 +151,72 @@ print("Mayores de 21: \(mayores)")
 // agrega su nombre al Array "mayores".
 // Imprime: Mayores de 21: ["Luis"]
 
+
+
+
+// =====================================
+// EJERCICIO 3: SETS
+// =====================================
+
+// ===== TODO 8: Eliminar duplicados =====
+
+var numerosSet: [Int] = []
+
+for i in 1...8 {
+    print("Número \(i):")
+    let n = Int(readLine() ?? "") ?? 0
+    numerosSet.append(n)
+}
+
+print("Con duplicados: \(numerosSet)")
+
+let sinDuplicados = Array(Set(numerosSet)).sorted()
+
+print("Sin duplicados: \(sinDuplicados)")
+
+
+// ===== TODO 9: Comparar asistencia =====
+
+// Pide 4 nombres lunes, 4 martes
+// Muestra: ambos días, solo lunes, solo martes
+
+var asistenciaLunes: Set<String> = []
+var asistenciaMartes: Set<String> = []
+
+print("===== ASISTENCIA LUNES =====")
+
+for i in 1...4 {
+    print("Alumno \(i):")
+    let nombre = readLine() ?? ""
+    asistenciaLunes.insert(nombre)
+}
+
+print("===== ASISTENCIA MARTES =====")
+
+for i in 1...4 {
+    print("Alumno \(i):")
+    let nombre = readLine() ?? ""
+    asistenciaMartes.insert(nombre)
+}
+
+let ambosDias = asistenciaLunes.intersection(asistenciaMartes)
+let soloLunes = asistenciaLunes.subtracting(asistenciaMartes)
+let soloMartes = asistenciaMartes.subtracting(asistenciaLunes)
+
+print("Ambos días: \(ambosDias)")
+print("Solo lunes: \(soloLunes)")
+print("Solo martes: \(soloMartes)")
+
+
+// ===== PREDICT =====
+
+let a: Set = [1, 2, 3, 4, 5]
+let b: Set = [4, 5, 6, 7, 8]
+
+print(a.intersection(b))      // PREDICT 5: [4, 5]
+print(a.union(b).count)       // PREDICT 6: 8
+print(a.subtracting(b))       // PREDICT 7: [1, 2, 3]
+
+var repetidos: Set = ["A", "B", "A", "C", "B"]
+
+print(repetidos.count)        // PREDICT 8: 3

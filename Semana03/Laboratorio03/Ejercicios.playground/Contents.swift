@@ -220,3 +220,61 @@ print(a.subtracting(b))       // PREDICT 7: [1, 2, 3]
 var repetidos: Set = ["A", "B", "A", "C", "B"]
 
 print(repetidos.count)        // PREDICT 8: 3
+
+
+// =====================================
+// EJERCICIO 4: COMBINACIÓN DE COLECCIONES
+// =====================================
+
+// ===== TODO 10: Inventario de productos =====
+
+var preciosInventario: [String: Double] = [:]
+var stocksInventario: [String: Int] = [:]
+
+print("¿Cuántos productos?")
+
+let cantidadProductosInventario = Int(readLine() ?? "") ?? 0
+
+for i in 1...cantidadProductosInventario {
+
+    print("Producto \(i) - Nombre:")
+    let nombreProducto = readLine() ?? ""
+
+    print("Precio:")
+    let precioProducto = Double(readLine() ?? "") ?? 0
+
+    print("Stock:")
+    let stockProducto = Int(readLine() ?? "") ?? 0
+
+    preciosInventario[nombreProducto] = precioProducto
+    stocksInventario[nombreProducto] = stockProducto
+}
+
+
+// ===== Calcular valor total =====
+
+var valorTotalInventario = 0.0
+
+for (nombreProducto, precioProducto) in preciosInventario {
+
+    if let stockProducto = stocksInventario[nombreProducto] {
+
+        let subtotalProducto = precioProducto * Double(stockProducto)
+
+        valorTotalInventario += subtotalProducto
+    }
+}
+
+print("Valor total del inventario: S/. \(valorTotalInventario)")
+
+
+// ===== Mostrar productos con stock bajo =====
+
+print("===== PRODUCTOS CON STOCK BAJO =====")
+
+for (nombreProducto, stockProducto) in stocksInventario {
+
+    if stockProducto < 5 {
+        print("\(nombreProducto) - Stock: \(stockProducto)")
+    }
+}x

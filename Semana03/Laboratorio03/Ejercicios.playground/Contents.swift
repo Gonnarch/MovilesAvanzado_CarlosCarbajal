@@ -277,4 +277,123 @@ for (nombreProducto, stockProducto) in stocksInventario {
     if stockProducto < 5 {
         print("\(nombreProducto) - Stock: \(stockProducto)")
     }
-}x
+}
+
+// =====================================
+// EJERCICIO 5: CARRITO DE COMPRAS 2.0
+// =====================================
+
+// ===== TODO 11: Pedir productos =====
+
+var nombresCarrito: [String] = []
+var preciosCarrito: [Double] = []
+var cantidadesCarrito: [Int] = []
+
+print("¿Cuántos productos va a comprar?")
+let totalProductosCarrito = Int(readLine() ?? "") ?? 0
+
+for i in 1...totalProductosCarrito {
+    print("\nProducto \(i) - Nombre:")
+    nombresCarrito.append(readLine() ?? "")
+
+    print("Precio unitario:")
+    preciosCarrito.append(Double(readLine() ?? "") ?? 0)
+
+    print("Cantidad:")
+    cantidadesCarrito.append(Int(readLine() ?? "") ?? 0)
+}
+
+
+// ===== TODO 12: Calcular subtotales =====
+
+var subtotalesCarrito: [Double] = []
+
+for i in 0..<nombresCarrito.count {
+    let subtotal = preciosCarrito[i] * Double(cantidadesCarrito[i])
+    subtotalesCarrito.append(subtotal)
+}
+
+
+// ===== TODO 13: Total del carrito =====
+
+var totalCarrito = 0.0
+
+for subtotal in subtotalesCarrito {
+    totalCarrito += subtotal
+}
+
+
+// ===== TODO 14: Nombre del cliente =====
+
+print("\nNombre del cliente:")
+let cliente = readLine() ?? ""
+
+
+// ===== TODO 15: Descuento =====
+
+var porcentajeDescuento = 0.0
+
+if totalCarrito >= 5000 {
+    porcentajeDescuento = 0.15
+} else if totalCarrito >= 2000 {
+    porcentajeDescuento = 0.10
+} else if totalCarrito >= 500 {
+    porcentajeDescuento = 0.05
+}
+
+let descuento = totalCarrito * porcentajeDescuento
+let totalConDescuento = totalCarrito - descuento
+
+
+// ===== TODO 16: IGV y total =====
+
+let igv = totalConDescuento * 0.18
+let totalFinal = totalConDescuento + igv
+
+
+// ===== TODO 17: Categoría =====
+
+var categoria = ""
+
+switch Int(totalCarrito) {
+case 0..<500:
+    categoria = "Regular"
+
+case 500..<2000:
+    categoria = "Frecuente"
+
+case 2000..<5000:
+    categoria = "VIP"
+
+default:
+    categoria = "Premium"
+}
+
+
+// ===== TODO 18: Ticket =====
+
+let separador = String(repeating: "=", count: 45)
+
+print(separador)
+print("TICKET DE COMPRA 2.0")
+print("Cliente: \(cliente) (\(categoria))")
+print(separador)
+
+for i in 0..<nombresCarrito.count {
+    print("\(nombresCarrito[i]) x\(cantidadesCarrito[i]) S/. \(subtotalesCarrito[i])")
+}
+
+print(separador)
+print("Subtotal: S/. \(totalCarrito)")
+
+if porcentajeDescuento > 0 {
+    print("Descuento (\(porcentajeDescuento * 100)%): -S/. \(descuento)")
+}
+
+print("IGV (18%): S/. \(igv)")
+print(separador)
+print("TOTAL: S/. \(totalFinal)")
+print(separador)
+print("¡Gracias por su compra, \(cliente)!")
+
+

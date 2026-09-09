@@ -27,3 +27,23 @@ Una estación de intercambio tiene un registro por cada línea.
 
 Los IDs L1-1, L2-1, etc. son identificadores internos, no códigos oficiales.
 Anterior y siguiente siempre se refieren al orden del arreglo indicado arriba.
+
+## Transbordos académicos
+
+El mapa es esquemático y no contiene una leyenda específica de pasajes peatonales.
+Para la aplicación se adoptan explícitamente estos siete pares en sus puntos de
+encuentro. Son supuestos de la simulación, no verificación de infraestructura real.
+
+| Origen | Destino |
+| --- | --- |
+| L1 — 28 de Julio | L2 — 28 de Julio |
+| L1 — Los Cabitos | L3 — Los Cabitos |
+| L1 — La Cultura | L4 — La Cultura |
+| L2 — Carmen de la Legua | L4 — Carmen de la Legua |
+| L2 — Estación Central | L3 — Estación Central |
+| L2 — Mercado Santa Anita | L4 — Mercado Santa Anita |
+| L3 — Rivera Navarrete | L4 — Conde de San Isidro |
+
+Las conexiones son bidireccionales. Se mantienen separados los nombres distintos
+del intercambio Rivera Navarrete / Conde de San Isidro. No se asigna un transbordo
+a Miguel Grau ni al cruce próximo a Atocongo, donde los puntos no coinciden.

@@ -54,6 +54,27 @@ let estaciones: [String: Estacion] = {
     return resultado
 }()
 
+// Pares explícitos de la simulación; nunca inferimos una conexión por nombre igual.
+let paresTransbordo: [(String, String)] = [
+    ("L1-16", "L2-16"), // 28 de Julio
+    ("L1-10", "L3-24"), // Los Cabitos
+    ("L1-13", "L4-19"), // La Cultura
+    ("L2-5", "L4-8"),   // Carmen de la Legua
+    ("L2-13", "L3-13"), // Estación Central
+    ("L2-24", "L4-27"), // Mercado Santa Anita
+    ("L3-17", "L4-17")  // Rivera Navarrete / Conde de San Isidro
+]
+
+// Diccionario de adyacencia: cada transbordo se puede realizar en ambos sentidos.
+let conexiones: [String: [String]] = {
+    var resultado: [String: [String]] = [:]
+    for (origen, destino) in paresTransbordo {
+        resultado[origen, default: []].append(destino)
+        resultado[destino, default: []].append(origen)
+    }
+    return resultado
+}()
+
 func normalizar(_ texto: String) -> String {
     texto.folding(options: [.diacriticInsensitive, .caseInsensitive],
                   locale: Locale(identifier: "es_PE"))
@@ -141,6 +162,28 @@ func mostrarDetalle(_ estacion: Estacion) {
     let anterior = estacion.indice > 0 ? nombres[estacion.indice - 1] : "No tiene (inicio de línea)"
     let siguiente = estacion.indice + 1 < nombres.count ? nombres[estacion.indice + 1] : "No tiene (final de línea)"
     print("Anterior: \(anterior)\nSiguiente: \(siguiente)")
+    mostrarTransbordos(estacion)
+}
+
+func mostrarTransbordos(_ estacion: Estacion) {
+    let destinos = conexiones[estacion.id] ?? []
+    if destinos.isEmpty {
+        print("Sin transbordos registrados en esta simulación.")
+        return
+    }
+    print("Transbordos de la simulación:")
+    for id in destinos {
+        guard let destino = estaciones[id] else { continue }
+        print("→ Línea \(destino.linea), estación \(destino.nombre)")
+    }
+}
+
+func listarConexiones() {
+    print("\nCONEXIONES DE LA SIMULACIÓN (no son información de servicio actual)")
+    for (origen, destino) in paresTransbordo {
+        guard let a = estaciones[origen], let b = estaciones[destino] else { continue }
+        print("\(a.nombre) (L\(a.linea)) ↔ \(b.nombre) (L\(b.linea))")
+    }
 }
 
 func filtrarEstaciones() {
@@ -157,13 +200,15 @@ func filtrarEstaciones() {
 func ejecutarMenu() {
     print("SIMULACIÓN ACADÉMICA: todas las estaciones se consideran operativas.")
     while true {
-        print("\nMETRO DE LIMA Y CALLAO\n1. Listar líneas\n2. Consultar línea\n3. Consultar estación\n4. Filtrar estaciones\n0. Salir")
+        print("\nMETRO DE LIMA Y CALLAO\n1. Listar líneas\n2. Consultar línea\n3. Consultar estación\n4. Filtrar estaciones\n5. Listar conexiones\n6. Consultar transbordos de una estación\n0. Salir")
         guard let opcion = leer("Seleccione una opción:") else { break }
         switch normalizar(opcion) {
         case "1": listarLineas()
         case "2": consultarLinea()
         case "3": if let estacion = seleccionarEstacion() { mostrarDetalle(estacion) }
         case "4": filtrarEstaciones()
+        case "5": listarConexiones()
+        case "6": if let estacion = seleccionarEstacion() { mostrarTransbordos(estacion) }
         case "0": print("Gracias por consultar. Hasta luego."); return
         default: print("Opción inválida. Intente nuevamente.")
         }
@@ -177,4 +222,5 @@ if CommandLine.arguments.contains("--menu") {
     listarLineas()
     if let estacion = buscarEstaciones("Grau").first { mostrarDetalle(estacion) }
     mostrarCoincidencias(buscarEstaciones("Santa"))
+    listarConexiones()
 }

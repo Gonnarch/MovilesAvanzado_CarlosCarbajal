@@ -216,11 +216,65 @@ func ejecutarMenu() {
     print("\nFin de entrada. Programa finalizado.")
 }
 
-if CommandLine.arguments.contains("--menu") {
-    ejecutarMenu()
-} else {
+// Pruebas reproducibles: ejecutar con el argumento --pruebas.
+// precondition también funciona con la optimización normal de Release.
+func ejecutarPruebas() {
+    precondition(lineas.keys.sorted() == [1, 2, 3, 4])
+    precondition(lineas[1]?.count == 27 && lineas[2]?.count == 27)
+    precondition(lineas[3]?.count == 28 && lineas[4]?.count == 27)
+    precondition(estaciones.count == 109)
+    precondition(normalizar("  LÍNEA   2 ") == "linea 2")
+    precondition(numeroLinea("LÍNEA 2") == 2 && numeroLinea(" 4 ") == 4)
+    precondition(numeroLinea("5") == nil && numeroLinea("2abc") == nil)
+    precondition(numeroLinea("") == nil && numeroLinea("Línea 2 Línea 2") == nil)
+    precondition(buscarEstaciones("GRAU").map { $0.nombre } == ["Miguel Grau"])
+    precondition(buscarEstaciones("bayovar").count == 1)
+    precondition(buscarEstaciones("Santa").count == 5)
+    precondition(buscarEstaciones("Mercado Santa Anita").count == 2)
+    precondition(buscarEstaciones("   ").isEmpty && buscarEstaciones("zzzz").isEmpty)
+    for numero in lineas.keys.sorted() {
+        guard let nombres = lineas[numero] else { preconditionFailure("Línea ausente") }
+        precondition(Set(nombres.map { normalizar($0) }).count == nombres.count)
+        for (indice, nombre) in nombres.enumerated() {
+            let registro = estaciones["L\(numero)-\(indice + 1)"]
+            precondition(registro?.nombre == nombre && registro?.indice == indice)
+        }
+    }
+    precondition(paresTransbordo.count == 7 && conexiones.count == 14)
+    for (origen, destino) in paresTransbordo {
+        guard let a = estaciones[origen], let b = estaciones[destino] else {
+            preconditionFailure("El transbordo contiene un ID inexistente")
+        }
+        precondition(a.linea != b.linea)
+        precondition(conexiones[origen]?.contains(destino) == true)
+        precondition(conexiones[destino]?.contains(origen) == true)
+    }
+    precondition(conexiones["L1-17"] == nil) // Miguel Grau no es transbordo.
+    precondition(conexiones["L1-16"] == ["L2-16"])
+    precondition(conexiones["L3-17"] == ["L4-17"])
+    print("OK: catálogo, normalización, búsqueda y transbordos verificados.")
+}
+
+// En Xcode se ejecutan ejemplos sin pedir entrada interactiva.
+// Para escribir consultas: swift MetroLima.playground/Contents.swift --menu
+func ejecutarEjemplos() {
+    print("METRO DE LIMA — EJEMPLOS DEL PLAYGROUND")
     listarLineas()
+    print("\nEstaciones de la línea 2:")
+    for (indice, nombre) in (lineas[2] ?? []).enumerated() {
+        print("\(indice + 1). \(nombre)")
+    }
+    print("\nConsulta: Grau")
     if let estacion = buscarEstaciones("Grau").first { mostrarDetalle(estacion) }
+    print("\nFiltro: Santa")
     mostrarCoincidencias(buscarEstaciones("Santa"))
     listarConexiones()
+}
+
+if CommandLine.arguments.contains("--pruebas") {
+    ejecutarPruebas()
+} else if CommandLine.arguments.contains("--menu") {
+    ejecutarMenu()
+} else {
+    ejecutarEjemplos()
 }

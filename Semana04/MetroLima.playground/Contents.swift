@@ -93,14 +93,77 @@ func consultarLinea() {
     }
 }
 
+// Se ordena explícitamente: los diccionarios no garantizan orden de recorrido.
+func buscarEstaciones(_ texto: String) -> [Estacion] {
+    let consulta = normalizar(texto)
+    guard !consulta.isEmpty else { return [] }
+    return estaciones.values.filter { normalizar($0.nombre).contains(consulta) }
+        .sorted { a, b in a.linea == b.linea ? a.indice < b.indice : a.linea < b.linea }
+}
+
+func mostrarCoincidencias(_ resultados: [Estacion]) {
+    for (indice, estacion) in resultados.enumerated() {
+        print("\(indice + 1). \(estacion.nombre) — Línea \(estacion.linea) [\(estacion.id)]")
+    }
+}
+
+func seleccionarEstacion() -> Estacion? {
+    guard let texto = leer("Nombre de estación (ejemplo: Grau):") else { return nil }
+    guard !normalizar(texto).isEmpty else {
+        print("Ingrese un nombre; la búsqueda no puede estar vacía.")
+        return nil
+    }
+    let resultados = buscarEstaciones(texto)
+    guard !resultados.isEmpty else {
+        print("No se encontraron estaciones.")
+        return nil
+    }
+    if resultados.count == 1 { return resultados[0] }
+    mostrarCoincidencias(resultados)
+    guard let respuesta = leer("Seleccione el número del resultado (0 para cancelar):"),
+          let numero = Int(respuesta.trimmingCharacters(in: .whitespacesAndNewlines)) else {
+        print("Selección inválida o fin de entrada.")
+        return nil
+    }
+    if numero == 0 { return nil }
+    guard (1...resultados.count).contains(numero) else {
+        print("Selección fuera de rango.")
+        return nil
+    }
+    return resultados[numero - 1]
+}
+
+func mostrarDetalle(_ estacion: Estacion) {
+    guard let nombres = lineas[estacion.linea] else { return }
+    print("\nESTACIÓN: \(estacion.nombre)")
+    print("Línea: \(estacion.linea) | ID interno: \(estacion.id)")
+    print("Posición: \(estacion.indice + 1) de \(nombres.count)")
+    let anterior = estacion.indice > 0 ? nombres[estacion.indice - 1] : "No tiene (inicio de línea)"
+    let siguiente = estacion.indice + 1 < nombres.count ? nombres[estacion.indice + 1] : "No tiene (final de línea)"
+    print("Anterior: \(anterior)\nSiguiente: \(siguiente)")
+}
+
+func filtrarEstaciones() {
+    guard let texto = leer("Ingrese parte del nombre:") else { return }
+    guard !normalizar(texto).isEmpty else {
+        print("El filtro no puede estar vacío.")
+        return
+    }
+    let resultados = buscarEstaciones(texto)
+    print("Coincidencias: \(resultados.count)")
+    mostrarCoincidencias(resultados)
+}
+
 func ejecutarMenu() {
     print("SIMULACIÓN ACADÉMICA: todas las estaciones se consideran operativas.")
     while true {
-        print("\nMETRO DE LIMA Y CALLAO\n1. Listar líneas\n2. Consultar línea\n0. Salir")
+        print("\nMETRO DE LIMA Y CALLAO\n1. Listar líneas\n2. Consultar línea\n3. Consultar estación\n4. Filtrar estaciones\n0. Salir")
         guard let opcion = leer("Seleccione una opción:") else { break }
         switch normalizar(opcion) {
         case "1": listarLineas()
         case "2": consultarLinea()
+        case "3": if let estacion = seleccionarEstacion() { mostrarDetalle(estacion) }
+        case "4": filtrarEstaciones()
         case "0": print("Gracias por consultar. Hasta luego."); return
         default: print("Opción inválida. Intente nuevamente.")
         }
@@ -112,4 +175,6 @@ if CommandLine.arguments.contains("--menu") {
     ejecutarMenu()
 } else {
     listarLineas()
+    if let estacion = buscarEstaciones("Grau").first { mostrarDetalle(estacion) }
+    mostrarCoincidencias(buscarEstaciones("Santa"))
 }

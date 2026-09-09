@@ -54,4 +54,62 @@ let estaciones: [String: Estacion] = {
     return resultado
 }()
 
-print("Metro de Lima y Callao — \(lineas.count) líneas cargadas")
+func normalizar(_ texto: String) -> String {
+    texto.folding(options: [.diacriticInsensitive, .caseInsensitive],
+                  locale: Locale(identifier: "es_PE"))
+        .split(whereSeparator: { $0.isWhitespace }).joined(separator: " ")
+        .lowercased()
+}
+
+func leer(_ mensaje: String) -> String? {
+    print(mensaje, terminator: " ")
+    return readLine()
+}
+
+func numeroLinea(_ texto: String) -> Int? {
+    let entrada = normalizar(texto)
+    let numero = Int(entrada.hasPrefix("linea ") ? String(entrada.dropFirst(6)) : entrada)
+    guard let numero = numero, lineas[numero] != nil else { return nil }
+    return numero
+}
+
+func listarLineas() {
+    for numero in lineas.keys.sorted() {
+        guard let nombres = lineas[numero], let inicio = nombres.first,
+              let final = nombres.last else { continue }
+        print("Línea \(numero): \(inicio) ↔ \(final) | \(nombres.count) estaciones")
+    }
+}
+
+func consultarLinea() {
+    guard let texto = leer("Ingrese una línea (ejemplo: Línea 2):") else { return }
+    guard let numero = numeroLinea(texto), let nombres = lineas[numero] else {
+        print("Línea inválida. Solo se admiten las líneas 1 a 4.")
+        return
+    }
+    print("\nLÍNEA \(numero) — \(nombres.count) estaciones")
+    for (indice, nombre) in nombres.enumerated() {
+        print("\(indice + 1). \(nombre)")
+    }
+}
+
+func ejecutarMenu() {
+    print("SIMULACIÓN ACADÉMICA: todas las estaciones se consideran operativas.")
+    while true {
+        print("\nMETRO DE LIMA Y CALLAO\n1. Listar líneas\n2. Consultar línea\n0. Salir")
+        guard let opcion = leer("Seleccione una opción:") else { break }
+        switch normalizar(opcion) {
+        case "1": listarLineas()
+        case "2": consultarLinea()
+        case "0": print("Gracias por consultar. Hasta luego."); return
+        default: print("Opción inválida. Intente nuevamente.")
+        }
+    }
+    print("\nFin de entrada. Programa finalizado.")
+}
+
+if CommandLine.arguments.contains("--menu") {
+    ejecutarMenu()
+} else {
+    listarLineas()
+}

@@ -1,6 +1,8 @@
 import Foundation
 
 // ACTIVIDAD PROPUESTA 02 - HERENCIA DE CLIENTES
+// La imagen del laboratorio es una referencia de estructura y presentación.
+// El usuario ingresa sus propios datos para crear un cliente natural o jurídico.
 
 class Cliente {
     let codigo: String
@@ -37,8 +39,8 @@ class ClienteNatural: Cliente {
     }
 
     override func mostrarDatos() {
-        print("👤 Cliente Natural:")
-        print("Nombre: \(nombreCompleto)")
+        print("\n👤 CLIENTE NATURAL")
+        print("Nombre completo: \(nombreCompleto)")
         print("DNI: \(dni)")
         super.mostrarDatos()
     }
@@ -57,35 +59,87 @@ class ClienteJuridico: Cliente {
     }
 
     override func mostrarDatos() {
-        print("🏢 Cliente Jurídico:")
-        print("Razón Social: \(razonSocial)")
+        print("\n🏢 CLIENTE JURÍDICO")
+        print("Razón social: \(razonSocial)")
         print("RUC: \(ruc)")
-        print("Representante Legal: \(representanteLegal)")
+        print("Representante legal: \(representanteLegal)")
         super.mostrarDatos()
     }
 }
 
-let clienteNatural = ClienteNatural(
-    nombreCompleto: "Juan Pérez",
-    dni: "12345678",
-    codigo: "C001",
-    direccion: "Av. Lima 123",
-    fechaDeRegistro: "2025-04-03",
-    numeroCuenta: "001-2025-000123",
-    montoMinimoApertura: 500.00
-)
+func leerTexto(_ mensaje: String) -> String {
+    print(mensaje, terminator: "")
+    let entrada = readLine()
 
-let clienteJuridico = ClienteJuridico(
-    razonSocial: "Soluciones SAC",
-    ruc: "20123456789",
-    representanteLegal: "María León",
-    codigo: "C002",
-    direccion: "Jr. Empresas 456",
-    fechaDeRegistro: "2025-05-01",
-    numeroCuenta: "001-2025-000456",
-    montoMinimoApertura: 3000.00
-)
+    if entrada == nil {
+        return ""
+    }
 
-clienteNatural.mostrarDatos()
-print("")
-clienteJuridico.mostrarDatos()
+    return entrada!
+}
+
+func leerDouble(_ mensaje: String) -> Double {
+    while true {
+        let texto = leerTexto(mensaje)
+        let numero = Double(texto)
+
+        if numero != nil && numero! >= 0 {
+            return numero!
+        }
+
+        print("Dato inválido. Ingresa un monto válido.")
+    }
+}
+
+print("===== REGISTRO DE CLIENTES =====")
+print("1. Cliente Natural")
+print("2. Cliente Jurídico")
+
+var opcion = ""
+while opcion != "1" && opcion != "2" {
+    opcion = leerTexto("Seleccione el tipo de cliente: ")
+
+    if opcion != "1" && opcion != "2" {
+        print("Opción inválida. Ingresa 1 o 2.")
+    }
+}
+
+let codigo = leerTexto("Código: ")
+let direccion = leerTexto("Dirección: ")
+let fechaDeRegistro = leerTexto("Fecha de registro: ")
+let numeroCuenta = leerTexto("Número de cuenta: ")
+let montoMinimoApertura = leerDouble("Monto mínimo de apertura: S/ ")
+
+if opcion == "1" {
+    let nombreCompleto = leerTexto("Nombre completo: ")
+    let dni = leerTexto("DNI: ")
+
+    let cliente = ClienteNatural(
+        nombreCompleto: nombreCompleto,
+        dni: dni,
+        codigo: codigo,
+        direccion: direccion,
+        fechaDeRegistro: fechaDeRegistro,
+        numeroCuenta: numeroCuenta,
+        montoMinimoApertura: montoMinimoApertura
+    )
+
+    cliente.mostrarDatos()
+} else {
+    let razonSocial = leerTexto("Razón social: ")
+    let ruc = leerTexto("RUC: ")
+    let representanteLegal = leerTexto("Representante legal: ")
+
+    let cliente = ClienteJuridico(
+        razonSocial: razonSocial,
+        ruc: ruc,
+        representanteLegal: representanteLegal,
+        codigo: codigo,
+        direccion: direccion,
+        fechaDeRegistro: fechaDeRegistro,
+        numeroCuenta: numeroCuenta,
+        montoMinimoApertura: montoMinimoApertura
+    )
+
+    cliente.mostrarDatos()
+}

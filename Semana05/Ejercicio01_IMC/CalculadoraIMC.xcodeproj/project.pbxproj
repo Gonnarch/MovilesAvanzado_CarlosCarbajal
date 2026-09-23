@@ -1,0 +1,29 @@
+// !$*UTF8*$!
+{ archiveVersion = 1; classes = {}; objectVersion = 56; objects = {
+7F30B9571C78D7897EA739CE = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+1E0F7EC0586D03EDB8285E7B = { isa = PBXBuildFile; fileRef = 7F30B9571C78D7897EA739CE; };
+C19B9879BA5BCD98CFB8F7F1 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+94E502497E57C7087FF35024 = { isa = PBXBuildFile; fileRef = C19B9879BA5BCD98CFB8F7F1; };
+EF76007DD642EFA7A1DF551A = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+F01480CB74191F4D1CA71304 = { isa = PBXBuildFile; fileRef = EF76007DD642EFA7A1DF551A; };
+B4B03C42BC2D9B4BFBBF64CE = { isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+761777905C95924C67965730 = { isa = PBXBuildFile; fileRef = B4B03C42BC2D9B4BFBBF64CE; };
+1100D911837FF28D53D04798 = { isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+9E7D5714B7B471D80E5021C5 = { isa = PBXBuildFile; fileRef = 1100D911837FF28D53D04798; };
+1C2F63B30B2BB3E265E745B6 = { isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+4FA114298FA86007DC56179B = { isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalculadoraIMC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+95702BCEE49AB2E7DB29BC16 = { isa = PBXGroup; children = (1D4B22E72DA4E1C977A4118E, BF8FCE9C16160A780DE39343,); sourceTree = "<group>"; };
+1D4B22E72DA4E1C977A4118E = { isa = PBXGroup; children = (7F30B9571C78D7897EA739CE, C19B9879BA5BCD98CFB8F7F1, EF76007DD642EFA7A1DF551A, B4B03C42BC2D9B4BFBBF64CE, 1100D911837FF28D53D04798, 1C2F63B30B2BB3E265E745B6,); path = CalculadoraIMC; sourceTree = "<group>"; };
+BF8FCE9C16160A780DE39343 = { isa = PBXGroup; children = (4FA114298FA86007DC56179B,); name = Products; sourceTree = "<group>"; };
+C903C175E40EFAC5C8223CA7 = { isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (1E0F7EC0586D03EDB8285E7B, 94E502497E57C7087FF35024, F01480CB74191F4D1CA71304, ); runOnlyForDeploymentPostprocessing = 0; };
+1FBF1ABAC56DBBEE0DFE94ED = { isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (761777905C95924C67965730, 9E7D5714B7B471D80E5021C5, ); runOnlyForDeploymentPostprocessing = 0; };
+FE0B4E2C7234A7ED0D25B74E = { isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+6A45445AA20799F94D2C96CF = { isa = PBXNativeTarget; buildConfigurationList = 806CE8AF5B80E6D6EBE227C0; buildPhases = (C903C175E40EFAC5C8223CA7, FE0B4E2C7234A7ED0D25B74E, 1FBF1ABAC56DBBEE0DFE94ED,); buildRules = (); dependencies = (); name = CalculadoraIMC; productName = CalculadoraIMC; productReference = 4FA114298FA86007DC56179B; productType = "com.apple.product-type.application"; };
+AE40B04BA2F4167735BA763C = { isa = PBXProject; attributes = { LastUpgradeCheck = 1600; }; buildConfigurationList = 1D0FC6181B68438B7CDCBDC0; compatibilityVersion = "Xcode 14.0"; developmentRegion = es; hasScannedForEncodings = 0; knownRegions = (es, en, Base,); mainGroup = 95702BCEE49AB2E7DB29BC16; productRefGroup = BF8FCE9C16160A780DE39343; projectDirPath = ""; projectRoot = ""; targets = (6A45445AA20799F94D2C96CF,); };
+9D8210F7F1FBF52439D007FD = { isa = XCBuildConfiguration; buildSettings = { CLANG_ENABLE_MODULES = YES; SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 15.0; SWIFT_VERSION = 5.0; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; DEBUG_INFORMATION_FORMAT = dwarf; }; name = Debug; };
+942701A5C266CBF199D5DFD3 = { isa = XCBuildConfiguration; buildSettings = { CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = CalculadoraIMC/Info.plist; MARKETING_VERSION = 1.0; PRODUCT_BUNDLE_IDENTIFIER = edu.pe.tecsup.carloscarbajal.calculadoraimc; PRODUCT_NAME = "$(TARGET_NAME)"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; TARGETED_DEVICE_FAMILY = "1,2"; SWIFT_EMIT_LOC_STRINGS = YES; }; name = Debug; };
+B274E2D8FFBB1F6D76641FCB = { isa = XCBuildConfiguration; buildSettings = { CLANG_ENABLE_MODULES = YES; SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 15.0; SWIFT_VERSION = 5.0; SWIFT_OPTIMIZATION_LEVEL = "-O"; DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym"; }; name = Release; };
+EDF9642DB4D7BEB8AE639366 = { isa = XCBuildConfiguration; buildSettings = { CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = CalculadoraIMC/Info.plist; MARKETING_VERSION = 1.0; PRODUCT_BUNDLE_IDENTIFIER = edu.pe.tecsup.carloscarbajal.calculadoraimc; PRODUCT_NAME = "$(TARGET_NAME)"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; TARGETED_DEVICE_FAMILY = "1,2"; SWIFT_EMIT_LOC_STRINGS = YES; }; name = Release; };
+1D0FC6181B68438B7CDCBDC0 = { isa = XCConfigurationList; buildConfigurations = (9D8210F7F1FBF52439D007FD, B274E2D8FFBB1F6D76641FCB,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+806CE8AF5B80E6D6EBE227C0 = { isa = XCConfigurationList; buildConfigurations = (942701A5C266CBF199D5DFD3, EDF9642DB4D7BEB8AE639366,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+}; rootObject = AE40B04BA2F4167735BA763C; }

@@ -1,0 +1,29 @@
+// !$*UTF8*$!
+{ archiveVersion = 1; classes = {}; objectVersion = 56; objects = {
+3DC1AC0BF9BFC0AEA38993C3 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+D75A6B3342A0C950966C209E = { isa = PBXBuildFile; fileRef = 3DC1AC0BF9BFC0AEA38993C3; };
+BEB15D7EBFA3AD431489836C = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+F9B1D443A00101C2B3AC6549 = { isa = PBXBuildFile; fileRef = BEB15D7EBFA3AD431489836C; };
+E8BF819EB04B8D70B26D9E50 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+BE7998234DD16221DE9A0E40 = { isa = PBXBuildFile; fileRef = E8BF819EB04B8D70B26D9E50; };
+6F650287F99B4C953D039523 = { isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+F3263B6F94A2F4441E16BFDA = { isa = PBXBuildFile; fileRef = 6F650287F99B4C953D039523; };
+7769D6DFE8C3126AE34D5F70 = { isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+011E0F371869706B1F388B31 = { isa = PBXBuildFile; fileRef = 7769D6DFE8C3126AE34D5F70; };
+9A77C54AAB9E99FEE6212CE5 = { isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+8621CF47F37CE657F040C168 = { isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalculadoraPrestamos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+D0684802BDE7903EA4FADCBE = { isa = PBXGroup; children = (F31E7CDB657075BA2F5E5329, 85F2097F2DDE4056DBF3A5EA,); sourceTree = "<group>"; };
+F31E7CDB657075BA2F5E5329 = { isa = PBXGroup; children = (3DC1AC0BF9BFC0AEA38993C3, BEB15D7EBFA3AD431489836C, E8BF819EB04B8D70B26D9E50, 6F650287F99B4C953D039523, 7769D6DFE8C3126AE34D5F70, 9A77C54AAB9E99FEE6212CE5,); path = CalculadoraPrestamos; sourceTree = "<group>"; };
+85F2097F2DDE4056DBF3A5EA = { isa = PBXGroup; children = (8621CF47F37CE657F040C168,); name = Products; sourceTree = "<group>"; };
+297FE7824D51331533C76F32 = { isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (D75A6B3342A0C950966C209E, F9B1D443A00101C2B3AC6549, BE7998234DD16221DE9A0E40, ); runOnlyForDeploymentPostprocessing = 0; };
+EF25AB26F8EBFE4D1E3BE178 = { isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (F3263B6F94A2F4441E16BFDA, 011E0F371869706B1F388B31, ); runOnlyForDeploymentPostprocessing = 0; };
+5D48CD125CCE4E1629B7C9A4 = { isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+2414D390D469C41BFB097D0B = { isa = PBXNativeTarget; buildConfigurationList = 7227233E4875AB3ADBF3DABD; buildPhases = (297FE7824D51331533C76F32, 5D48CD125CCE4E1629B7C9A4, EF25AB26F8EBFE4D1E3BE178,); buildRules = (); dependencies = (); name = CalculadoraPrestamos; productName = CalculadoraPrestamos; productReference = 8621CF47F37CE657F040C168; productType = "com.apple.product-type.application"; };
+0D75AA9166DF272AA5882E66 = { isa = PBXProject; attributes = { LastUpgradeCheck = 1600; }; buildConfigurationList = D841E1A32F437DBDE4F24ACD; compatibilityVersion = "Xcode 14.0"; developmentRegion = es; hasScannedForEncodings = 0; knownRegions = (es, en, Base,); mainGroup = D0684802BDE7903EA4FADCBE; productRefGroup = 85F2097F2DDE4056DBF3A5EA; projectDirPath = ""; projectRoot = ""; targets = (2414D390D469C41BFB097D0B,); };
+04DA35DD2256EDB3DE87AAF5 = { isa = XCBuildConfiguration; buildSettings = { CLANG_ENABLE_MODULES = YES; SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 15.0; SWIFT_VERSION = 5.0; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; DEBUG_INFORMATION_FORMAT = dwarf; }; name = Debug; };
+15593AA9C9C4770D742E63AA = { isa = XCBuildConfiguration; buildSettings = { CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = CalculadoraPrestamos/Info.plist; MARKETING_VERSION = 1.0; PRODUCT_BUNDLE_IDENTIFIER = edu.pe.tecsup.carloscarbajal.calculadoraprestamos; PRODUCT_NAME = "$(TARGET_NAME)"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; TARGETED_DEVICE_FAMILY = "1,2"; SWIFT_EMIT_LOC_STRINGS = YES; }; name = Debug; };
+38F0FC6B5A75636FA8E99980 = { isa = XCBuildConfiguration; buildSettings = { CLANG_ENABLE_MODULES = YES; SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 15.0; SWIFT_VERSION = 5.0; SWIFT_OPTIMIZATION_LEVEL = "-O"; DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym"; }; name = Release; };
+BF1C864489D92381E2C1861A = { isa = XCBuildConfiguration; buildSettings = { CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = CalculadoraPrestamos/Info.plist; MARKETING_VERSION = 1.0; PRODUCT_BUNDLE_IDENTIFIER = edu.pe.tecsup.carloscarbajal.calculadoraprestamos; PRODUCT_NAME = "$(TARGET_NAME)"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; TARGETED_DEVICE_FAMILY = "1,2"; SWIFT_EMIT_LOC_STRINGS = YES; }; name = Release; };
+D841E1A32F437DBDE4F24ACD = { isa = XCConfigurationList; buildConfigurations = (04DA35DD2256EDB3DE87AAF5, 38F0FC6B5A75636FA8E99980,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+7227233E4875AB3ADBF3DABD = { isa = XCConfigurationList; buildConfigurations = (15593AA9C9C4770D742E63AA, BF1C864489D92381E2C1861A,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+}; rootObject = 0D75AA9166DF272AA5882E66; }

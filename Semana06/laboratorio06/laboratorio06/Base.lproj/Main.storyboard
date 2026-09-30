@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pantalla1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nav">
   <device id="retina6_12" orientation="portrait" appearance="light" />
   <dependencies>
     <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504" />
@@ -7,6 +7,18 @@
     <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0" />
   </dependencies>
   <scenes>
+    <scene sceneID="nav-scene">
+      <objects>
+        <navigationController id="nav" sceneMemberID="viewController">
+          <navigationBar key="navigationBar" contentMode="scaleToFill" id="nav-bar" />
+          <connections>
+            <segue destination="pantalla1" kind="relationship" relationship="rootViewController" id="nav-root" />
+          </connections>
+        </navigationController>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="nav-responder" userLabel="First Responder" sceneMemberID="firstResponder" />
+      </objects>
+      <point key="canvasLocation" x="-500" y="0" />
+    </scene>
     <scene sceneID="pantalla1-scene">
       <objects>
         <viewController id="pantalla1" customClass="ViewController" customModule="laboratorio06" customModuleProvider="target" sceneMemberID="viewController">
@@ -37,7 +49,7 @@
                         <fontDescription key="fontDescription" type="system" pointSize="17" />
                         <color key="textColor" red=".09" green=".14" blue=".24" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
                       </label>
-                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Proyecto UIKit laboratorio06" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="pantalla1-text">
+                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Usa «A Pantalla 2» en la barra superior para navegar." lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="pantalla1-text">
                         <rect key="frame" x="0" y="0" width="345" height="28" />
                         <fontDescription key="fontDescription" type="system" pointSize="16" />
                         <color key="textColor" red=".09" green=".14" blue=".24" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
@@ -64,12 +76,69 @@
             </constraints>
           </view>
           <navigationItem key="navigationItem" title="Pantalla 1" id="pantalla1-item">
-            </navigationItem>
+            <barButtonItem key="rightBarButtonItem" title="A Pantalla 2" id="bar-pantalla2">
+              <connections>
+                <segue destination="pantalla2" kind="show" identifier="showPantalla2" id="bar-pantalla2-segue" />
+              </connections>
+            </barButtonItem>
+          </navigationItem>
           <connections />
         </viewController>
         <placeholder placeholderIdentifier="IBFirstResponder" id="pantalla1-responder" userLabel="First Responder" sceneMemberID="firstResponder" />
       </objects>
       <point key="canvasLocation" x="0" y="0" />
+    </scene>
+    <scene sceneID="pantalla2-scene">
+      <objects>
+        <viewController id="pantalla2" customClass="ViewController2" customModule="laboratorio06" customModuleProvider="target" sceneMemberID="viewController">
+          <view key="view" contentMode="scaleToFill" id="pantalla2-view">
+            <rect key="frame" x="0" y="0" width="393" height="852" />
+            <viewLayoutGuide key="safeArea" id="pantalla2-safe" />
+            <color key="backgroundColor" red="0.97" green="0.98" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+            <subviews>
+              <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="pantalla2-scroll">
+                <rect key="frame" x="0" y="0" width="393" height="700" />
+                <subviews>
+                  <stackView contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="pantalla2-stack">
+                    <rect key="frame" x="0" y="0" width="345" height="600" />
+                    <subviews>
+                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="PANTALLA 02" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="pantalla2-label">
+                        <rect key="frame" x="0" y="0" width="345" height="28" />
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28" />
+                        <color key="textColor" red=".09" green=".14" blue=".24" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                      </label>
+                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="La navegación Show conserva la pantalla anterior. Usa el botón de regreso de la barra superior." lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="pantalla2-text">
+                        <rect key="frame" x="0" y="0" width="345" height="28" />
+                        <fontDescription key="fontDescription" type="system" pointSize="17" />
+                        <color key="textColor" red=".09" green=".14" blue=".24" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                      </label>
+                    </subviews>
+                  </stackView>
+                </subviews>
+                <viewLayoutGuide key="contentLayoutGuide" id="pantalla2-content" />
+                <viewLayoutGuide key="frameLayoutGuide" id="pantalla2-frame" />
+                <constraints>
+                  <constraint firstItem="pantalla2-stack" firstAttribute="leading" secondItem="pantalla2-content" secondAttribute="leading" constant="24" id="pantalla2-sc-l" />
+                  <constraint firstItem="pantalla2-stack" firstAttribute="trailing" secondItem="pantalla2-content" secondAttribute="trailing" constant="-24" id="pantalla2-sc-r" />
+                  <constraint firstItem="pantalla2-stack" firstAttribute="top" secondItem="pantalla2-content" secondAttribute="top" constant="24" id="pantalla2-sc-t" />
+                  <constraint firstItem="pantalla2-stack" firstAttribute="bottom" secondItem="pantalla2-content" secondAttribute="bottom" constant="-24" id="pantalla2-sc-b" />
+                  <constraint firstItem="pantalla2-stack" firstAttribute="width" secondItem="pantalla2-frame" secondAttribute="width" constant="-48" id="pantalla2-width" />
+                </constraints>
+              </scrollView>
+            </subviews>
+            <constraints>
+              <constraint firstItem="pantalla2-scroll" firstAttribute="leading" secondItem="pantalla2-safe" secondAttribute="leading" id="pantalla2-root-leading" />
+              <constraint firstItem="pantalla2-scroll" firstAttribute="trailing" secondItem="pantalla2-safe" secondAttribute="trailing" id="pantalla2-root-trailing" />
+              <constraint firstItem="pantalla2-scroll" firstAttribute="top" secondItem="pantalla2-safe" secondAttribute="top" id="pantalla2-root-top" />
+              <constraint firstItem="pantalla2-scroll" firstAttribute="bottom" secondItem="pantalla2-safe" secondAttribute="bottom" id="pantalla2-root-bottom" />
+            </constraints>
+          </view>
+          <navigationItem key="navigationItem" title="Pantalla 02" id="pantalla2-item" />
+          <connections />
+        </viewController>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="pantalla2-responder" userLabel="First Responder" sceneMemberID="firstResponder" />
+      </objects>
+      <point key="canvasLocation" x="500" y="0" />
     </scene>
   </scenes>
   <resources>

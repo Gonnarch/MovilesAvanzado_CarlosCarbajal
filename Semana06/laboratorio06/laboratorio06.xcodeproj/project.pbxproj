@@ -17,6 +17,12 @@
 			"path" = "ViewController.swift";
 			"sourceTree" = "<group>";
 		};
+		"E3A7523F12CC2D8A5D98E7D6" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "ViewController2.swift";
+			"sourceTree" = "<group>";
+		};
 		"E4E9BA59B648999049FEEB09" = {
 			"isa" = "PBXFileReference";
 			"lastKnownFileType" = "file.storyboard";
@@ -46,6 +52,7 @@
 			"children" = (
 				"12BE6F43C250EA1C0ABFBF32",
 				"EB7DDF8FA648EB57709F217F",
+				"E3A7523F12CC2D8A5D98E7D6",
 				"E4E9BA59B648999049FEEB09",
 				"79A4DCC881409AA6BF986942",
 				"6C36FFE920F24CEDB7CFDBFC",
@@ -105,6 +112,10 @@
 			"isa" = "PBXBuildFile";
 			"fileRef" = "EB7DDF8FA648EB57709F217F";
 		};
+		"BE7AEDEB552778F240730F56" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "E3A7523F12CC2D8A5D98E7D6";
+		};
 		"58190F512CFCF1FF1EEE0946" = {
 			"isa" = "PBXBuildFile";
 			"fileRef" = "E4E9BA59B648999049FEEB09";
@@ -123,6 +134,7 @@
 			"files" = (
 				"F5BE9891C374F841755EAF68",
 				"28C6259F90E783DE36D95F96",
+				"BE7AEDEB552778F240730F56",
 			);
 			"runOnlyForDeploymentPostprocessing" = "0";
 		};

@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pantalla1">
+  <device id="retina6_12" orientation="portrait" appearance="light" />
+  <dependencies>
+    <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504" />
+    <capability name="Safe area layout guides" minToolsVersion="9.0" />
+    <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0" />
+  </dependencies>
+  <scenes>
+    <scene sceneID="pantalla1-scene">
+      <objects>
+        <viewController id="pantalla1" customClass="ViewController" customModule="laboratorio06" customModuleProvider="target" sceneMemberID="viewController">
+          <view key="view" contentMode="scaleToFill" id="pantalla1-view">
+            <rect key="frame" x="0" y="0" width="393" height="852" />
+            <viewLayoutGuide key="safeArea" id="pantalla1-safe" />
+            <color key="backgroundColor" red="0.97" green="0.98" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+            <subviews>
+              <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="pantalla1-scroll">
+                <rect key="frame" x="0" y="0" width="393" height="700" />
+                <subviews>
+                  <stackView contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="pantalla1-stack">
+                    <rect key="frame" x="0" y="0" width="345" height="600" />
+                    <subviews>
+                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="PANTALLA 1" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="pantalla1-label">
+                        <rect key="frame" x="0" y="0" width="345" height="28" />
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28" />
+                        <color key="textColor" red=".09" green=".14" blue=".24" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                      </label>
+                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Laboratorio 06 · Carlos Carbajal" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="pantalla1-info">
+                        <rect key="frame" x="0" y="0" width="345" height="28" />
+                        <fontDescription key="fontDescription" type="system" pointSize="17" />
+                        <color key="textColor" red=".09" green=".14" blue=".24" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                      </label>
+                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Proyecto UIKit laboratorio06" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="pantalla1-text">
+                        <rect key="frame" x="0" y="0" width="345" height="28" />
+                        <fontDescription key="fontDescription" type="system" pointSize="16" />
+                        <color key="textColor" red=".09" green=".14" blue=".24" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                      </label>
+                    </subviews>
+                  </stackView>
+                </subviews>
+                <viewLayoutGuide key="contentLayoutGuide" id="pantalla1-content" />
+                <viewLayoutGuide key="frameLayoutGuide" id="pantalla1-frame" />
+                <constraints>
+                  <constraint firstItem="pantalla1-stack" firstAttribute="leading" secondItem="pantalla1-content" secondAttribute="leading" constant="24" id="pantalla1-sc-l" />
+                  <constraint firstItem="pantalla1-stack" firstAttribute="trailing" secondItem="pantalla1-content" secondAttribute="trailing" constant="-24" id="pantalla1-sc-r" />
+                  <constraint firstItem="pantalla1-stack" firstAttribute="top" secondItem="pantalla1-content" secondAttribute="top" constant="24" id="pantalla1-sc-t" />
+                  <constraint firstItem="pantalla1-stack" firstAttribute="bottom" secondItem="pantalla1-content" secondAttribute="bottom" constant="-24" id="pantalla1-sc-b" />
+                  <constraint firstItem="pantalla1-stack" firstAttribute="width" secondItem="pantalla1-frame" secondAttribute="width" constant="-48" id="pantalla1-width" />
+                </constraints>
+              </scrollView>
+            </subviews>
+            <constraints>
+              <constraint firstItem="pantalla1-scroll" firstAttribute="leading" secondItem="pantalla1-safe" secondAttribute="leading" id="pantalla1-root-leading" />
+              <constraint firstItem="pantalla1-scroll" firstAttribute="trailing" secondItem="pantalla1-safe" secondAttribute="trailing" id="pantalla1-root-trailing" />
+              <constraint firstItem="pantalla1-scroll" firstAttribute="top" secondItem="pantalla1-safe" secondAttribute="top" id="pantalla1-root-top" />
+              <constraint firstItem="pantalla1-scroll" firstAttribute="bottom" secondItem="pantalla1-safe" secondAttribute="bottom" id="pantalla1-root-bottom" />
+            </constraints>
+          </view>
+          <navigationItem key="navigationItem" title="Pantalla 1" id="pantalla1-item">
+            </navigationItem>
+          <connections />
+        </viewController>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="pantalla1-responder" userLabel="First Responder" sceneMemberID="firstResponder" />
+      </objects>
+      <point key="canvasLocation" x="0" y="0" />
+    </scene>
+  </scenes>
+</document>

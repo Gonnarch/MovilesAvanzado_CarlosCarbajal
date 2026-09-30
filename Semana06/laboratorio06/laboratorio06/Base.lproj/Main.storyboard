@@ -1,0 +1,367 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nav">
+  <device id="retina6_12" orientation="portrait" appearance="light" />
+  <dependencies>
+    <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504" />
+    <capability name="Safe area layout guides" minToolsVersion="9.0" />
+    <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0" />
+  </dependencies>
+  <scenes>
+    <scene sceneID="nav-scene">
+      <objects>
+        <navigationController id="nav" sceneMemberID="viewController">
+          <navigationBar key="navigationBar" contentMode="scaleToFill" id="nav-bar" />
+          <connections>
+            <segue destination="pantalla1" kind="relationship" relationship="rootViewController" id="nav-root" />
+          </connections>
+        </navigationController>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="nav-responder" userLabel="First Responder" sceneMemberID="firstResponder" />
+      </objects>
+      <point key="canvasLocation" x="-500" y="0" />
+    </scene>
+    <scene sceneID="pantalla1-scene">
+      <objects>
+        <viewController id="pantalla1" customClass="ViewController" customModule="laboratorio06" customModuleProvider="target" sceneMemberID="viewController">
+          <view key="view" contentMode="scaleToFill" id="pantalla1-view">
+            <rect key="frame" x="0" y="0" width="393" height="852" />
+            <viewLayoutGuide key="safeArea" id="pantalla1-safe" />
+            <color key="backgroundColor" red="0.97" green="0.98" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+            <subviews>
+              <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="pantalla1-scroll">
+                <rect key="frame" x="0" y="0" width="393" height="700" />
+                <subviews>
+                  <stackView contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="pantalla1-stack">
+                    <rect key="frame" x="0" y="0" width="345" height="600" />
+                    <subviews>
+                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="PANTALLA 1" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="pantalla1-label">
+                        <rect key="frame" x="0" y="0" width="345" height="28" />
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28" />
+                        <color key="textColor" red=".09" green=".14" blue=".24" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                      </label>
+                      <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="logo">
+                        <rect key="frame" x="0" y="0" width="345" height="128" />
+                        <constraints>
+                          <constraint firstAttribute="height" constant="128" id="logo-height" />
+                        </constraints>
+                      </imageView>
+                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Laboratorio 06 · Carlos Carbajal" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="pantalla1-info">
+                        <rect key="frame" x="0" y="0" width="345" height="28" />
+                        <fontDescription key="fontDescription" type="system" pointSize="17" />
+                        <color key="textColor" red=".09" green=".14" blue=".24" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                      </label>
+                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Usa «A Pantalla 2» en la barra superior para navegar." lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="pantalla1-text">
+                        <rect key="frame" x="0" y="0" width="345" height="28" />
+                        <fontDescription key="fontDescription" type="system" pointSize="16" />
+                        <color key="textColor" red=".09" green=".14" blue=".24" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                      </label>
+                      <button opaque="NO" contentMode="scaleToFill" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="ircliente">
+                        <rect key="frame" x="0" y="0" width="345" height="48" />
+                        <constraints>
+                          <constraint firstAttribute="height" constant="48" id="ircliente-height" />
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18" />
+                        <state key="normal" title="Registro de cliente">
+                          <color key="titleColor" red=".05" green=".29" blue=".65" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                        </state>
+                        <connections>
+                          <segue destination="cliente" kind="show" identifier="irclienteSegue" id="ircliente-segue" />
+                        </connections>
+                      </button>
+                    </subviews>
+                  </stackView>
+                </subviews>
+                <viewLayoutGuide key="contentLayoutGuide" id="pantalla1-content" />
+                <viewLayoutGuide key="frameLayoutGuide" id="pantalla1-frame" />
+                <constraints>
+                  <constraint firstItem="pantalla1-stack" firstAttribute="leading" secondItem="pantalla1-content" secondAttribute="leading" constant="24" id="pantalla1-sc-l" />
+                  <constraint firstItem="pantalla1-stack" firstAttribute="trailing" secondItem="pantalla1-content" secondAttribute="trailing" constant="-24" id="pantalla1-sc-r" />
+                  <constraint firstItem="pantalla1-stack" firstAttribute="top" secondItem="pantalla1-content" secondAttribute="top" constant="24" id="pantalla1-sc-t" />
+                  <constraint firstItem="pantalla1-stack" firstAttribute="bottom" secondItem="pantalla1-content" secondAttribute="bottom" constant="-24" id="pantalla1-sc-b" />
+                  <constraint firstItem="pantalla1-stack" firstAttribute="width" secondItem="pantalla1-frame" secondAttribute="width" constant="-48" id="pantalla1-width" />
+                </constraints>
+              </scrollView>
+            </subviews>
+            <constraints>
+              <constraint firstItem="pantalla1-scroll" firstAttribute="leading" secondItem="pantalla1-safe" secondAttribute="leading" id="pantalla1-root-leading" />
+              <constraint firstItem="pantalla1-scroll" firstAttribute="trailing" secondItem="pantalla1-safe" secondAttribute="trailing" id="pantalla1-root-trailing" />
+              <constraint firstItem="pantalla1-scroll" firstAttribute="top" secondItem="pantalla1-safe" secondAttribute="top" id="pantalla1-root-top" />
+              <constraint firstItem="pantalla1-scroll" firstAttribute="bottom" secondItem="pantalla1-safe" secondAttribute="bottom" id="pantalla1-root-bottom" />
+            </constraints>
+          </view>
+          <navigationItem key="navigationItem" title="Pantalla 1" id="pantalla1-item">
+            <barButtonItem key="rightBarButtonItem" title="A Pantalla 2" id="bar-pantalla2">
+              <connections>
+                <segue destination="pantalla2" kind="show" identifier="showPantalla2" id="bar-pantalla2-segue" />
+              </connections>
+            </barButtonItem>
+          </navigationItem>
+          <connections />
+        </viewController>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="pantalla1-responder" userLabel="First Responder" sceneMemberID="firstResponder" />
+      </objects>
+      <point key="canvasLocation" x="0" y="0" />
+    </scene>
+    <scene sceneID="pantalla2-scene">
+      <objects>
+        <viewController id="pantalla2" customClass="ViewController2" customModule="laboratorio06" customModuleProvider="target" sceneMemberID="viewController">
+          <view key="view" contentMode="scaleToFill" id="pantalla2-view">
+            <rect key="frame" x="0" y="0" width="393" height="852" />
+            <viewLayoutGuide key="safeArea" id="pantalla2-safe" />
+            <color key="backgroundColor" red="0.97" green="0.98" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+            <subviews>
+              <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="pantalla2-scroll">
+                <rect key="frame" x="0" y="0" width="393" height="700" />
+                <subviews>
+                  <stackView contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="pantalla2-stack">
+                    <rect key="frame" x="0" y="0" width="345" height="600" />
+                    <subviews>
+                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="PANTALLA 02" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="pantalla2-label">
+                        <rect key="frame" x="0" y="0" width="345" height="28" />
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28" />
+                        <color key="textColor" red=".09" green=".14" blue=".24" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                      </label>
+                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="La navegación Show conserva la pantalla anterior. Usa el botón de regreso de la barra superior." lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="pantalla2-text">
+                        <rect key="frame" x="0" y="0" width="345" height="28" />
+                        <fontDescription key="fontDescription" type="system" pointSize="17" />
+                        <color key="textColor" red=".09" green=".14" blue=".24" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                      </label>
+                    </subviews>
+                  </stackView>
+                </subviews>
+                <viewLayoutGuide key="contentLayoutGuide" id="pantalla2-content" />
+                <viewLayoutGuide key="frameLayoutGuide" id="pantalla2-frame" />
+                <constraints>
+                  <constraint firstItem="pantalla2-stack" firstAttribute="leading" secondItem="pantalla2-content" secondAttribute="leading" constant="24" id="pantalla2-sc-l" />
+                  <constraint firstItem="pantalla2-stack" firstAttribute="trailing" secondItem="pantalla2-content" secondAttribute="trailing" constant="-24" id="pantalla2-sc-r" />
+                  <constraint firstItem="pantalla2-stack" firstAttribute="top" secondItem="pantalla2-content" secondAttribute="top" constant="24" id="pantalla2-sc-t" />
+                  <constraint firstItem="pantalla2-stack" firstAttribute="bottom" secondItem="pantalla2-content" secondAttribute="bottom" constant="-24" id="pantalla2-sc-b" />
+                  <constraint firstItem="pantalla2-stack" firstAttribute="width" secondItem="pantalla2-frame" secondAttribute="width" constant="-48" id="pantalla2-width" />
+                </constraints>
+              </scrollView>
+            </subviews>
+            <constraints>
+              <constraint firstItem="pantalla2-scroll" firstAttribute="leading" secondItem="pantalla2-safe" secondAttribute="leading" id="pantalla2-root-leading" />
+              <constraint firstItem="pantalla2-scroll" firstAttribute="trailing" secondItem="pantalla2-safe" secondAttribute="trailing" id="pantalla2-root-trailing" />
+              <constraint firstItem="pantalla2-scroll" firstAttribute="top" secondItem="pantalla2-safe" secondAttribute="top" id="pantalla2-root-top" />
+              <constraint firstItem="pantalla2-scroll" firstAttribute="bottom" secondItem="pantalla2-safe" secondAttribute="bottom" id="pantalla2-root-bottom" />
+            </constraints>
+          </view>
+          <navigationItem key="navigationItem" title="Pantalla 02" id="pantalla2-item" />
+          <connections />
+        </viewController>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="pantalla2-responder" userLabel="First Responder" sceneMemberID="firstResponder" />
+      </objects>
+      <point key="canvasLocation" x="500" y="0" />
+    </scene>
+    <scene sceneID="cliente-scene">
+      <objects>
+        <viewController id="cliente" customClass="ViewControllerCliente" customModule="laboratorio06" customModuleProvider="target" sceneMemberID="viewController">
+          <view key="view" contentMode="scaleToFill" id="cliente-view">
+            <rect key="frame" x="0" y="0" width="393" height="852" />
+            <viewLayoutGuide key="safeArea" id="cliente-safe" />
+            <color key="backgroundColor" red="0.97" green="0.98" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+            <subviews>
+              <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="cliente-scroll">
+                <rect key="frame" x="0" y="0" width="393" height="700" />
+                <subviews>
+                  <stackView contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="cliente-stack">
+                    <rect key="frame" x="0" y="0" width="345" height="600" />
+                    <subviews>
+                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="DATOS DEL CLIENTE" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="cliente-heading">
+                        <rect key="frame" x="0" y="0" width="345" height="28" />
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25" />
+                        <color key="textColor" red=".09" green=".14" blue=".24" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                      </label>
+                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Por favor ingresa los siguientes datos:" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="cliente-help">
+                        <rect key="frame" x="0" y="0" width="345" height="28" />
+                        <fontDescription key="fontDescription" type="system" pointSize="16" />
+                        <color key="textColor" red=".09" green=".14" blue=".24" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                      </label>
+                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Apellidos" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="apellido-caption">
+                        <rect key="frame" x="0" y="0" width="345" height="28" />
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15" />
+                        <color key="textColor" red=".09" green=".14" blue=".24" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                      </label>
+                      <textField opaque="NO" contentMode="scaleToFill" borderStyle="roundedRect" placeholder="Ej. Carbajal Durand" translatesAutoresizingMaskIntoConstraints="NO" id="apellido">
+                        <rect key="frame" x="0" y="0" width="345" height="44" />
+                        <fontDescription key="fontDescription" type="system" pointSize="17" />
+                        <textInputTraits key="textInputTraits" keyboardType="default" autocorrectionType="no" />
+                        <constraints>
+                          <constraint firstAttribute="height" constant="44" id="apellido-height" />
+                        </constraints>
+                      </textField>
+                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Nombres" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="nombre-caption">
+                        <rect key="frame" x="0" y="0" width="345" height="28" />
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15" />
+                        <color key="textColor" red=".09" green=".14" blue=".24" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                      </label>
+                      <textField opaque="NO" contentMode="scaleToFill" borderStyle="roundedRect" placeholder="Ej. Carlos Daniel" translatesAutoresizingMaskIntoConstraints="NO" id="nombre">
+                        <rect key="frame" x="0" y="0" width="345" height="44" />
+                        <fontDescription key="fontDescription" type="system" pointSize="17" />
+                        <textInputTraits key="textInputTraits" keyboardType="default" autocorrectionType="no" />
+                        <constraints>
+                          <constraint firstAttribute="height" constant="44" id="nombre-height" />
+                        </constraints>
+                      </textField>
+                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="DNI" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="dni-caption">
+                        <rect key="frame" x="0" y="0" width="345" height="28" />
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15" />
+                        <color key="textColor" red=".09" green=".14" blue=".24" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                      </label>
+                      <textField opaque="NO" contentMode="scaleToFill" borderStyle="roundedRect" placeholder="8 dígitos" translatesAutoresizingMaskIntoConstraints="NO" id="dni">
+                        <rect key="frame" x="0" y="0" width="345" height="44" />
+                        <fontDescription key="fontDescription" type="system" pointSize="17" />
+                        <textInputTraits key="textInputTraits" keyboardType="numberPad" autocorrectionType="no" />
+                        <constraints>
+                          <constraint firstAttribute="height" constant="44" id="dni-height" />
+                        </constraints>
+                      </textField>
+                      <button opaque="NO" contentMode="scaleToFill" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="continuar">
+                        <rect key="frame" x="0" y="0" width="345" height="48" />
+                        <constraints>
+                          <constraint firstAttribute="height" constant="48" id="continuar-height" />
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18" />
+                        <state key="normal" title="Continuar">
+                          <color key="titleColor" red=".05" green=".29" blue=".65" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                        </state>
+                        <connections>
+                          <action selector="btnContinuar:" destination="cliente" eventType="touchUpInside" id="continuar-action" />
+                        </connections>
+                      </button>
+                    </subviews>
+                  </stackView>
+                </subviews>
+                <viewLayoutGuide key="contentLayoutGuide" id="cliente-content" />
+                <viewLayoutGuide key="frameLayoutGuide" id="cliente-frame" />
+                <constraints>
+                  <constraint firstItem="cliente-stack" firstAttribute="leading" secondItem="cliente-content" secondAttribute="leading" constant="24" id="cliente-sc-l" />
+                  <constraint firstItem="cliente-stack" firstAttribute="trailing" secondItem="cliente-content" secondAttribute="trailing" constant="-24" id="cliente-sc-r" />
+                  <constraint firstItem="cliente-stack" firstAttribute="top" secondItem="cliente-content" secondAttribute="top" constant="24" id="cliente-sc-t" />
+                  <constraint firstItem="cliente-stack" firstAttribute="bottom" secondItem="cliente-content" secondAttribute="bottom" constant="-24" id="cliente-sc-b" />
+                  <constraint firstItem="cliente-stack" firstAttribute="width" secondItem="cliente-frame" secondAttribute="width" constant="-48" id="cliente-width" />
+                </constraints>
+              </scrollView>
+            </subviews>
+            <constraints>
+              <constraint firstItem="cliente-scroll" firstAttribute="leading" secondItem="cliente-safe" secondAttribute="leading" id="cliente-root-leading" />
+              <constraint firstItem="cliente-scroll" firstAttribute="trailing" secondItem="cliente-safe" secondAttribute="trailing" id="cliente-root-trailing" />
+              <constraint firstItem="cliente-scroll" firstAttribute="top" secondItem="cliente-safe" secondAttribute="top" id="cliente-root-top" />
+              <constraint firstItem="cliente-scroll" firstAttribute="bottom" secondItem="cliente-safe" secondAttribute="bottom" id="cliente-root-bottom" />
+            </constraints>
+          </view>
+          <navigationItem key="navigationItem" title="Datos del cliente" id="cliente-item" />
+          <connections>
+            <outlet property="tfApellido" destination="apellido" id="apellido-outlet" />
+            <outlet property="tfNombre" destination="nombre" id="nombre-outlet" />
+            <outlet property="tfDni" destination="dni" id="dni-outlet" />
+          </connections>
+        </viewController>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="cliente-responder" userLabel="First Responder" sceneMemberID="firstResponder" />
+      </objects>
+      <point key="canvasLocation" x="0" y="1000" />
+    </scene>
+    <scene sceneID="confirmacion-scene">
+      <objects>
+        <viewController id="confirmacion" customClass="ViewControllerConfirmacion" customModule="laboratorio06" customModuleProvider="target" sceneMemberID="viewController" storyboardIdentifier="ViewControllerConfirmacion">
+          <view key="view" contentMode="scaleToFill" id="confirmacion-view">
+            <rect key="frame" x="0" y="0" width="393" height="852" />
+            <viewLayoutGuide key="safeArea" id="confirmacion-safe" />
+            <color key="backgroundColor" red="0.97" green="0.98" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+            <subviews>
+              <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="confirmacion-scroll">
+                <rect key="frame" x="0" y="0" width="393" height="700" />
+                <subviews>
+                  <stackView contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="confirmacion-stack">
+                    <rect key="frame" x="0" y="0" width="345" height="600" />
+                    <subviews>
+                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="DATOS INGRESADOS" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="confirmacion-heading">
+                        <rect key="frame" x="0" y="0" width="345" height="28" />
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25" />
+                        <color key="textColor" red=".09" green=".14" blue=".24" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                      </label>
+                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Datos del cliente que fueron ingresados:" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="confirmacion-help">
+                        <rect key="frame" x="0" y="0" width="345" height="28" />
+                        <fontDescription key="fontDescription" type="system" pointSize="16" />
+                        <color key="textColor" red=".09" green=".14" blue=".24" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                      </label>
+                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Apellidos" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="confirmacion-tfApellido-caption">
+                        <rect key="frame" x="0" y="0" width="345" height="28" />
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15" />
+                        <color key="textColor" red=".09" green=".14" blue=".24" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                      </label>
+                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="—" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="confirmacion-tfApellido">
+                        <rect key="frame" x="0" y="0" width="345" height="28" />
+                        <fontDescription key="fontDescription" type="system" pointSize="20" />
+                        <color key="textColor" red=".09" green=".14" blue=".24" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                      </label>
+                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Nombres" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="confirmacion-tfNombre-caption">
+                        <rect key="frame" x="0" y="0" width="345" height="28" />
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15" />
+                        <color key="textColor" red=".09" green=".14" blue=".24" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                      </label>
+                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="—" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="confirmacion-tfNombre">
+                        <rect key="frame" x="0" y="0" width="345" height="28" />
+                        <fontDescription key="fontDescription" type="system" pointSize="20" />
+                        <color key="textColor" red=".09" green=".14" blue=".24" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                      </label>
+                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="DNI" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="confirmacion-tfDni-caption">
+                        <rect key="frame" x="0" y="0" width="345" height="28" />
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15" />
+                        <color key="textColor" red=".09" green=".14" blue=".24" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                      </label>
+                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="—" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="confirmacion-tfDni">
+                        <rect key="frame" x="0" y="0" width="345" height="28" />
+                        <fontDescription key="fontDescription" type="system" pointSize="20" />
+                        <color key="textColor" red=".09" green=".14" blue=".24" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                      </label>
+                      <button opaque="NO" contentMode="scaleToFill" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="cerrar">
+                        <rect key="frame" x="0" y="0" width="345" height="48" />
+                        <constraints>
+                          <constraint firstAttribute="height" constant="48" id="cerrar-height" />
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18" />
+                        <state key="normal" title="Cerrar">
+                          <color key="titleColor" red=".05" green=".29" blue=".65" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                        </state>
+                        <connections>
+                          <action selector="btnCerrar:" destination="confirmacion" eventType="touchUpInside" id="cerrar-action" />
+                        </connections>
+                      </button>
+                    </subviews>
+                  </stackView>
+                </subviews>
+                <viewLayoutGuide key="contentLayoutGuide" id="confirmacion-content" />
+                <viewLayoutGuide key="frameLayoutGuide" id="confirmacion-frame" />
+                <constraints>
+                  <constraint firstItem="confirmacion-stack" firstAttribute="leading" secondItem="confirmacion-content" secondAttribute="leading" constant="24" id="confirmacion-sc-l" />
+                  <constraint firstItem="confirmacion-stack" firstAttribute="trailing" secondItem="confirmacion-content" secondAttribute="trailing" constant="-24" id="confirmacion-sc-r" />
+                  <constraint firstItem="confirmacion-stack" firstAttribute="top" secondItem="confirmacion-content" secondAttribute="top" constant="24" id="confirmacion-sc-t" />
+                  <constraint firstItem="confirmacion-stack" firstAttribute="bottom" secondItem="confirmacion-content" secondAttribute="bottom" constant="-24" id="confirmacion-sc-b" />
+                  <constraint firstItem="confirmacion-stack" firstAttribute="width" secondItem="confirmacion-frame" secondAttribute="width" constant="-48" id="confirmacion-width" />
+                </constraints>
+              </scrollView>
+            </subviews>
+            <constraints>
+              <constraint firstItem="confirmacion-scroll" firstAttribute="leading" secondItem="confirmacion-safe" secondAttribute="leading" id="confirmacion-root-leading" />
+              <constraint firstItem="confirmacion-scroll" firstAttribute="trailing" secondItem="confirmacion-safe" secondAttribute="trailing" id="confirmacion-root-trailing" />
+              <constraint firstItem="confirmacion-scroll" firstAttribute="top" secondItem="confirmacion-safe" secondAttribute="top" id="confirmacion-root-top" />
+              <constraint firstItem="confirmacion-scroll" firstAttribute="bottom" secondItem="confirmacion-safe" secondAttribute="bottom" id="confirmacion-root-bottom" />
+            </constraints>
+          </view>
+          <navigationItem key="navigationItem" title="Confirmación" id="confirmacion-item" />
+          <connections>
+            <outlet property="tfApellido" destination="confirmacion-tfApellido" id="confirmacion-tfApellido-outlet" />
+            <outlet property="tfNombre" destination="confirmacion-tfNombre" id="confirmacion-tfNombre-outlet" />
+            <outlet property="tfDni" destination="confirmacion-tfDni" id="confirmacion-tfDni-outlet" />
+          </connections>
+        </viewController>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="confirmacion-responder" userLabel="First Responder" sceneMemberID="firstResponder" />
+      </objects>
+      <point key="canvasLocation" x="500" y="1000" />
+    </scene>
+  </scenes>
+  <resources>
+    <image name="Logo" width="1024" height="1024" />
+  </resources>
+</document>

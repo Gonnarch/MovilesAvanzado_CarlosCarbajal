@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nav">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="modalnav">
   <device id="retina6_12" orientation="portrait" appearance="light" />
   <dependencies>
     <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504" />
@@ -7,151 +7,17 @@
     <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0" />
   </dependencies>
   <scenes>
-    <scene sceneID="nav-scene">
+    <scene sceneID="modalnav-scene">
       <objects>
-        <navigationController id="nav" sceneMemberID="viewController">
-          <navigationBar key="navigationBar" contentMode="scaleToFill" id="nav-bar" />
+        <navigationController id="modalnav" sceneMemberID="viewController">
+          <navigationBar key="navigationBar" contentMode="scaleToFill" id="modalnav-bar" />
           <connections>
-            <segue destination="pantalla1" kind="relationship" relationship="rootViewController" id="nav-root" />
+            <segue destination="cliente" kind="relationship" relationship="rootViewController" id="modalnav-root" />
           </connections>
         </navigationController>
-        <placeholder placeholderIdentifier="IBFirstResponder" id="nav-responder" userLabel="First Responder" sceneMemberID="firstResponder" />
+        <placeholder placeholderIdentifier="IBFirstResponder" id="modalnav-responder" userLabel="First Responder" sceneMemberID="firstResponder" />
       </objects>
       <point key="canvasLocation" x="-500" y="0" />
-    </scene>
-    <scene sceneID="pantalla1-scene">
-      <objects>
-        <viewController id="pantalla1" customClass="ViewController" customModule="laboratorio06" customModuleProvider="target" sceneMemberID="viewController">
-          <view key="view" contentMode="scaleToFill" id="pantalla1-view">
-            <rect key="frame" x="0" y="0" width="393" height="852" />
-            <viewLayoutGuide key="safeArea" id="pantalla1-safe" />
-            <color key="backgroundColor" red="0.97" green="0.98" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
-            <subviews>
-              <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="pantalla1-scroll">
-                <rect key="frame" x="0" y="0" width="393" height="700" />
-                <subviews>
-                  <stackView contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="pantalla1-stack">
-                    <rect key="frame" x="0" y="0" width="345" height="600" />
-                    <subviews>
-                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="PANTALLA 1" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="pantalla1-label">
-                        <rect key="frame" x="0" y="0" width="345" height="28" />
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28" />
-                        <color key="textColor" red=".09" green=".14" blue=".24" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
-                      </label>
-                      <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="logo">
-                        <rect key="frame" x="0" y="0" width="345" height="128" />
-                        <constraints>
-                          <constraint firstAttribute="height" constant="128" id="logo-height" />
-                        </constraints>
-                      </imageView>
-                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Laboratorio 06 · Carlos Carbajal" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="pantalla1-info">
-                        <rect key="frame" x="0" y="0" width="345" height="28" />
-                        <fontDescription key="fontDescription" type="system" pointSize="17" />
-                        <color key="textColor" red=".09" green=".14" blue=".24" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
-                      </label>
-                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Usa «A Pantalla 2» en la barra superior para navegar." lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="pantalla1-text">
-                        <rect key="frame" x="0" y="0" width="345" height="28" />
-                        <fontDescription key="fontDescription" type="system" pointSize="16" />
-                        <color key="textColor" red=".09" green=".14" blue=".24" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
-                      </label>
-                      <button opaque="NO" contentMode="scaleToFill" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="ircliente">
-                        <rect key="frame" x="0" y="0" width="345" height="48" />
-                        <constraints>
-                          <constraint firstAttribute="height" constant="48" id="ircliente-height" />
-                        </constraints>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18" />
-                        <state key="normal" title="Registro de cliente">
-                          <color key="titleColor" red=".05" green=".29" blue=".65" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
-                        </state>
-                        <connections>
-                          <segue destination="cliente" kind="show" identifier="irclienteSegue" id="ircliente-segue" />
-                        </connections>
-                      </button>
-                    </subviews>
-                  </stackView>
-                </subviews>
-                <viewLayoutGuide key="contentLayoutGuide" id="pantalla1-content" />
-                <viewLayoutGuide key="frameLayoutGuide" id="pantalla1-frame" />
-                <constraints>
-                  <constraint firstItem="pantalla1-stack" firstAttribute="leading" secondItem="pantalla1-content" secondAttribute="leading" constant="24" id="pantalla1-sc-l" />
-                  <constraint firstItem="pantalla1-stack" firstAttribute="trailing" secondItem="pantalla1-content" secondAttribute="trailing" constant="-24" id="pantalla1-sc-r" />
-                  <constraint firstItem="pantalla1-stack" firstAttribute="top" secondItem="pantalla1-content" secondAttribute="top" constant="24" id="pantalla1-sc-t" />
-                  <constraint firstItem="pantalla1-stack" firstAttribute="bottom" secondItem="pantalla1-content" secondAttribute="bottom" constant="-24" id="pantalla1-sc-b" />
-                  <constraint firstItem="pantalla1-stack" firstAttribute="width" secondItem="pantalla1-frame" secondAttribute="width" constant="-48" id="pantalla1-width" />
-                </constraints>
-              </scrollView>
-            </subviews>
-            <constraints>
-              <constraint firstItem="pantalla1-scroll" firstAttribute="leading" secondItem="pantalla1-safe" secondAttribute="leading" id="pantalla1-root-leading" />
-              <constraint firstItem="pantalla1-scroll" firstAttribute="trailing" secondItem="pantalla1-safe" secondAttribute="trailing" id="pantalla1-root-trailing" />
-              <constraint firstItem="pantalla1-scroll" firstAttribute="top" secondItem="pantalla1-safe" secondAttribute="top" id="pantalla1-root-top" />
-              <constraint firstItem="pantalla1-scroll" firstAttribute="bottom" secondItem="pantalla1-safe" secondAttribute="bottom" id="pantalla1-root-bottom" />
-            </constraints>
-          </view>
-          <navigationItem key="navigationItem" title="Pantalla 1" id="pantalla1-item">
-            <barButtonItem key="rightBarButtonItem" title="A Pantalla 2" id="bar-pantalla2">
-              <connections>
-                <segue destination="pantalla2" kind="show" identifier="showPantalla2" id="bar-pantalla2-segue" />
-              </connections>
-            </barButtonItem>
-          </navigationItem>
-          <connections />
-        </viewController>
-        <placeholder placeholderIdentifier="IBFirstResponder" id="pantalla1-responder" userLabel="First Responder" sceneMemberID="firstResponder" />
-      </objects>
-      <point key="canvasLocation" x="0" y="0" />
-    </scene>
-    <scene sceneID="pantalla2-scene">
-      <objects>
-        <viewController id="pantalla2" customClass="ViewController2" customModule="laboratorio06" customModuleProvider="target" sceneMemberID="viewController">
-          <view key="view" contentMode="scaleToFill" id="pantalla2-view">
-            <rect key="frame" x="0" y="0" width="393" height="852" />
-            <viewLayoutGuide key="safeArea" id="pantalla2-safe" />
-            <color key="backgroundColor" red="0.97" green="0.98" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
-            <subviews>
-              <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="pantalla2-scroll">
-                <rect key="frame" x="0" y="0" width="393" height="700" />
-                <subviews>
-                  <stackView contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="pantalla2-stack">
-                    <rect key="frame" x="0" y="0" width="345" height="600" />
-                    <subviews>
-                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="PANTALLA 02" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="pantalla2-label">
-                        <rect key="frame" x="0" y="0" width="345" height="28" />
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28" />
-                        <color key="textColor" red=".09" green=".14" blue=".24" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
-                      </label>
-                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="La navegación Show conserva la pantalla anterior. Usa el botón de regreso de la barra superior." lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="pantalla2-text">
-                        <rect key="frame" x="0" y="0" width="345" height="28" />
-                        <fontDescription key="fontDescription" type="system" pointSize="17" />
-                        <color key="textColor" red=".09" green=".14" blue=".24" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
-                      </label>
-                    </subviews>
-                  </stackView>
-                </subviews>
-                <viewLayoutGuide key="contentLayoutGuide" id="pantalla2-content" />
-                <viewLayoutGuide key="frameLayoutGuide" id="pantalla2-frame" />
-                <constraints>
-                  <constraint firstItem="pantalla2-stack" firstAttribute="leading" secondItem="pantalla2-content" secondAttribute="leading" constant="24" id="pantalla2-sc-l" />
-                  <constraint firstItem="pantalla2-stack" firstAttribute="trailing" secondItem="pantalla2-content" secondAttribute="trailing" constant="-24" id="pantalla2-sc-r" />
-                  <constraint firstItem="pantalla2-stack" firstAttribute="top" secondItem="pantalla2-content" secondAttribute="top" constant="24" id="pantalla2-sc-t" />
-                  <constraint firstItem="pantalla2-stack" firstAttribute="bottom" secondItem="pantalla2-content" secondAttribute="bottom" constant="-24" id="pantalla2-sc-b" />
-                  <constraint firstItem="pantalla2-stack" firstAttribute="width" secondItem="pantalla2-frame" secondAttribute="width" constant="-48" id="pantalla2-width" />
-                </constraints>
-              </scrollView>
-            </subviews>
-            <constraints>
-              <constraint firstItem="pantalla2-scroll" firstAttribute="leading" secondItem="pantalla2-safe" secondAttribute="leading" id="pantalla2-root-leading" />
-              <constraint firstItem="pantalla2-scroll" firstAttribute="trailing" secondItem="pantalla2-safe" secondAttribute="trailing" id="pantalla2-root-trailing" />
-              <constraint firstItem="pantalla2-scroll" firstAttribute="top" secondItem="pantalla2-safe" secondAttribute="top" id="pantalla2-root-top" />
-              <constraint firstItem="pantalla2-scroll" firstAttribute="bottom" secondItem="pantalla2-safe" secondAttribute="bottom" id="pantalla2-root-bottom" />
-            </constraints>
-          </view>
-          <navigationItem key="navigationItem" title="Pantalla 02" id="pantalla2-item" />
-          <connections />
-        </viewController>
-        <placeholder placeholderIdentifier="IBFirstResponder" id="pantalla2-responder" userLabel="First Responder" sceneMemberID="firstResponder" />
-      </objects>
-      <point key="canvasLocation" x="500" y="0" />
     </scene>
     <scene sceneID="cliente-scene">
       <objects>
@@ -259,7 +125,7 @@
         </viewController>
         <placeholder placeholderIdentifier="IBFirstResponder" id="cliente-responder" userLabel="First Responder" sceneMemberID="firstResponder" />
       </objects>
-      <point key="canvasLocation" x="0" y="1000" />
+      <point key="canvasLocation" x="0" y="0" />
     </scene>
     <scene sceneID="confirmacion-scene">
       <objects>
@@ -358,10 +224,7 @@
         </viewController>
         <placeholder placeholderIdentifier="IBFirstResponder" id="confirmacion-responder" userLabel="First Responder" sceneMemberID="firstResponder" />
       </objects>
-      <point key="canvasLocation" x="500" y="1000" />
+      <point key="canvasLocation" x="500" y="0" />
     </scene>
   </scenes>
-  <resources>
-    <image name="Logo" width="1024" height="1024" />
-  </resources>
 </document>

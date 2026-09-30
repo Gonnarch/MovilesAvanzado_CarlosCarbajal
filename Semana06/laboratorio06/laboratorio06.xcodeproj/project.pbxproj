@@ -146,6 +146,7 @@
 		"FBE8B8E262969490C0CD80A7" = {
 			"isa" = "XCBuildConfiguration";
 			"buildSettings" = {
+				"ASSETCATALOG_COMPILER_APPICON_NAME" = "AppIcon";
 				"CODE_SIGN_STYLE" = "Automatic";
 				"CURRENT_PROJECT_VERSION" = "1";
 				"GENERATE_INFOPLIST_FILE" = "NO";
@@ -166,6 +167,7 @@
 		"99283C85D3A7680777DE07E3" = {
 			"isa" = "XCBuildConfiguration";
 			"buildSettings" = {
+				"ASSETCATALOG_COMPILER_APPICON_NAME" = "AppIcon";
 				"CODE_SIGN_STYLE" = "Automatic";
 				"CURRENT_PROJECT_VERSION" = "1";
 				"GENERATE_INFOPLIST_FILE" = "NO";

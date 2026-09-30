@@ -26,6 +26,12 @@
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="28" />
                         <color key="textColor" red=".09" green=".14" blue=".24" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
                       </label>
+                      <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="logo">
+                        <rect key="frame" x="0" y="0" width="345" height="128" />
+                        <constraints>
+                          <constraint firstAttribute="height" constant="128" id="logo-height" />
+                        </constraints>
+                      </imageView>
                       <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Laboratorio 06 · Carlos Carbajal" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="pantalla1-info">
                         <rect key="frame" x="0" y="0" width="345" height="28" />
                         <fontDescription key="fontDescription" type="system" pointSize="17" />
@@ -66,4 +72,7 @@
       <point key="canvasLocation" x="0" y="0" />
     </scene>
   </scenes>
+  <resources>
+    <image name="Logo" width="1024" height="1024" />
+  </resources>
 </document>

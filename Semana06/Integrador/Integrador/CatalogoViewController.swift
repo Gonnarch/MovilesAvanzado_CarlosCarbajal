@@ -6,8 +6,14 @@ class CatalogoViewController: UIViewController {
         Producto(nombre: "Refrigeradora", precio: 2000, stock: 5),
         Producto(nombre: "Licuadora", precio: 250, stock: 10),
         Producto(nombre: "Laptop", precio: 3500, stock: 3),
-        Producto(nombre: "Cocina", precio: 1200, stock: 4)
+        Producto(nombre: "Cocina", precio: 1200, stock: 4),
+        Producto(nombre: "Microondas", precio: 450, stock: 6)
     ]
+
+    // Prueba final (regla 10): un bloque de cambio en Storyboard
+    // (duplicar botón, título Microondas, tag 4 y misma acción productoTapped:)
+    // y un cambio en código (agregar una entrada al array productos).
+    // No se agregaron segues ni se modificaron los demás controladores/modelos.
 
     // Única creación del carrito en toda la aplicación.
     let carrito = CarritoModel()

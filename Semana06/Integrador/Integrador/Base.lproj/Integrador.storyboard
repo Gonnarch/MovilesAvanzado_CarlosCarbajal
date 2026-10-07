@@ -101,6 +101,20 @@
                           <action selector="productoTapped:" destination="catalogo-vc" eventType="touchUpInside" id="producto-3-action" />
                         </connections>
                       </button>
+                      <button opaque="NO" contentMode="scaleToFill" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="producto-4" tag="4">
+                        <rect key="frame" x="0" y="0" width="350" height="52" />
+                        <constraints>
+                          <constraint firstAttribute="height" constant="52" id="producto-4-height" />
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16" />
+                        <state key="normal" title="Microondas · S/ 450">
+                          <color key="titleColor" systemColor="systemBlueColor" />
+                        </state>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" />
+                        <connections>
+                          <action selector="productoTapped:" destination="catalogo-vc" eventType="touchUpInside" id="producto-4-action" />
+                        </connections>
+                      </button>
                       <button opaque="NO" contentMode="scaleToFill" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="ver-carrito">
                         <rect key="frame" x="0" y="0" width="350" height="52" />
                         <constraints>

@@ -2,6 +2,7 @@
 import UIKit
 
 class CarritoViewController: UIViewController {
+    var carrito: CarritoModel!
     @IBOutlet weak var itemsTextView: UITextView!
     @IBOutlet weak var subtotalLabel: UILabel!
     @IBOutlet weak var descuentoLabel: UILabel!

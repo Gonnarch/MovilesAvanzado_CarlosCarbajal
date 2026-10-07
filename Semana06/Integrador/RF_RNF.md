@@ -4,7 +4,7 @@
 
 | ID | Requerimiento | Implementación / verificación |
 | --- | --- | --- |
-| RF-01 | Mostrar cuatro productos fijos con sus precios y stock | Array `productos` de Catálogo; tabla del README |
+| RF-01 | Mostrar cuatro productos fijos con sus precios y stock | Array `productos` de Catálogo |
 | RF-02 | Abrir Detalle usando una sola acción y un solo segue | `productoTapped`, sender, tags 0–4, `verDetalle` |
 | RF-03 | Seleccionar una cantidad positiva | UIStepper; modelo rechaza valores no positivos |
 | RF-04 | Rechazar compras que excedan el stock acumulado | `CarritoModel.agregar`; escenario 3 |
@@ -34,6 +34,6 @@
 | RNF-05 | Adaptar la interfaz a la pantalla | Auto Layout y Safe Area en cada escena |
 | RNF-06 | Ejecutar sin servicios o dependencias externos | Productos y stock en memoria |
 | RNF-07 | Mantener trazabilidad con commits progresivos | Rama `integrador`; más de seis checkpoints |
-| RNF-08 | Documentar pruebas reproducibles | Escenarios y pasos de comprobación en README |
+| RNF-08 | Definir criterios de comprobación | Cinco escenarios de verificación del PDF |
 | RNF-09 | Conservar la organización del repositorio | `Semana06/Integrador`; proyecto y target independientes |
 | RNF-10 | Evitar pérdida de la boleta tras vaciar el carrito | Snapshot de líneas, subtotal, descuento, IGV y total |

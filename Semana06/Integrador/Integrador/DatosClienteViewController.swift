@@ -2,6 +2,7 @@
 import UIKit
 
 class DatosClienteViewController: UIViewController {
+    var carrito: CarritoModel!
     @IBOutlet weak var apellidoTextField: UITextField!
     @IBOutlet weak var nombreTextField: UITextField!
     @IBOutlet weak var dniTextField: UITextField!

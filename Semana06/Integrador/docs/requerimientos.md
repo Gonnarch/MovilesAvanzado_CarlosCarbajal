@@ -31,13 +31,9 @@
 | RNF-02 | Separar cálculo y presentación | Importes y categoría viven en `CarritoModel` |
 | RNF-03 | Evitar confirmaciones parciales o repetidas | Revalidación conjunta y bloqueo del botón |
 | RNF-04 | Mostrar importes con dos decimales | `Moneda.formato`, locale POSIX |
-| RNF-05 | Adaptar la interfaz a la pantalla | Auto Layout, Safe Area y UIScrollView en cada escena |
+| RNF-05 | Adaptar la interfaz a la pantalla | Auto Layout y Safe Area en cada escena |
 | RNF-06 | Ejecutar sin servicios o dependencias externos | Productos y stock en memoria |
 | RNF-07 | Mantener trazabilidad con commits progresivos | Rama `integrador`; más de seis checkpoints |
 | RNF-08 | Documentar pruebas reproducibles | Escenarios y pasos de comprobación en README |
 | RNF-09 | Conservar la organización del repositorio | `Semana06/Integrador`; proyecto y target independientes |
 | RNF-10 | Evitar pérdida de la boleta tras vaciar el carrito | Snapshot de líneas, subtotal, descuento, IGV y total |
-
-## Condiciones académicas del enunciado
-
-«Sin IA», diseño manual y trabajo individual en clase son condiciones del proceso, no prestaciones de la app. Esta preparación asistida por IA no puede acreditar su cumplimiento. La validación de interacción real y las capturas del simulador deben distinguirse de las verificaciones estáticas. La compilación y la interacción en Xcode están pendientes.

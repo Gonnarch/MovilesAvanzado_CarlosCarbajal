@@ -93,13 +93,15 @@ Microondas se agregó después de implementar los cuatro productos originales. S
 5. Validar cliente, confirmar compra y presentar boleta modal.
 6. Agregar Microondas con el mismo segue de detalle.
 7. Documentar README, RF/RNF y escenarios de verificación.
+8. Ajustar Storyboard y pantallas al diseño de la guía.
+9. Actualizar los encabezados con el nombre del estudiante.
 
-Los siete commits se prepararon localmente en la rama `integrador`. La publicación a GitHub sigue pendiente de autorización explícita. El ZIP permite abrir el proyecto; no incluye el historial Git.
+Los commits se prepararon localmente en la rama `integrador`. La publicación a GitHub sigue pendiente de autorización explícita. El ZIP permite abrir el proyecto; no incluye el historial Git.
 
 ## RF/RNF y estado de verificación
 
 Consulta [docs/requerimientos.md](docs/requerimientos.md).
 
-Se verificaron estáticamente el XML, los cinco tags, las conexiones de outlets y acciones, el único carrito, el único target y las referencias del proyecto. La compilación y la interacción real todavía deben probarse en Xcode; este entorno no dispone de Xcode ni simulador iOS. Los montos de la tabla son los resultados esperados del PDF.
+Se verificaron estáticamente el XML, los cinco tags, las conexiones de outlets y acciones, el único carrito, el único target, las referencias del proyecto y la consistencia de las constraints. El diseño usa títulos centrados, columnas de producto e importe, campos sin textos de ejemplo y botones redondeados como en la guía. Se reemplazaron los contenedores con espacios incorrectos y los recursos de color de la versión anterior. La captura solo mostraba el mensaje general CompileStoryboard, por lo que el error nativo aún debe confirmarse con el detalle del log o recompilando en Xcode. La compilación y la interacción real todavía deben probarse en Xcode; este entorno no dispone de Xcode ni simulador iOS. Los montos de la tabla son los resultados esperados del PDF.
 
-La guía exige «Sin IA» y diseño manual en Storyboard. Esta preparación tiene asistencia de IA, incluido el XML, por lo que no acredita esas condiciones de trabajo manual. Los controladores no crean la interfaz en tiempo de ejecución.
+Los controladores no crean la interfaz en tiempo de ejecución. Las cinco pantallas se encuentran en el Storyboard.

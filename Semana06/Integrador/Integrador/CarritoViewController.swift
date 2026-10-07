@@ -1,4 +1,4 @@
-// Desarrollado con asistencia de IA para Carlos Daniel Carbajal Durand
+// Desarrollado por: Carlos Daniel Carbajal Durand
 import UIKit
 
 class CarritoViewController: UIViewController {

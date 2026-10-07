@@ -10,6 +10,18 @@ class DetalleViewController: UIViewController {
     @IBOutlet weak var cantidadLabel: UILabel!
     @IBOutlet weak var cantidadStepper: UIStepper!
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Configuración de comportamiento del control colocado manualmente en Storyboard.
+        // A 1 unidad, el botón menos está deshabilitado por el límite mínimo.
+        cantidadStepper.minimumValue = 1
+        cantidadStepper.maximumValue = 100
+        cantidadStepper.stepValue = 1
+        cantidadStepper.value = 1
+        cantidadStepper.isEnabled = true
+        cantidadStepper.isUserInteractionEnabled = true
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         guard producto != nil, carrito != nil else { return }

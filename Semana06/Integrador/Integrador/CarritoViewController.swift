@@ -3,8 +3,10 @@ import UIKit
 
 class CarritoViewController: UIViewController {
     var carrito: CarritoModel!
-    @IBOutlet weak var itemsTextView: UITextView!
+    @IBOutlet weak var itemsLabel: UILabel!
+    @IBOutlet weak var importesLabel: UILabel!
     @IBOutlet weak var subtotalLabel: UILabel!
+    @IBOutlet weak var descuentoTituloLabel: UILabel!
     @IBOutlet weak var descuentoLabel: UILabel!
     @IBOutlet weak var igvLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
@@ -14,11 +16,13 @@ class CarritoViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         guard let carrito = carrito else { return }
-        itemsTextView.text = carrito.items.isEmpty ? "Tu carrito está vacío." : carrito.detalleLineas()
-        subtotalLabel.text = "Subtotal: \(Moneda.formato(carrito.subtotal()))"
-        descuentoLabel.text = "Descuento (\(Int(carrito.porcentajeDescuento() * 100))%): -\(Moneda.formato(carrito.descuento()))"
-        igvLabel.text = "IGV (18%): \(Moneda.formato(carrito.igv()))"
-        totalLabel.text = "TOTAL: \(Moneda.formato(carrito.total()))"
+        itemsLabel.text = carrito.items.isEmpty ? "Tu carrito está vacío." : carrito.nombresLineas()
+        importesLabel.text = carrito.importesLineas()
+        subtotalLabel.text = Moneda.formato(carrito.subtotal())
+        descuentoTituloLabel.text = "Descuento (\(Int(carrito.porcentajeDescuento() * 100))%)"
+        descuentoLabel.text = "-\(Moneda.formato(carrito.descuento()))"
+        igvLabel.text = Moneda.formato(carrito.igv())
+        totalLabel.text = Moneda.formato(carrito.total())
         categoriaLabel.text = "Categoría: \(carrito.categoriaCliente())"
     }
 

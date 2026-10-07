@@ -1,26 +1,26 @@
 <?xml version='1.0' encoding='utf-8'?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nav-vc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nav-vc">
   <device id="retina6_12" orientation="portrait" appearance="light" />
   <dependencies>
-    <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084" />
+    <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504" />
     <capability name="Safe area layout guides" minToolsVersion="9.0" />
-    <capability name="System colors in document resources" minToolsVersion="11.0" />
+    <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0" />
   </dependencies>
   <scenes>
     <scene sceneID="nav-scene">
       <objects>
         <navigationController id="nav-vc" sceneMemberID="viewController">
           <navigationBar key="navigationBar" contentMode="scaleToFill" id="nav-bar">
-            <rect key="frame" x="0" y="0" width="390" height="44" />
+            <rect key="frame" x="0" y="59" width="390" height="44" />
             <autoresizingMask key="autoresizingMask" widthSizable="YES" />
           </navigationBar>
           <connections>
             <segue destination="catalogo-vc" kind="relationship" relationship="rootViewController" id="root-segue" />
           </connections>
         </navigationController>
-        <placeholder placeholderIdentifier="IBFirstResponder" id="nav-first" userLabel="First Responder" sceneMemberID="firstResponder" />
+        <placeholder placeholderIdentifier="IBFirstResponder" id="nav-first" sceneMemberID="firstResponder" />
       </objects>
-      <point key="canvasLocation" x="-800" y="0" />
+      <point key="canvasLocation" x="-700" y="0" />
     </scene>
     <scene sceneID="catalogo-scene">
       <objects>
@@ -29,137 +29,153 @@
             <rect key="frame" x="0" y="0" width="390" height="844" />
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" />
             <subviews>
-              <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="catalogo-scroll">
-                <rect key="frame" x="0" y="0" width="390" height="700" />
-                <subviews>
-                  <stackView contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="catalogo-stack">
-                    <rect key="frame" x="0" y="0" width="350" height="600" />
-                    <subviews>
-                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tienda Tecsup" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="catalogo-heading">
-                        <rect key="frame" x="0" y="0" width="350" height="40" />
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28" />
-                        <color key="textColor" systemColor="labelColor" />
-                      </label>
-                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elige un electrodoméstico para ver sus detalles." lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="catalogo-subtitle">
-                        <rect key="frame" x="0" y="0" width="350" height="40" />
-                        <fontDescription key="fontDescription" type="system" pointSize="16" />
-                        <color key="textColor" systemColor="labelColor" />
-                      </label>
-                      <button opaque="NO" contentMode="scaleToFill" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="producto-0" tag="0">
-                        <rect key="frame" x="0" y="0" width="350" height="52" />
-                        <constraints>
-                          <constraint firstAttribute="height" constant="52" id="producto-0-height" />
-                        </constraints>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16" />
-                        <state key="normal" title="Refrigeradora · S/ 2000">
-                          <color key="titleColor" systemColor="systemBlueColor" />
-                        </state>
-                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" />
-                        <connections>
-                          <action selector="productoTapped:" destination="catalogo-vc" eventType="touchUpInside" id="producto-0-action" />
-                        </connections>
-                      </button>
-                      <button opaque="NO" contentMode="scaleToFill" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="producto-1" tag="1">
-                        <rect key="frame" x="0" y="0" width="350" height="52" />
-                        <constraints>
-                          <constraint firstAttribute="height" constant="52" id="producto-1-height" />
-                        </constraints>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16" />
-                        <state key="normal" title="Licuadora · S/ 250">
-                          <color key="titleColor" systemColor="systemBlueColor" />
-                        </state>
-                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" />
-                        <connections>
-                          <action selector="productoTapped:" destination="catalogo-vc" eventType="touchUpInside" id="producto-1-action" />
-                        </connections>
-                      </button>
-                      <button opaque="NO" contentMode="scaleToFill" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="producto-2" tag="2">
-                        <rect key="frame" x="0" y="0" width="350" height="52" />
-                        <constraints>
-                          <constraint firstAttribute="height" constant="52" id="producto-2-height" />
-                        </constraints>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16" />
-                        <state key="normal" title="Laptop · S/ 3500">
-                          <color key="titleColor" systemColor="systemBlueColor" />
-                        </state>
-                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" />
-                        <connections>
-                          <action selector="productoTapped:" destination="catalogo-vc" eventType="touchUpInside" id="producto-2-action" />
-                        </connections>
-                      </button>
-                      <button opaque="NO" contentMode="scaleToFill" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="producto-3" tag="3">
-                        <rect key="frame" x="0" y="0" width="350" height="52" />
-                        <constraints>
-                          <constraint firstAttribute="height" constant="52" id="producto-3-height" />
-                        </constraints>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16" />
-                        <state key="normal" title="Cocina · S/ 1200">
-                          <color key="titleColor" systemColor="systemBlueColor" />
-                        </state>
-                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" />
-                        <connections>
-                          <action selector="productoTapped:" destination="catalogo-vc" eventType="touchUpInside" id="producto-3-action" />
-                        </connections>
-                      </button>
-                      <button opaque="NO" contentMode="scaleToFill" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="producto-4" tag="4">
-                        <rect key="frame" x="0" y="0" width="350" height="52" />
-                        <constraints>
-                          <constraint firstAttribute="height" constant="52" id="producto-4-height" />
-                        </constraints>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16" />
-                        <state key="normal" title="Microondas · S/ 450">
-                          <color key="titleColor" systemColor="systemBlueColor" />
-                        </state>
-                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" />
-                        <connections>
-                          <action selector="productoTapped:" destination="catalogo-vc" eventType="touchUpInside" id="producto-4-action" />
-                        </connections>
-                      </button>
-                      <button opaque="NO" contentMode="scaleToFill" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="ver-carrito">
-                        <rect key="frame" x="0" y="0" width="350" height="52" />
-                        <constraints>
-                          <constraint firstAttribute="height" constant="52" id="ver-carrito-height" />
-                        </constraints>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16" />
-                        <state key="normal" title="Ver carrito (0)">
-                          <color key="titleColor" systemColor="whiteColor" />
-                        </state>
-                        <color key="backgroundColor" systemColor="systemBlueColor" />
-                        <connections>
-                          <action selector="verCarritoTapped:" destination="catalogo-vc" eventType="touchUpInside" id="ver-carrito-action" />
-                        </connections>
-                      </button>
-                    </subviews>
-                  </stackView>
-                </subviews>
-                <viewLayoutGuide key="contentLayoutGuide" id="catalogo-content" />
-                <viewLayoutGuide key="frameLayoutGuide" id="catalogo-frame" />
-                <constraints>
-                  <constraint firstItem="catalogo-stack" firstAttribute="leading" secondItem="catalogo-content" secondAttribute="leading" constant="20" id="catalogo-leading-content" />
-                  <constraint firstItem="catalogo-content" firstAttribute="trailing" secondItem="catalogo-stack" secondAttribute="trailing" constant="20" id="catalogo-trailing-content" />
-                  <constraint firstItem="catalogo-stack" firstAttribute="top" secondItem="catalogo-content" secondAttribute="top" constant="20" id="catalogo-top-content" />
-                  <constraint firstItem="catalogo-content" firstAttribute="bottom" secondItem="catalogo-stack" secondAttribute="bottom" constant="20" id="catalogo-bottom-content" />
-                  <constraint firstItem="catalogo-stack" firstAttribute="width" secondItem="catalogo-frame" secondAttribute="width" constant="-40" id="catalogo-width" />
-                </constraints>
-              </scrollView>
+              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tienda Tecsup" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="1" translatesAutoresizingMaskIntoConstraints="NO" id="catalogo-heading">
+                <rect key="frame" x="24.0" y="127.0" width="342.0" height="28.0" />
+                <fontDescription key="fontDescription" type="boldSystem" pointSize="22" />
+                <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+              </label>
+              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elige un producto" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="1" translatesAutoresizingMaskIntoConstraints="NO" id="catalogo-subtitle">
+                <rect key="frame" x="24.0" y="165.0" width="342.0" height="20.0" />
+                <fontDescription key="fontDescription" type="system" pointSize="14" />
+                <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+              </label>
+              <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="producto-0" tag="0">
+                <rect key="frame" x="24.0" y="213.0" width="342.0" height="46.0" />
+                <color key="backgroundColor" white="0.96" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+                <fontDescription key="fontDescription" type="system" pointSize="16" />
+                <state key="normal" title="Refrigeradora · S/ 2000">
+                  <color key="titleColor" white="0.14" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+                </state>
+                <userDefinedRuntimeAttributes>
+                  <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <real key="value" value="10" />
+                  </userDefinedRuntimeAttribute>
+                </userDefinedRuntimeAttributes>
+                <connections>
+                  <action selector="productoTapped:" destination="catalogo-vc" eventType="touchUpInside" id="producto-0-action" />
+                </connections>
+              </button>
+              <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="producto-1" tag="1">
+                <rect key="frame" x="24.0" y="269.0" width="342.0" height="46.0" />
+                <color key="backgroundColor" white="0.96" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+                <fontDescription key="fontDescription" type="system" pointSize="16" />
+                <state key="normal" title="Licuadora · S/ 250">
+                  <color key="titleColor" white="0.14" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+                </state>
+                <userDefinedRuntimeAttributes>
+                  <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <real key="value" value="10" />
+                  </userDefinedRuntimeAttribute>
+                </userDefinedRuntimeAttributes>
+                <connections>
+                  <action selector="productoTapped:" destination="catalogo-vc" eventType="touchUpInside" id="producto-1-action" />
+                </connections>
+              </button>
+              <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="producto-2" tag="2">
+                <rect key="frame" x="24.0" y="325.0" width="342.0" height="46.0" />
+                <color key="backgroundColor" white="0.96" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+                <fontDescription key="fontDescription" type="system" pointSize="16" />
+                <state key="normal" title="Laptop · S/ 3500">
+                  <color key="titleColor" white="0.14" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+                </state>
+                <userDefinedRuntimeAttributes>
+                  <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <real key="value" value="10" />
+                  </userDefinedRuntimeAttribute>
+                </userDefinedRuntimeAttributes>
+                <connections>
+                  <action selector="productoTapped:" destination="catalogo-vc" eventType="touchUpInside" id="producto-2-action" />
+                </connections>
+              </button>
+              <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="producto-3" tag="3">
+                <rect key="frame" x="24.0" y="381.0" width="342.0" height="46.0" />
+                <color key="backgroundColor" white="0.96" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+                <fontDescription key="fontDescription" type="system" pointSize="16" />
+                <state key="normal" title="Cocina · S/ 1200">
+                  <color key="titleColor" white="0.14" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+                </state>
+                <userDefinedRuntimeAttributes>
+                  <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <real key="value" value="10" />
+                  </userDefinedRuntimeAttribute>
+                </userDefinedRuntimeAttributes>
+                <connections>
+                  <action selector="productoTapped:" destination="catalogo-vc" eventType="touchUpInside" id="producto-3-action" />
+                </connections>
+              </button>
+              <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="producto-4" tag="4">
+                <rect key="frame" x="24.0" y="437.0" width="342.0" height="46.0" />
+                <color key="backgroundColor" white="0.96" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+                <fontDescription key="fontDescription" type="system" pointSize="16" />
+                <state key="normal" title="Microondas · S/ 450">
+                  <color key="titleColor" white="0.14" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+                </state>
+                <userDefinedRuntimeAttributes>
+                  <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <real key="value" value="10" />
+                  </userDefinedRuntimeAttribute>
+                </userDefinedRuntimeAttributes>
+                <connections>
+                  <action selector="productoTapped:" destination="catalogo-vc" eventType="touchUpInside" id="producto-4-action" />
+                </connections>
+              </button>
+              <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="ver-carrito">
+                <rect key="frame" x="24.0" y="493.0" width="342.0" height="44.0" />
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+                <fontDescription key="fontDescription" type="system" pointSize="16" />
+                <state key="normal" title="Ver carrito (0)">
+                  <color key="titleColor" red="0" green="0.36" blue="0.9" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                </state>
+                <connections>
+                  <action selector="verCarritoTapped:" destination="catalogo-vc" eventType="touchUpInside" id="ver-carrito-action" />
+                </connections>
+              </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="catalogo-safe" />
-            <color key="backgroundColor" systemColor="systemBackgroundColor" />
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
             <constraints>
-              <constraint firstItem="catalogo-scroll" firstAttribute="leading" secondItem="catalogo-safe" secondAttribute="leading" id="catalogo-leading-safe" />
-              <constraint firstItem="catalogo-scroll" firstAttribute="trailing" secondItem="catalogo-safe" secondAttribute="trailing" id="catalogo-trailing-safe" />
-              <constraint firstItem="catalogo-scroll" firstAttribute="top" secondItem="catalogo-safe" secondAttribute="top" id="catalogo-top-safe" />
-              <constraint firstItem="catalogo-scroll" firstAttribute="bottom" secondItem="catalogo-safe" secondAttribute="bottom" id="catalogo-bottom-safe" />
+              <constraint firstItem="catalogo-heading" firstAttribute="leading" constant="24" id="constraint-1" secondItem="catalogo-safe" secondAttribute="leading" />
+              <constraint firstItem="catalogo-heading" firstAttribute="trailing" constant="-24" id="constraint-2" secondItem="catalogo-safe" secondAttribute="trailing" />
+              <constraint firstItem="catalogo-heading" firstAttribute="height" constant="28" id="constraint-3" />
+              <constraint firstItem="catalogo-heading" firstAttribute="top" constant="24" id="constraint-4" secondItem="catalogo-safe" secondAttribute="top" />
+              <constraint firstItem="catalogo-subtitle" firstAttribute="leading" constant="24" id="constraint-5" secondItem="catalogo-safe" secondAttribute="leading" />
+              <constraint firstItem="catalogo-subtitle" firstAttribute="trailing" constant="-24" id="constraint-6" secondItem="catalogo-safe" secondAttribute="trailing" />
+              <constraint firstItem="catalogo-subtitle" firstAttribute="height" constant="20" id="constraint-7" />
+              <constraint firstItem="catalogo-subtitle" firstAttribute="top" constant="10" id="constraint-8" secondItem="catalogo-heading" secondAttribute="bottom" />
+              <constraint firstItem="producto-0" firstAttribute="leading" constant="24" id="constraint-9" secondItem="catalogo-safe" secondAttribute="leading" />
+              <constraint firstItem="producto-0" firstAttribute="trailing" constant="-24" id="constraint-10" secondItem="catalogo-safe" secondAttribute="trailing" />
+              <constraint firstItem="producto-0" firstAttribute="height" constant="46" id="constraint-11" />
+              <constraint firstItem="producto-0" firstAttribute="top" constant="28" id="constraint-12" secondItem="catalogo-subtitle" secondAttribute="bottom" />
+              <constraint firstItem="producto-1" firstAttribute="leading" constant="24" id="constraint-13" secondItem="catalogo-safe" secondAttribute="leading" />
+              <constraint firstItem="producto-1" firstAttribute="trailing" constant="-24" id="constraint-14" secondItem="catalogo-safe" secondAttribute="trailing" />
+              <constraint firstItem="producto-1" firstAttribute="height" constant="46" id="constraint-15" />
+              <constraint firstItem="producto-1" firstAttribute="top" constant="10" id="constraint-16" secondItem="producto-0" secondAttribute="bottom" />
+              <constraint firstItem="producto-2" firstAttribute="leading" constant="24" id="constraint-17" secondItem="catalogo-safe" secondAttribute="leading" />
+              <constraint firstItem="producto-2" firstAttribute="trailing" constant="-24" id="constraint-18" secondItem="catalogo-safe" secondAttribute="trailing" />
+              <constraint firstItem="producto-2" firstAttribute="height" constant="46" id="constraint-19" />
+              <constraint firstItem="producto-2" firstAttribute="top" constant="10" id="constraint-20" secondItem="producto-1" secondAttribute="bottom" />
+              <constraint firstItem="producto-3" firstAttribute="leading" constant="24" id="constraint-21" secondItem="catalogo-safe" secondAttribute="leading" />
+              <constraint firstItem="producto-3" firstAttribute="trailing" constant="-24" id="constraint-22" secondItem="catalogo-safe" secondAttribute="trailing" />
+              <constraint firstItem="producto-3" firstAttribute="height" constant="46" id="constraint-23" />
+              <constraint firstItem="producto-3" firstAttribute="top" constant="10" id="constraint-24" secondItem="producto-2" secondAttribute="bottom" />
+              <constraint firstItem="producto-4" firstAttribute="leading" constant="24" id="constraint-25" secondItem="catalogo-safe" secondAttribute="leading" />
+              <constraint firstItem="producto-4" firstAttribute="trailing" constant="-24" id="constraint-26" secondItem="catalogo-safe" secondAttribute="trailing" />
+              <constraint firstItem="producto-4" firstAttribute="height" constant="46" id="constraint-27" />
+              <constraint firstItem="producto-4" firstAttribute="top" constant="10" id="constraint-28" secondItem="producto-3" secondAttribute="bottom" />
+              <constraint firstItem="ver-carrito" firstAttribute="leading" constant="24" id="constraint-29" secondItem="catalogo-safe" secondAttribute="leading" />
+              <constraint firstItem="ver-carrito" firstAttribute="trailing" constant="-24" id="constraint-30" secondItem="catalogo-safe" secondAttribute="trailing" />
+              <constraint firstItem="ver-carrito" firstAttribute="height" constant="44" id="constraint-31" />
+              <constraint firstItem="ver-carrito" firstAttribute="top" constant="10" id="constraint-32" secondItem="producto-4" secondAttribute="bottom" />
             </constraints>
           </view>
-          <navigationItem key="navigationItem" title="Catálogo" id="catalogo-navitem" />
+          <navigationItem key="navigationItem" title="Catálogo" id="catalogo-nav" />
           <connections>
             <outlet property="verCarritoButton" destination="ver-carrito" id="catalogo-verCarritoButton-outlet" />
             <segue destination="detalle-vc" kind="show" identifier="verDetalle" id="verDetalle-segue" />
             <segue destination="carrito-vc" kind="show" identifier="verCarrito" id="verCarrito-segue" />
           </connections>
         </viewController>
-        <placeholder placeholderIdentifier="IBFirstResponder" id="catalogo-first" userLabel="First Responder" sceneMemberID="firstResponder" />
+        <placeholder placeholderIdentifier="IBFirstResponder" id="catalogo-first" sceneMemberID="firstResponder" />
       </objects>
       <point key="canvasLocation" x="0" y="0" />
     </scene>
@@ -170,87 +186,117 @@
             <rect key="frame" x="0" y="0" width="390" height="844" />
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" />
             <subviews>
-              <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="detalle-scroll">
-                <rect key="frame" x="0" y="0" width="390" height="700" />
-                <subviews>
-                  <stackView contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="detalle-stack">
-                    <rect key="frame" x="0" y="0" width="350" height="600" />
-                    <subviews>
-                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Producto" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="detalle-nombre">
-                        <rect key="frame" x="0" y="0" width="350" height="40" />
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28" />
-                        <color key="textColor" systemColor="labelColor" />
-                      </label>
-                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precio: S/ 0.00" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="detalle-precio">
-                        <rect key="frame" x="0" y="0" width="350" height="40" />
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20" />
-                        <color key="textColor" systemColor="labelColor" />
-                      </label>
-                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stock: 0" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="detalle-stock">
-                        <rect key="frame" x="0" y="0" width="350" height="40" />
-                        <fontDescription key="fontDescription" type="system" pointSize="17" />
-                        <color key="textColor" systemColor="labelColor" />
-                      </label>
-                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cantidad: 1" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="detalle-cantidad">
-                        <rect key="frame" x="0" y="0" width="350" height="40" />
-                        <fontDescription key="fontDescription" type="system" pointSize="17" />
-                        <color key="textColor" systemColor="labelColor" />
-                      </label>
-                      <stepper opaque="NO" contentMode="scaleToFill" value="1" minimumValue="1" maximumValue="100" stepValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cantidad-stepper">
-                        <rect key="frame" x="0" y="0" width="94" height="32" />
-                        <connections>
-                          <action selector="cantidadChanged:" destination="detalle-vc" eventType="valueChanged" id="stepper-action" />
-                        </connections>
-                      </stepper>
-                      <button opaque="NO" contentMode="scaleToFill" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="agregar-carrito">
-                        <rect key="frame" x="0" y="0" width="350" height="52" />
-                        <constraints>
-                          <constraint firstAttribute="height" constant="52" id="agregar-carrito-height" />
-                        </constraints>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16" />
-                        <state key="normal" title="Agregar al carrito">
-                          <color key="titleColor" systemColor="whiteColor" />
-                        </state>
-                        <color key="backgroundColor" systemColor="systemBlueColor" />
-                        <connections>
-                          <action selector="agregarTapped:" destination="detalle-vc" eventType="touchUpInside" id="agregar-carrito-action" />
-                        </connections>
-                      </button>
-                    </subviews>
-                  </stackView>
-                </subviews>
-                <viewLayoutGuide key="contentLayoutGuide" id="detalle-content" />
-                <viewLayoutGuide key="frameLayoutGuide" id="detalle-frame" />
-                <constraints>
-                  <constraint firstItem="detalle-stack" firstAttribute="leading" secondItem="detalle-content" secondAttribute="leading" constant="20" id="detalle-leading-content" />
-                  <constraint firstItem="detalle-content" firstAttribute="trailing" secondItem="detalle-stack" secondAttribute="trailing" constant="20" id="detalle-trailing-content" />
-                  <constraint firstItem="detalle-stack" firstAttribute="top" secondItem="detalle-content" secondAttribute="top" constant="20" id="detalle-top-content" />
-                  <constraint firstItem="detalle-content" firstAttribute="bottom" secondItem="detalle-stack" secondAttribute="bottom" constant="20" id="detalle-bottom-content" />
-                  <constraint firstItem="detalle-stack" firstAttribute="width" secondItem="detalle-frame" secondAttribute="width" constant="-40" id="detalle-width" />
-                </constraints>
-              </scrollView>
+              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Refrigeradora" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="1" translatesAutoresizingMaskIntoConstraints="NO" id="detalle-nombre">
+                <rect key="frame" x="24.0" y="127.0" width="342.0" height="28.0" />
+                <fontDescription key="fontDescription" type="boldSystem" pointSize="22" />
+                <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+              </label>
+              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precio" textAlignment="left" lineBreakMode="tailTruncation" numberOfLines="1" translatesAutoresizingMaskIntoConstraints="NO" id="detalle-precio-title">
+                <rect key="frame" x="24.0" y="187.0" width="210.0" height="24.0" />
+                <fontDescription key="fontDescription" type="system" pointSize="16" />
+                <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+              </label>
+              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S/ 2000.00" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="1" translatesAutoresizingMaskIntoConstraints="NO" id="detalle-precio-value">
+                <rect key="frame" x="234.0" y="187.0" width="132.0" height="24.0" />
+                <fontDescription key="fontDescription" type="system" pointSize="16" />
+                <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+              </label>
+              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stock" textAlignment="left" lineBreakMode="tailTruncation" numberOfLines="1" translatesAutoresizingMaskIntoConstraints="NO" id="detalle-stock-title">
+                <rect key="frame" x="24.0" y="225.0" width="210.0" height="24.0" />
+                <fontDescription key="fontDescription" type="system" pointSize="16" />
+                <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+              </label>
+              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="1" translatesAutoresizingMaskIntoConstraints="NO" id="detalle-stock-value">
+                <rect key="frame" x="234.0" y="225.0" width="132.0" height="24.0" />
+                <fontDescription key="fontDescription" type="system" pointSize="16" />
+                <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+              </label>
+              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cantidad" textAlignment="left" lineBreakMode="tailTruncation" numberOfLines="1" translatesAutoresizingMaskIntoConstraints="NO" id="cantidad-title">
+                <rect key="frame" x="24.0" y="263.0" width="190.0" height="32.0" />
+                <fontDescription key="fontDescription" type="system" pointSize="16" />
+                <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+              </label>
+              <stepper opaque="NO" contentMode="scaleToFill" value="1" stepValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cantidad-stepper" minValue="1" maxValue="100">
+                <rect key="frame" x="272.0" y="263.0" width="94.0" height="32.0" />
+                <connections>
+                  <action selector="cantidadChanged:" destination="detalle-vc" eventType="valueChanged" id="stepper-action" />
+                </connections>
+              </stepper>
+              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="1" translatesAutoresizingMaskIntoConstraints="NO" id="detalle-cantidad">
+                <rect key="frame" x="226.0" y="263.0" width="36.0" height="32.0" />
+                <fontDescription key="fontDescription" type="system" pointSize="16" />
+                <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+              </label>
+              <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="agregar-carrito">
+                <rect key="frame" x="24.0" y="742.0" width="342.0" height="48.0" />
+                <color key="backgroundColor" red="0" green="0.36" blue="0.9" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                <fontDescription key="fontDescription" type="system" pointSize="16" />
+                <state key="normal" title="Agregar al carrito">
+                  <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+                </state>
+                <userDefinedRuntimeAttributes>
+                  <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <real key="value" value="10" />
+                  </userDefinedRuntimeAttribute>
+                </userDefinedRuntimeAttributes>
+                <connections>
+                  <action selector="agregarTapped:" destination="detalle-vc" eventType="touchUpInside" id="agregar-carrito-action" />
+                </connections>
+              </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="detalle-safe" />
-            <color key="backgroundColor" systemColor="systemBackgroundColor" />
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
             <constraints>
-              <constraint firstItem="detalle-scroll" firstAttribute="leading" secondItem="detalle-safe" secondAttribute="leading" id="detalle-leading-safe" />
-              <constraint firstItem="detalle-scroll" firstAttribute="trailing" secondItem="detalle-safe" secondAttribute="trailing" id="detalle-trailing-safe" />
-              <constraint firstItem="detalle-scroll" firstAttribute="top" secondItem="detalle-safe" secondAttribute="top" id="detalle-top-safe" />
-              <constraint firstItem="detalle-scroll" firstAttribute="bottom" secondItem="detalle-safe" secondAttribute="bottom" id="detalle-bottom-safe" />
+              <constraint firstItem="detalle-nombre" firstAttribute="leading" constant="24" id="constraint-33" secondItem="detalle-safe" secondAttribute="leading" />
+              <constraint firstItem="detalle-nombre" firstAttribute="trailing" constant="-24" id="constraint-34" secondItem="detalle-safe" secondAttribute="trailing" />
+              <constraint firstItem="detalle-nombre" firstAttribute="height" constant="28" id="constraint-35" />
+              <constraint firstItem="detalle-nombre" firstAttribute="top" constant="24" id="constraint-36" secondItem="detalle-safe" secondAttribute="top" />
+              <constraint firstItem="detalle-precio-title" firstAttribute="width" constant="-24" id="constraint-37" secondItem="detalle-safe" secondAttribute="width" multiplier="0.6" />
+              <constraint firstItem="detalle-precio-title" firstAttribute="leading" constant="24" id="constraint-38" secondItem="detalle-safe" secondAttribute="leading" />
+              <constraint firstItem="detalle-precio-title" firstAttribute="height" constant="24" id="constraint-39" />
+              <constraint firstItem="detalle-precio-title" firstAttribute="top" constant="32" id="constraint-40" secondItem="detalle-nombre" secondAttribute="bottom" />
+              <constraint firstItem="detalle-precio-value" firstAttribute="width" constant="-24" id="constraint-41" secondItem="detalle-safe" secondAttribute="width" multiplier="0.4" />
+              <constraint firstItem="detalle-precio-value" firstAttribute="trailing" constant="-24" id="constraint-42" secondItem="detalle-safe" secondAttribute="trailing" />
+              <constraint firstItem="detalle-precio-value" firstAttribute="height" constant="24" id="constraint-43" />
+              <constraint firstItem="detalle-precio-value" firstAttribute="top" constant="0" id="constraint-44" secondItem="detalle-precio-title" secondAttribute="top" />
+              <constraint firstItem="detalle-stock-title" firstAttribute="width" constant="-24" id="constraint-45" secondItem="detalle-safe" secondAttribute="width" multiplier="0.6" />
+              <constraint firstItem="detalle-stock-title" firstAttribute="leading" constant="24" id="constraint-46" secondItem="detalle-safe" secondAttribute="leading" />
+              <constraint firstItem="detalle-stock-title" firstAttribute="height" constant="24" id="constraint-47" />
+              <constraint firstItem="detalle-stock-title" firstAttribute="top" constant="14" id="constraint-48" secondItem="detalle-precio-title" secondAttribute="bottom" />
+              <constraint firstItem="detalle-stock-value" firstAttribute="width" constant="-24" id="constraint-49" secondItem="detalle-safe" secondAttribute="width" multiplier="0.4" />
+              <constraint firstItem="detalle-stock-value" firstAttribute="trailing" constant="-24" id="constraint-50" secondItem="detalle-safe" secondAttribute="trailing" />
+              <constraint firstItem="detalle-stock-value" firstAttribute="height" constant="24" id="constraint-51" />
+              <constraint firstItem="detalle-stock-value" firstAttribute="top" constant="0" id="constraint-52" secondItem="detalle-stock-title" secondAttribute="top" />
+              <constraint firstItem="cantidad-title" firstAttribute="width" constant="190" id="constraint-53" />
+              <constraint firstItem="cantidad-title" firstAttribute="leading" constant="24" id="constraint-54" secondItem="detalle-safe" secondAttribute="leading" />
+              <constraint firstItem="cantidad-title" firstAttribute="height" constant="32" id="constraint-55" />
+              <constraint firstItem="cantidad-title" firstAttribute="top" constant="14" id="constraint-56" secondItem="detalle-stock-title" secondAttribute="bottom" />
+              <constraint firstItem="cantidad-stepper" firstAttribute="width" constant="94" id="constraint-57" />
+              <constraint firstItem="cantidad-stepper" firstAttribute="trailing" constant="-24" id="constraint-58" secondItem="detalle-safe" secondAttribute="trailing" />
+              <constraint firstItem="cantidad-stepper" firstAttribute="height" constant="32" id="constraint-59" />
+              <constraint firstItem="cantidad-stepper" firstAttribute="top" constant="0" id="constraint-60" secondItem="cantidad-title" secondAttribute="top" />
+              <constraint firstItem="detalle-cantidad" firstAttribute="width" constant="36" id="constraint-61" />
+              <constraint firstItem="detalle-cantidad" firstAttribute="height" constant="32" id="constraint-62" />
+              <constraint firstItem="detalle-cantidad" firstAttribute="trailing" constant="-10" id="constraint-63" secondItem="cantidad-stepper" secondAttribute="leading" />
+              <constraint firstItem="detalle-cantidad" firstAttribute="top" constant="0" id="constraint-64" secondItem="cantidad-title" secondAttribute="top" />
+              <constraint firstItem="agregar-carrito" firstAttribute="leading" constant="24" id="constraint-65" secondItem="detalle-safe" secondAttribute="leading" />
+              <constraint firstItem="agregar-carrito" firstAttribute="trailing" constant="-24" id="constraint-66" secondItem="detalle-safe" secondAttribute="trailing" />
+              <constraint firstItem="agregar-carrito" firstAttribute="height" constant="48" id="constraint-67" />
+              <constraint firstItem="agregar-carrito" firstAttribute="bottom" constant="-20" id="constraint-68" secondItem="detalle-safe" secondAttribute="bottom" />
             </constraints>
           </view>
-          <navigationItem key="navigationItem" title="Detalle" id="detalle-navitem" />
+          <navigationItem key="navigationItem" title="Detalle" id="detalle-nav" />
           <connections>
             <outlet property="nombreLabel" destination="detalle-nombre" id="detalle-nombreLabel-outlet" />
-            <outlet property="precioLabel" destination="detalle-precio" id="detalle-precioLabel-outlet" />
-            <outlet property="stockLabel" destination="detalle-stock" id="detalle-stockLabel-outlet" />
-            <outlet property="cantidadLabel" destination="detalle-cantidad" id="detalle-cantidadLabel-outlet" />
+            <outlet property="precioLabel" destination="detalle-precio-value" id="detalle-precioLabel-outlet" />
+            <outlet property="stockLabel" destination="detalle-stock-value" id="detalle-stockLabel-outlet" />
             <outlet property="cantidadStepper" destination="cantidad-stepper" id="detalle-cantidadStepper-outlet" />
+            <outlet property="cantidadLabel" destination="detalle-cantidad" id="detalle-cantidadLabel-outlet" />
           </connections>
         </viewController>
-        <placeholder placeholderIdentifier="IBFirstResponder" id="detalle-first" userLabel="First Responder" sceneMemberID="firstResponder" />
+        <placeholder placeholderIdentifier="IBFirstResponder" id="detalle-first" sceneMemberID="firstResponder" />
       </objects>
-      <point key="canvasLocation" x="800" y="-600" />
+      <point key="canvasLocation" x="650" y="-600" />
     </scene>
     <scene sceneID="carrito-scene">
       <objects>
@@ -259,104 +305,165 @@
             <rect key="frame" x="0" y="0" width="390" height="844" />
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" />
             <subviews>
-              <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="carrito-scroll">
-                <rect key="frame" x="0" y="0" width="390" height="700" />
-                <subviews>
-                  <stackView contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="carrito-stack">
-                    <rect key="frame" x="0" y="0" width="350" height="600" />
-                    <subviews>
-                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tu carrito" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="carrito-heading">
-                        <rect key="frame" x="0" y="0" width="350" height="40" />
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28" />
-                        <color key="textColor" systemColor="labelColor" />
-                      </label>
-                      <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="YES" text="Tu carrito está vacío." translatesAutoresizingMaskIntoConstraints="NO" id="carrito-items">
-                        <rect key="frame" x="0" y="0" width="350" height="190" />
-                        <constraints>
-                          <constraint firstAttribute="height" constant="190" id="carrito-items-height" />
-                        </constraints>
-                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" />
-                        <color key="textColor" systemColor="labelColor" />
-                        <fontDescription key="fontDescription" type="system" pointSize="16" />
-                        <textInputTraits key="textInputTraits" />
-                      </textView>
-                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtotal: S/ 0.00" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="carrito-subtotal">
-                        <rect key="frame" x="0" y="0" width="350" height="40" />
-                        <fontDescription key="fontDescription" type="system" pointSize="17" />
-                        <color key="textColor" systemColor="labelColor" />
-                      </label>
-                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descuento (0 %): -S/ 0.00" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="carrito-descuento">
-                        <rect key="frame" x="0" y="0" width="350" height="40" />
-                        <fontDescription key="fontDescription" type="system" pointSize="17" />
-                        <color key="textColor" systemColor="labelColor" />
-                      </label>
-                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IGV (18 %): S/ 0.00" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="carrito-igv">
-                        <rect key="frame" x="0" y="0" width="350" height="40" />
-                        <fontDescription key="fontDescription" type="system" pointSize="17" />
-                        <color key="textColor" systemColor="labelColor" />
-                      </label>
-                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL: S/ 0.00" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="carrito-total">
-                        <rect key="frame" x="0" y="0" width="350" height="40" />
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20" />
-                        <color key="textColor" systemColor="labelColor" />
-                      </label>
-                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categoría: Regular" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="carrito-categoria">
-                        <rect key="frame" x="0" y="0" width="350" height="40" />
-                        <fontDescription key="fontDescription" type="system" pointSize="17" />
-                        <color key="textColor" systemColor="labelColor" />
-                      </label>
-                      <button opaque="NO" contentMode="scaleToFill" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="finalizar">
-                        <rect key="frame" x="0" y="0" width="350" height="52" />
-                        <constraints>
-                          <constraint firstAttribute="height" constant="52" id="finalizar-height" />
-                        </constraints>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16" />
-                        <state key="normal" title="Finalizar compra">
-                          <color key="titleColor" systemColor="whiteColor" />
-                        </state>
-                        <color key="backgroundColor" systemColor="systemBlueColor" />
-                        <connections>
-                          <action selector="finalizarTapped:" destination="carrito-vc" eventType="touchUpInside" id="finalizar-action" />
-                        </connections>
-                      </button>
-                    </subviews>
-                  </stackView>
-                </subviews>
-                <viewLayoutGuide key="contentLayoutGuide" id="carrito-content" />
-                <viewLayoutGuide key="frameLayoutGuide" id="carrito-frame" />
-                <constraints>
-                  <constraint firstItem="carrito-stack" firstAttribute="leading" secondItem="carrito-content" secondAttribute="leading" constant="20" id="carrito-leading-content" />
-                  <constraint firstItem="carrito-content" firstAttribute="trailing" secondItem="carrito-stack" secondAttribute="trailing" constant="20" id="carrito-trailing-content" />
-                  <constraint firstItem="carrito-stack" firstAttribute="top" secondItem="carrito-content" secondAttribute="top" constant="20" id="carrito-top-content" />
-                  <constraint firstItem="carrito-content" firstAttribute="bottom" secondItem="carrito-stack" secondAttribute="bottom" constant="20" id="carrito-bottom-content" />
-                  <constraint firstItem="carrito-stack" firstAttribute="width" secondItem="carrito-frame" secondAttribute="width" constant="-40" id="carrito-width" />
-                </constraints>
-              </scrollView>
+              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carrito" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="1" translatesAutoresizingMaskIntoConstraints="NO" id="carrito-heading">
+                <rect key="frame" x="24.0" y="127.0" width="342.0" height="28.0" />
+                <fontDescription key="fontDescription" type="boldSystem" pointSize="22" />
+                <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+              </label>
+              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Refrigeradora x1&#10;Licuadora x2" textAlignment="left" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="carrito-items">
+                <rect key="frame" x="24.0" y="181.0" width="210.0" height="36.0" />
+                <fontDescription key="fontDescription" type="system" pointSize="15" />
+                <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+              </label>
+              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S/ 2000.00&#10;S/ 500.00" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="carrito-importes">
+                <rect key="frame" x="234.0" y="181.0" width="132.0" height="36.0" />
+                <fontDescription key="fontDescription" type="system" pointSize="15" />
+                <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+              </label>
+              <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="carrito-linea">
+                <rect key="frame" x="24.0" y="227.0" width="342.0" height="1.0" />
+                <color key="backgroundColor" white="0.89" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+              </view>
+              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtotal" textAlignment="left" lineBreakMode="tailTruncation" numberOfLines="1" translatesAutoresizingMaskIntoConstraints="NO" id="carrito-subtotal-title">
+                <rect key="frame" x="24.0" y="240.0" width="210.0" height="24.0" />
+                <fontDescription key="fontDescription" type="system" pointSize="16" />
+                <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+              </label>
+              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S/ 2500.00" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="1" translatesAutoresizingMaskIntoConstraints="NO" id="carrito-subtotal-value">
+                <rect key="frame" x="234.0" y="240.0" width="132.0" height="24.0" />
+                <fontDescription key="fontDescription" type="system" pointSize="16" />
+                <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+              </label>
+              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descuento (10%)" textAlignment="left" lineBreakMode="tailTruncation" numberOfLines="1" translatesAutoresizingMaskIntoConstraints="NO" id="carrito-descuento-title">
+                <rect key="frame" x="24.0" y="276.0" width="210.0" height="24.0" />
+                <fontDescription key="fontDescription" type="system" pointSize="16" />
+                <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+              </label>
+              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-S/ 250.00" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="1" translatesAutoresizingMaskIntoConstraints="NO" id="carrito-descuento-value">
+                <rect key="frame" x="234.0" y="276.0" width="132.0" height="24.0" />
+                <fontDescription key="fontDescription" type="system" pointSize="16" />
+                <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+              </label>
+              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IGV (18%)" textAlignment="left" lineBreakMode="tailTruncation" numberOfLines="1" translatesAutoresizingMaskIntoConstraints="NO" id="carrito-igv-title">
+                <rect key="frame" x="24.0" y="312.0" width="210.0" height="24.0" />
+                <fontDescription key="fontDescription" type="system" pointSize="16" />
+                <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+              </label>
+              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S/ 405.00" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="1" translatesAutoresizingMaskIntoConstraints="NO" id="carrito-igv-value">
+                <rect key="frame" x="234.0" y="312.0" width="132.0" height="24.0" />
+                <fontDescription key="fontDescription" type="system" pointSize="16" />
+                <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+              </label>
+              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL" textAlignment="left" lineBreakMode="tailTruncation" numberOfLines="1" translatesAutoresizingMaskIntoConstraints="NO" id="carrito-total-title">
+                <rect key="frame" x="24.0" y="348.0" width="210.0" height="24.0" />
+                <fontDescription key="fontDescription" type="boldSystem" pointSize="16" />
+                <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+              </label>
+              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S/ 2655.00" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="1" translatesAutoresizingMaskIntoConstraints="NO" id="carrito-total-value">
+                <rect key="frame" x="234.0" y="348.0" width="132.0" height="24.0" />
+                <fontDescription key="fontDescription" type="boldSystem" pointSize="16" />
+                <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+              </label>
+              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categoría: VIP" textAlignment="left" lineBreakMode="tailTruncation" numberOfLines="1" translatesAutoresizingMaskIntoConstraints="NO" id="carrito-categoria">
+                <rect key="frame" x="24.0" y="388.0" width="342.0" height="22.0" />
+                <fontDescription key="fontDescription" type="system" pointSize="14" />
+                <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+              </label>
+              <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="finalizar">
+                <rect key="frame" x="24.0" y="742.0" width="342.0" height="48.0" />
+                <color key="backgroundColor" red="0" green="0.36" blue="0.9" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                <fontDescription key="fontDescription" type="system" pointSize="16" />
+                <state key="normal" title="Finalizar compra">
+                  <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+                </state>
+                <userDefinedRuntimeAttributes>
+                  <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <real key="value" value="10" />
+                  </userDefinedRuntimeAttribute>
+                </userDefinedRuntimeAttributes>
+                <connections>
+                  <action selector="finalizarTapped:" destination="carrito-vc" eventType="touchUpInside" id="finalizar-action" />
+                </connections>
+              </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="carrito-safe" />
-            <color key="backgroundColor" systemColor="systemBackgroundColor" />
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
             <constraints>
-              <constraint firstItem="carrito-scroll" firstAttribute="leading" secondItem="carrito-safe" secondAttribute="leading" id="carrito-leading-safe" />
-              <constraint firstItem="carrito-scroll" firstAttribute="trailing" secondItem="carrito-safe" secondAttribute="trailing" id="carrito-trailing-safe" />
-              <constraint firstItem="carrito-scroll" firstAttribute="top" secondItem="carrito-safe" secondAttribute="top" id="carrito-top-safe" />
-              <constraint firstItem="carrito-scroll" firstAttribute="bottom" secondItem="carrito-safe" secondAttribute="bottom" id="carrito-bottom-safe" />
+              <constraint firstItem="carrito-heading" firstAttribute="leading" constant="24" id="constraint-69" secondItem="carrito-safe" secondAttribute="leading" />
+              <constraint firstItem="carrito-heading" firstAttribute="trailing" constant="-24" id="constraint-70" secondItem="carrito-safe" secondAttribute="trailing" />
+              <constraint firstItem="carrito-heading" firstAttribute="height" constant="28" id="constraint-71" />
+              <constraint firstItem="carrito-heading" firstAttribute="top" constant="24" id="constraint-72" secondItem="carrito-safe" secondAttribute="top" />
+              <constraint firstItem="carrito-items" firstAttribute="width" constant="-24" id="constraint-73" secondItem="carrito-safe" secondAttribute="width" multiplier="0.6" />
+              <constraint firstItem="carrito-items" firstAttribute="leading" constant="24" id="constraint-74" secondItem="carrito-safe" secondAttribute="leading" />
+              <constraint firstItem="carrito-items" firstAttribute="top" constant="26" id="constraint-76" secondItem="carrito-heading" secondAttribute="bottom" />
+              <constraint firstItem="carrito-importes" firstAttribute="width" constant="-24" id="constraint-77" secondItem="carrito-safe" secondAttribute="width" multiplier="0.4" />
+              <constraint firstItem="carrito-importes" firstAttribute="trailing" constant="-24" id="constraint-78" secondItem="carrito-safe" secondAttribute="trailing" />
+              <constraint firstItem="carrito-importes" firstAttribute="top" constant="0" id="constraint-80" secondItem="carrito-items" secondAttribute="top" />
+              <constraint firstItem="carrito-linea" firstAttribute="leading" constant="24" id="constraint-81" secondItem="carrito-safe" secondAttribute="leading" />
+              <constraint firstItem="carrito-linea" firstAttribute="trailing" constant="-24" id="constraint-82" secondItem="carrito-safe" secondAttribute="trailing" />
+              <constraint firstItem="carrito-linea" firstAttribute="height" constant="1" id="constraint-83" />
+              <constraint firstItem="carrito-linea" firstAttribute="top" constant="10" id="constraint-84" secondItem="carrito-items" secondAttribute="bottom" />
+              <constraint firstItem="carrito-subtotal-title" firstAttribute="width" constant="-24" id="constraint-85" secondItem="carrito-safe" secondAttribute="width" multiplier="0.6" />
+              <constraint firstItem="carrito-subtotal-title" firstAttribute="leading" constant="24" id="constraint-86" secondItem="carrito-safe" secondAttribute="leading" />
+              <constraint firstItem="carrito-subtotal-title" firstAttribute="height" constant="24" id="constraint-87" />
+              <constraint firstItem="carrito-subtotal-title" firstAttribute="top" constant="12" id="constraint-88" secondItem="carrito-linea" secondAttribute="bottom" />
+              <constraint firstItem="carrito-subtotal-value" firstAttribute="width" constant="-24" id="constraint-89" secondItem="carrito-safe" secondAttribute="width" multiplier="0.4" />
+              <constraint firstItem="carrito-subtotal-value" firstAttribute="trailing" constant="-24" id="constraint-90" secondItem="carrito-safe" secondAttribute="trailing" />
+              <constraint firstItem="carrito-subtotal-value" firstAttribute="height" constant="24" id="constraint-91" />
+              <constraint firstItem="carrito-subtotal-value" firstAttribute="top" constant="0" id="constraint-92" secondItem="carrito-subtotal-title" secondAttribute="top" />
+              <constraint firstItem="carrito-descuento-title" firstAttribute="width" constant="-24" id="constraint-93" secondItem="carrito-safe" secondAttribute="width" multiplier="0.6" />
+              <constraint firstItem="carrito-descuento-title" firstAttribute="leading" constant="24" id="constraint-94" secondItem="carrito-safe" secondAttribute="leading" />
+              <constraint firstItem="carrito-descuento-title" firstAttribute="height" constant="24" id="constraint-95" />
+              <constraint firstItem="carrito-descuento-title" firstAttribute="top" constant="12" id="constraint-96" secondItem="carrito-subtotal-title" secondAttribute="bottom" />
+              <constraint firstItem="carrito-descuento-value" firstAttribute="width" constant="-24" id="constraint-97" secondItem="carrito-safe" secondAttribute="width" multiplier="0.4" />
+              <constraint firstItem="carrito-descuento-value" firstAttribute="trailing" constant="-24" id="constraint-98" secondItem="carrito-safe" secondAttribute="trailing" />
+              <constraint firstItem="carrito-descuento-value" firstAttribute="height" constant="24" id="constraint-99" />
+              <constraint firstItem="carrito-descuento-value" firstAttribute="top" constant="0" id="constraint-100" secondItem="carrito-descuento-title" secondAttribute="top" />
+              <constraint firstItem="carrito-igv-title" firstAttribute="width" constant="-24" id="constraint-101" secondItem="carrito-safe" secondAttribute="width" multiplier="0.6" />
+              <constraint firstItem="carrito-igv-title" firstAttribute="leading" constant="24" id="constraint-102" secondItem="carrito-safe" secondAttribute="leading" />
+              <constraint firstItem="carrito-igv-title" firstAttribute="height" constant="24" id="constraint-103" />
+              <constraint firstItem="carrito-igv-title" firstAttribute="top" constant="12" id="constraint-104" secondItem="carrito-descuento-title" secondAttribute="bottom" />
+              <constraint firstItem="carrito-igv-value" firstAttribute="width" constant="-24" id="constraint-105" secondItem="carrito-safe" secondAttribute="width" multiplier="0.4" />
+              <constraint firstItem="carrito-igv-value" firstAttribute="trailing" constant="-24" id="constraint-106" secondItem="carrito-safe" secondAttribute="trailing" />
+              <constraint firstItem="carrito-igv-value" firstAttribute="height" constant="24" id="constraint-107" />
+              <constraint firstItem="carrito-igv-value" firstAttribute="top" constant="0" id="constraint-108" secondItem="carrito-igv-title" secondAttribute="top" />
+              <constraint firstItem="carrito-total-title" firstAttribute="width" constant="-24" id="constraint-109" secondItem="carrito-safe" secondAttribute="width" multiplier="0.6" />
+              <constraint firstItem="carrito-total-title" firstAttribute="leading" constant="24" id="constraint-110" secondItem="carrito-safe" secondAttribute="leading" />
+              <constraint firstItem="carrito-total-title" firstAttribute="height" constant="24" id="constraint-111" />
+              <constraint firstItem="carrito-total-title" firstAttribute="top" constant="12" id="constraint-112" secondItem="carrito-igv-title" secondAttribute="bottom" />
+              <constraint firstItem="carrito-total-value" firstAttribute="width" constant="-24" id="constraint-113" secondItem="carrito-safe" secondAttribute="width" multiplier="0.4" />
+              <constraint firstItem="carrito-total-value" firstAttribute="trailing" constant="-24" id="constraint-114" secondItem="carrito-safe" secondAttribute="trailing" />
+              <constraint firstItem="carrito-total-value" firstAttribute="height" constant="24" id="constraint-115" />
+              <constraint firstItem="carrito-total-value" firstAttribute="top" constant="0" id="constraint-116" secondItem="carrito-total-title" secondAttribute="top" />
+              <constraint firstItem="carrito-categoria" firstAttribute="leading" constant="24" id="constraint-117" secondItem="carrito-safe" secondAttribute="leading" />
+              <constraint firstItem="carrito-categoria" firstAttribute="trailing" constant="-24" id="constraint-118" secondItem="carrito-safe" secondAttribute="trailing" />
+              <constraint firstItem="carrito-categoria" firstAttribute="height" constant="22" id="constraint-119" />
+              <constraint firstItem="carrito-categoria" firstAttribute="top" constant="16" id="constraint-120" secondItem="carrito-total-title" secondAttribute="bottom" />
+              <constraint firstItem="finalizar" firstAttribute="leading" constant="24" id="constraint-121" secondItem="carrito-safe" secondAttribute="leading" />
+              <constraint firstItem="finalizar" firstAttribute="trailing" constant="-24" id="constraint-122" secondItem="carrito-safe" secondAttribute="trailing" />
+              <constraint firstItem="finalizar" firstAttribute="height" constant="48" id="constraint-123" />
+              <constraint firstItem="finalizar" firstAttribute="bottom" constant="-20" id="constraint-124" secondItem="carrito-safe" secondAttribute="bottom" />
+              <constraint firstItem="carrito-items" firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="carrito-items-minheight" />
+              <constraint firstItem="carrito-importes" firstAttribute="height" secondItem="carrito-items" secondAttribute="height" id="carrito-items-sameheight" />
             </constraints>
           </view>
-          <navigationItem key="navigationItem" title="Carrito" id="carrito-navitem" />
+          <navigationItem key="navigationItem" title="Carrito" id="carrito-nav" />
           <connections>
-            <outlet property="itemsTextView" destination="carrito-items" id="carrito-itemsTextView-outlet" />
-            <outlet property="subtotalLabel" destination="carrito-subtotal" id="carrito-subtotalLabel-outlet" />
-            <outlet property="descuentoLabel" destination="carrito-descuento" id="carrito-descuentoLabel-outlet" />
-            <outlet property="igvLabel" destination="carrito-igv" id="carrito-igvLabel-outlet" />
-            <outlet property="totalLabel" destination="carrito-total" id="carrito-totalLabel-outlet" />
+            <outlet property="itemsLabel" destination="carrito-items" id="carrito-itemsLabel-outlet" />
+            <outlet property="importesLabel" destination="carrito-importes" id="carrito-importesLabel-outlet" />
+            <outlet property="subtotalLabel" destination="carrito-subtotal-value" id="carrito-subtotalLabel-outlet" />
+            <outlet property="descuentoLabel" destination="carrito-descuento-value" id="carrito-descuentoLabel-outlet" />
+            <outlet property="descuentoTituloLabel" destination="carrito-descuento-title" id="carrito-descuentoTituloLabel-outlet" />
+            <outlet property="igvLabel" destination="carrito-igv-value" id="carrito-igvLabel-outlet" />
+            <outlet property="totalLabel" destination="carrito-total-value" id="carrito-totalLabel-outlet" />
             <outlet property="categoriaLabel" destination="carrito-categoria" id="carrito-categoriaLabel-outlet" />
             <outlet property="finalizarButton" destination="finalizar" id="carrito-finalizarButton-outlet" />
             <segue destination="datos-vc" kind="show" identifier="irDatosCliente" id="irDatosCliente-segue" />
           </connections>
         </viewController>
-        <placeholder placeholderIdentifier="IBFirstResponder" id="carrito-first" userLabel="First Responder" sceneMemberID="firstResponder" />
+        <placeholder placeholderIdentifier="IBFirstResponder" id="carrito-first" sceneMemberID="firstResponder" />
       </objects>
-      <point key="canvasLocation" x="800" y="300" />
+      <point key="canvasLocation" x="650" y="350" />
     </scene>
     <scene sceneID="datos-scene">
       <objects>
@@ -365,99 +472,96 @@
             <rect key="frame" x="0" y="0" width="390" height="844" />
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" />
             <subviews>
-              <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="datos-scroll">
-                <rect key="frame" x="0" y="0" width="390" height="700" />
-                <subviews>
-                  <stackView contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="datos-stack">
-                    <rect key="frame" x="0" y="0" width="350" height="600" />
-                    <subviews>
-                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Datos del cliente" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="datos-heading">
-                        <rect key="frame" x="0" y="0" width="350" height="40" />
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28" />
-                        <color key="textColor" systemColor="labelColor" />
-                      </label>
-                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completa tus datos para emitir la boleta." lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="datos-info">
-                        <rect key="frame" x="0" y="0" width="350" height="40" />
-                        <fontDescription key="fontDescription" type="system" pointSize="16" />
-                        <color key="textColor" systemColor="labelColor" />
-                      </label>
-                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apellidos" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="datos-apellido-titulo">
-                        <rect key="frame" x="0" y="0" width="350" height="40" />
-                        <fontDescription key="fontDescription" type="system" pointSize="17" />
-                        <color key="textColor" systemColor="labelColor" />
-                      </label>
-                      <textField opaque="NO" contentMode="scaleToFill" borderStyle="roundedRect" placeholder="Ejemplo: Pérez" translatesAutoresizingMaskIntoConstraints="NO" id="datos-apellido">
-                        <rect key="frame" x="0" y="0" width="350" height="46" />
-                        <constraints>
-                          <constraint firstAttribute="height" constant="46" id="datos-apellido-height" />
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17" />
-                        <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" />
-                      </textField>
-                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombres" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="datos-nombre-titulo">
-                        <rect key="frame" x="0" y="0" width="350" height="40" />
-                        <fontDescription key="fontDescription" type="system" pointSize="17" />
-                        <color key="textColor" systemColor="labelColor" />
-                      </label>
-                      <textField opaque="NO" contentMode="scaleToFill" borderStyle="roundedRect" placeholder="Ejemplo: Ana" translatesAutoresizingMaskIntoConstraints="NO" id="datos-nombre">
-                        <rect key="frame" x="0" y="0" width="350" height="46" />
-                        <constraints>
-                          <constraint firstAttribute="height" constant="46" id="datos-nombre-height" />
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17" />
-                        <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" />
-                      </textField>
-                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DNI (8 dígitos)" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="datos-dni-titulo">
-                        <rect key="frame" x="0" y="0" width="350" height="40" />
-                        <fontDescription key="fontDescription" type="system" pointSize="17" />
-                        <color key="textColor" systemColor="labelColor" />
-                      </label>
-                      <textField opaque="NO" contentMode="scaleToFill" borderStyle="roundedRect" placeholder="12345678" translatesAutoresizingMaskIntoConstraints="NO" id="datos-dni">
-                        <rect key="frame" x="0" y="0" width="350" height="46" />
-                        <constraints>
-                          <constraint firstAttribute="height" constant="46" id="datos-dni-height" />
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17" />
-                        <textInputTraits key="textInputTraits" keyboardType="numberPad" />
-                      </textField>
-                      <button opaque="NO" contentMode="scaleToFill" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="confirmar">
-                        <rect key="frame" x="0" y="0" width="350" height="52" />
-                        <constraints>
-                          <constraint firstAttribute="height" constant="52" id="confirmar-height" />
-                        </constraints>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16" />
-                        <state key="normal" title="Confirmar compra">
-                          <color key="titleColor" systemColor="whiteColor" />
-                        </state>
-                        <color key="backgroundColor" systemColor="systemBlueColor" />
-                        <connections>
-                          <action selector="confirmarTapped:" destination="datos-vc" eventType="touchUpInside" id="confirmar-action" />
-                        </connections>
-                      </button>
-                    </subviews>
-                  </stackView>
-                </subviews>
-                <viewLayoutGuide key="contentLayoutGuide" id="datos-content" />
-                <viewLayoutGuide key="frameLayoutGuide" id="datos-frame" />
-                <constraints>
-                  <constraint firstItem="datos-stack" firstAttribute="leading" secondItem="datos-content" secondAttribute="leading" constant="20" id="datos-leading-content" />
-                  <constraint firstItem="datos-content" firstAttribute="trailing" secondItem="datos-stack" secondAttribute="trailing" constant="20" id="datos-trailing-content" />
-                  <constraint firstItem="datos-stack" firstAttribute="top" secondItem="datos-content" secondAttribute="top" constant="20" id="datos-top-content" />
-                  <constraint firstItem="datos-content" firstAttribute="bottom" secondItem="datos-stack" secondAttribute="bottom" constant="20" id="datos-bottom-content" />
-                  <constraint firstItem="datos-stack" firstAttribute="width" secondItem="datos-frame" secondAttribute="width" constant="-40" id="datos-width" />
-                </constraints>
-              </scrollView>
+              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Datos del cliente" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="1" translatesAutoresizingMaskIntoConstraints="NO" id="datos-heading">
+                <rect key="frame" x="24.0" y="127.0" width="342.0" height="28.0" />
+                <fontDescription key="fontDescription" type="boldSystem" pointSize="22" />
+                <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+              </label>
+              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apellidos:" textAlignment="left" lineBreakMode="tailTruncation" numberOfLines="1" translatesAutoresizingMaskIntoConstraints="NO" id="datos-apellido-titulo">
+                <rect key="frame" x="24.0" y="181.0" width="342.0" height="22.0" />
+                <fontDescription key="fontDescription" type="system" pointSize="16" />
+                <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+              </label>
+              <textField opaque="NO" contentMode="scaleToFill" borderStyle="roundedRect" placeholder="" translatesAutoresizingMaskIntoConstraints="NO" id="datos-apellido">
+                <rect key="frame" x="24.0" y="209.0" width="342.0" height="44.0" />
+                <fontDescription key="fontDescription" type="system" pointSize="17" />
+                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" />
+              </textField>
+              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombres:" textAlignment="left" lineBreakMode="tailTruncation" numberOfLines="1" translatesAutoresizingMaskIntoConstraints="NO" id="datos-nombre-titulo">
+                <rect key="frame" x="24.0" y="273.0" width="342.0" height="22.0" />
+                <fontDescription key="fontDescription" type="system" pointSize="16" />
+                <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+              </label>
+              <textField opaque="NO" contentMode="scaleToFill" borderStyle="roundedRect" placeholder="" translatesAutoresizingMaskIntoConstraints="NO" id="datos-nombre">
+                <rect key="frame" x="24.0" y="301.0" width="342.0" height="44.0" />
+                <fontDescription key="fontDescription" type="system" pointSize="17" />
+                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" />
+              </textField>
+              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DNI (8 dígitos):" textAlignment="left" lineBreakMode="tailTruncation" numberOfLines="1" translatesAutoresizingMaskIntoConstraints="NO" id="datos-dni-titulo">
+                <rect key="frame" x="24.0" y="365.0" width="342.0" height="22.0" />
+                <fontDescription key="fontDescription" type="system" pointSize="16" />
+                <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+              </label>
+              <textField opaque="NO" contentMode="scaleToFill" borderStyle="roundedRect" placeholder="" translatesAutoresizingMaskIntoConstraints="NO" id="datos-dni">
+                <rect key="frame" x="24.0" y="393.0" width="342.0" height="44.0" />
+                <fontDescription key="fontDescription" type="system" pointSize="17" />
+                <textInputTraits key="textInputTraits" keyboardType="numberPad" />
+              </textField>
+              <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="confirmar">
+                <rect key="frame" x="24.0" y="465.0" width="342.0" height="48.0" />
+                <color key="backgroundColor" red="0" green="0.36" blue="0.9" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                <fontDescription key="fontDescription" type="system" pointSize="16" />
+                <state key="normal" title="Confirmar compra">
+                  <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+                </state>
+                <userDefinedRuntimeAttributes>
+                  <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <real key="value" value="10" />
+                  </userDefinedRuntimeAttribute>
+                </userDefinedRuntimeAttributes>
+                <connections>
+                  <action selector="confirmarTapped:" destination="datos-vc" eventType="touchUpInside" id="confirmar-action" />
+                </connections>
+              </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="datos-safe" />
-            <color key="backgroundColor" systemColor="systemBackgroundColor" />
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
             <constraints>
-              <constraint firstItem="datos-scroll" firstAttribute="leading" secondItem="datos-safe" secondAttribute="leading" id="datos-leading-safe" />
-              <constraint firstItem="datos-scroll" firstAttribute="trailing" secondItem="datos-safe" secondAttribute="trailing" id="datos-trailing-safe" />
-              <constraint firstItem="datos-scroll" firstAttribute="top" secondItem="datos-safe" secondAttribute="top" id="datos-top-safe" />
-              <constraint firstItem="datos-scroll" firstAttribute="bottom" secondItem="datos-safe" secondAttribute="bottom" id="datos-bottom-safe" />
+              <constraint firstItem="datos-heading" firstAttribute="leading" constant="24" id="constraint-125" secondItem="datos-safe" secondAttribute="leading" />
+              <constraint firstItem="datos-heading" firstAttribute="trailing" constant="-24" id="constraint-126" secondItem="datos-safe" secondAttribute="trailing" />
+              <constraint firstItem="datos-heading" firstAttribute="height" constant="28" id="constraint-127" />
+              <constraint firstItem="datos-heading" firstAttribute="top" constant="24" id="constraint-128" secondItem="datos-safe" secondAttribute="top" />
+              <constraint firstItem="datos-apellido-titulo" firstAttribute="leading" constant="24" id="constraint-129" secondItem="datos-safe" secondAttribute="leading" />
+              <constraint firstItem="datos-apellido-titulo" firstAttribute="trailing" constant="-24" id="constraint-130" secondItem="datos-safe" secondAttribute="trailing" />
+              <constraint firstItem="datos-apellido-titulo" firstAttribute="height" constant="22" id="constraint-131" />
+              <constraint firstItem="datos-apellido-titulo" firstAttribute="top" constant="26" id="constraint-132" secondItem="datos-heading" secondAttribute="bottom" />
+              <constraint firstItem="datos-apellido" firstAttribute="leading" constant="24" id="constraint-133" secondItem="datos-safe" secondAttribute="leading" />
+              <constraint firstItem="datos-apellido" firstAttribute="trailing" constant="-24" id="constraint-134" secondItem="datos-safe" secondAttribute="trailing" />
+              <constraint firstItem="datos-apellido" firstAttribute="height" constant="44" id="constraint-135" />
+              <constraint firstItem="datos-apellido" firstAttribute="top" constant="6" id="constraint-136" secondItem="datos-apellido-titulo" secondAttribute="bottom" />
+              <constraint firstItem="datos-nombre-titulo" firstAttribute="leading" constant="24" id="constraint-137" secondItem="datos-safe" secondAttribute="leading" />
+              <constraint firstItem="datos-nombre-titulo" firstAttribute="trailing" constant="-24" id="constraint-138" secondItem="datos-safe" secondAttribute="trailing" />
+              <constraint firstItem="datos-nombre-titulo" firstAttribute="height" constant="22" id="constraint-139" />
+              <constraint firstItem="datos-nombre-titulo" firstAttribute="top" constant="20" id="constraint-140" secondItem="datos-apellido" secondAttribute="bottom" />
+              <constraint firstItem="datos-nombre" firstAttribute="leading" constant="24" id="constraint-141" secondItem="datos-safe" secondAttribute="leading" />
+              <constraint firstItem="datos-nombre" firstAttribute="trailing" constant="-24" id="constraint-142" secondItem="datos-safe" secondAttribute="trailing" />
+              <constraint firstItem="datos-nombre" firstAttribute="height" constant="44" id="constraint-143" />
+              <constraint firstItem="datos-nombre" firstAttribute="top" constant="6" id="constraint-144" secondItem="datos-nombre-titulo" secondAttribute="bottom" />
+              <constraint firstItem="datos-dni-titulo" firstAttribute="leading" constant="24" id="constraint-145" secondItem="datos-safe" secondAttribute="leading" />
+              <constraint firstItem="datos-dni-titulo" firstAttribute="trailing" constant="-24" id="constraint-146" secondItem="datos-safe" secondAttribute="trailing" />
+              <constraint firstItem="datos-dni-titulo" firstAttribute="height" constant="22" id="constraint-147" />
+              <constraint firstItem="datos-dni-titulo" firstAttribute="top" constant="20" id="constraint-148" secondItem="datos-nombre" secondAttribute="bottom" />
+              <constraint firstItem="datos-dni" firstAttribute="leading" constant="24" id="constraint-149" secondItem="datos-safe" secondAttribute="leading" />
+              <constraint firstItem="datos-dni" firstAttribute="trailing" constant="-24" id="constraint-150" secondItem="datos-safe" secondAttribute="trailing" />
+              <constraint firstItem="datos-dni" firstAttribute="height" constant="44" id="constraint-151" />
+              <constraint firstItem="datos-dni" firstAttribute="top" constant="6" id="constraint-152" secondItem="datos-dni-titulo" secondAttribute="bottom" />
+              <constraint firstItem="confirmar" firstAttribute="leading" constant="24" id="constraint-153" secondItem="datos-safe" secondAttribute="leading" />
+              <constraint firstItem="confirmar" firstAttribute="trailing" constant="-24" id="constraint-154" secondItem="datos-safe" secondAttribute="trailing" />
+              <constraint firstItem="confirmar" firstAttribute="height" constant="48" id="constraint-155" />
+              <constraint firstItem="confirmar" firstAttribute="top" constant="28" id="constraint-156" secondItem="datos-dni" secondAttribute="bottom" />
             </constraints>
           </view>
-          <navigationItem key="navigationItem" title="Datos del cliente" id="datos-navitem" />
+          <navigationItem key="navigationItem" title="Datos del cliente" id="datos-nav" />
           <connections>
             <outlet property="apellidoTextField" destination="datos-apellido" id="datos-apellidoTextField-outlet" />
             <outlet property="nombreTextField" destination="datos-nombre" id="datos-nombreTextField-outlet" />
@@ -466,9 +570,9 @@
             <segue destination="boleta-vc" kind="presentation" identifier="verBoleta" id="verBoleta-segue" />
           </connections>
         </viewController>
-        <placeholder placeholderIdentifier="IBFirstResponder" id="datos-first" userLabel="First Responder" sceneMemberID="firstResponder" />
+        <placeholder placeholderIdentifier="IBFirstResponder" id="datos-first" sceneMemberID="firstResponder" />
       </objects>
-      <point key="canvasLocation" x="1600" y="300" />
+      <point key="canvasLocation" x="1300" y="350" />
     </scene>
     <scene sceneID="boleta-scene">
       <objects>
@@ -477,89 +581,163 @@
             <rect key="frame" x="0" y="0" width="390" height="844" />
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" />
             <subviews>
-              <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="boleta-scroll">
-                <rect key="frame" x="0" y="0" width="390" height="700" />
-                <subviews>
-                  <stackView contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="boleta-stack">
-                    <rect key="frame" x="0" y="0" width="350" height="600" />
-                    <subviews>
-                      <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BOLETA DE COMPRA" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="boleta-heading">
-                        <rect key="frame" x="0" y="0" width="350" height="40" />
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25" />
-                        <color key="textColor" systemColor="labelColor" />
-                      </label>
-                      <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="YES" text="Aquí se mostrará el comprobante." translatesAutoresizingMaskIntoConstraints="NO" id="boleta-texto">
-                        <rect key="frame" x="0" y="0" width="350" height="370" />
-                        <constraints>
-                          <constraint firstAttribute="height" constant="370" id="boleta-texto-height" />
-                        </constraints>
-                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" />
-                        <color key="textColor" systemColor="labelColor" />
-                        <fontDescription key="fontDescription" type="system" pointSize="16" />
-                        <textInputTraits key="textInputTraits" />
-                      </textView>
-                      <button opaque="NO" contentMode="scaleToFill" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="cerrar-boleta">
-                        <rect key="frame" x="0" y="0" width="350" height="52" />
-                        <constraints>
-                          <constraint firstAttribute="height" constant="52" id="cerrar-boleta-height" />
-                        </constraints>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16" />
-                        <state key="normal" title="Cerrar">
-                          <color key="titleColor" systemColor="whiteColor" />
-                        </state>
-                        <color key="backgroundColor" systemColor="systemBlueColor" />
-                        <connections>
-                          <action selector="cerrarTapped:" destination="boleta-vc" eventType="touchUpInside" id="cerrar-boleta-action" />
-                        </connections>
-                      </button>
-                    </subviews>
-                  </stackView>
-                </subviews>
-                <viewLayoutGuide key="contentLayoutGuide" id="boleta-content" />
-                <viewLayoutGuide key="frameLayoutGuide" id="boleta-frame" />
-                <constraints>
-                  <constraint firstItem="boleta-stack" firstAttribute="leading" secondItem="boleta-content" secondAttribute="leading" constant="20" id="boleta-leading-content" />
-                  <constraint firstItem="boleta-content" firstAttribute="trailing" secondItem="boleta-stack" secondAttribute="trailing" constant="20" id="boleta-trailing-content" />
-                  <constraint firstItem="boleta-stack" firstAttribute="top" secondItem="boleta-content" secondAttribute="top" constant="20" id="boleta-top-content" />
-                  <constraint firstItem="boleta-content" firstAttribute="bottom" secondItem="boleta-stack" secondAttribute="bottom" constant="20" id="boleta-bottom-content" />
-                  <constraint firstItem="boleta-stack" firstAttribute="width" secondItem="boleta-frame" secondAttribute="width" constant="-40" id="boleta-width" />
-                </constraints>
-              </scrollView>
+              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BOLETA DE COMPRA" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="1" translatesAutoresizingMaskIntoConstraints="NO" id="boleta-heading">
+                <rect key="frame" x="24.0" y="44.0" width="342.0" height="28.0" />
+                <fontDescription key="fontDescription" type="boldSystem" pointSize="21" />
+                <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+              </label>
+              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ana Pérez (VIP) · DNI 12345678" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="boleta-cliente">
+                <rect key="frame" x="24.0" y="84.0" width="342.0" height="40.0" />
+                <fontDescription key="fontDescription" type="system" pointSize="14" />
+                <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+              </label>
+              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Refrigeradora x1&#10;Licuadora x2" textAlignment="left" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="boleta-items">
+                <rect key="frame" x="24.0" y="142.0" width="210.0" height="36.0" />
+                <fontDescription key="fontDescription" type="system" pointSize="15" />
+                <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+              </label>
+              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S/ 2000.00&#10;S/ 500.00" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="boleta-importes">
+                <rect key="frame" x="234.0" y="142.0" width="132.0" height="36.0" />
+                <fontDescription key="fontDescription" type="system" pointSize="15" />
+                <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+              </label>
+              <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="boleta-linea">
+                <rect key="frame" x="24.0" y="188.0" width="342.0" height="1.0" />
+                <color key="backgroundColor" white="0.89" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+              </view>
+              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtotal" textAlignment="left" lineBreakMode="tailTruncation" numberOfLines="1" translatesAutoresizingMaskIntoConstraints="NO" id="boleta-subtotal-title">
+                <rect key="frame" x="24.0" y="201.0" width="210.0" height="24.0" />
+                <fontDescription key="fontDescription" type="system" pointSize="16" />
+                <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+              </label>
+              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S/ 2500.00" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="1" translatesAutoresizingMaskIntoConstraints="NO" id="boleta-subtotal-value">
+                <rect key="frame" x="234.0" y="201.0" width="132.0" height="24.0" />
+                <fontDescription key="fontDescription" type="system" pointSize="16" />
+                <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+              </label>
+              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descuento (10%)" textAlignment="left" lineBreakMode="tailTruncation" numberOfLines="1" translatesAutoresizingMaskIntoConstraints="NO" id="boleta-descuento-title">
+                <rect key="frame" x="24.0" y="237.0" width="210.0" height="24.0" />
+                <fontDescription key="fontDescription" type="system" pointSize="16" />
+                <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+              </label>
+              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-S/ 250.00" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="1" translatesAutoresizingMaskIntoConstraints="NO" id="boleta-descuento-value">
+                <rect key="frame" x="234.0" y="237.0" width="132.0" height="24.0" />
+                <fontDescription key="fontDescription" type="system" pointSize="16" />
+                <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+              </label>
+              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IGV (18%)" textAlignment="left" lineBreakMode="tailTruncation" numberOfLines="1" translatesAutoresizingMaskIntoConstraints="NO" id="boleta-igv-title">
+                <rect key="frame" x="24.0" y="273.0" width="210.0" height="24.0" />
+                <fontDescription key="fontDescription" type="system" pointSize="16" />
+                <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+              </label>
+              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S/ 405.00" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="1" translatesAutoresizingMaskIntoConstraints="NO" id="boleta-igv-value">
+                <rect key="frame" x="234.0" y="273.0" width="132.0" height="24.0" />
+                <fontDescription key="fontDescription" type="system" pointSize="16" />
+                <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+              </label>
+              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL" textAlignment="left" lineBreakMode="tailTruncation" numberOfLines="1" translatesAutoresizingMaskIntoConstraints="NO" id="boleta-total-title">
+                <rect key="frame" x="24.0" y="309.0" width="210.0" height="24.0" />
+                <fontDescription key="fontDescription" type="boldSystem" pointSize="16" />
+                <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+              </label>
+              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S/ 2655.00" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="1" translatesAutoresizingMaskIntoConstraints="NO" id="boleta-total-value">
+                <rect key="frame" x="234.0" y="309.0" width="132.0" height="24.0" />
+                <fontDescription key="fontDescription" type="boldSystem" pointSize="16" />
+                <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+              </label>
+              <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="cerrar-boleta">
+                <rect key="frame" x="24.0" y="361.0" width="342.0" height="48.0" />
+                <color key="backgroundColor" red="0" green="0.36" blue="0.9" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
+                <fontDescription key="fontDescription" type="system" pointSize="16" />
+                <state key="normal" title="Cerrar">
+                  <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
+                </state>
+                <userDefinedRuntimeAttributes>
+                  <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <real key="value" value="10" />
+                  </userDefinedRuntimeAttribute>
+                </userDefinedRuntimeAttributes>
+                <connections>
+                  <action selector="cerrarTapped:" destination="boleta-vc" eventType="touchUpInside" id="cerrar-boleta-action" />
+                </connections>
+              </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="boleta-safe" />
-            <color key="backgroundColor" systemColor="systemBackgroundColor" />
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
             <constraints>
-              <constraint firstItem="boleta-scroll" firstAttribute="leading" secondItem="boleta-safe" secondAttribute="leading" id="boleta-leading-safe" />
-              <constraint firstItem="boleta-scroll" firstAttribute="trailing" secondItem="boleta-safe" secondAttribute="trailing" id="boleta-trailing-safe" />
-              <constraint firstItem="boleta-scroll" firstAttribute="top" secondItem="boleta-safe" secondAttribute="top" id="boleta-top-safe" />
-              <constraint firstItem="boleta-scroll" firstAttribute="bottom" secondItem="boleta-safe" secondAttribute="bottom" id="boleta-bottom-safe" />
+              <constraint firstItem="boleta-heading" firstAttribute="leading" constant="24" id="constraint-157" secondItem="boleta-safe" secondAttribute="leading" />
+              <constraint firstItem="boleta-heading" firstAttribute="trailing" constant="-24" id="constraint-158" secondItem="boleta-safe" secondAttribute="trailing" />
+              <constraint firstItem="boleta-heading" firstAttribute="height" constant="28" id="constraint-159" />
+              <constraint firstItem="boleta-heading" firstAttribute="top" constant="24" id="constraint-160" secondItem="boleta-safe" secondAttribute="top" />
+              <constraint firstItem="boleta-cliente" firstAttribute="leading" constant="24" id="constraint-161" secondItem="boleta-safe" secondAttribute="leading" />
+              <constraint firstItem="boleta-cliente" firstAttribute="trailing" constant="-24" id="constraint-162" secondItem="boleta-safe" secondAttribute="trailing" />
+              <constraint firstItem="boleta-cliente" firstAttribute="height" constant="40" id="constraint-163" />
+              <constraint firstItem="boleta-cliente" firstAttribute="top" constant="12" id="constraint-164" secondItem="boleta-heading" secondAttribute="bottom" />
+              <constraint firstItem="boleta-items" firstAttribute="width" constant="-24" id="constraint-165" secondItem="boleta-safe" secondAttribute="width" multiplier="0.6" />
+              <constraint firstItem="boleta-items" firstAttribute="leading" constant="24" id="constraint-166" secondItem="boleta-safe" secondAttribute="leading" />
+              <constraint firstItem="boleta-items" firstAttribute="top" constant="18" id="constraint-168" secondItem="boleta-cliente" secondAttribute="bottom" />
+              <constraint firstItem="boleta-importes" firstAttribute="width" constant="-24" id="constraint-169" secondItem="boleta-safe" secondAttribute="width" multiplier="0.4" />
+              <constraint firstItem="boleta-importes" firstAttribute="trailing" constant="-24" id="constraint-170" secondItem="boleta-safe" secondAttribute="trailing" />
+              <constraint firstItem="boleta-importes" firstAttribute="top" constant="0" id="constraint-172" secondItem="boleta-items" secondAttribute="top" />
+              <constraint firstItem="boleta-linea" firstAttribute="leading" constant="24" id="constraint-173" secondItem="boleta-safe" secondAttribute="leading" />
+              <constraint firstItem="boleta-linea" firstAttribute="trailing" constant="-24" id="constraint-174" secondItem="boleta-safe" secondAttribute="trailing" />
+              <constraint firstItem="boleta-linea" firstAttribute="height" constant="1" id="constraint-175" />
+              <constraint firstItem="boleta-linea" firstAttribute="top" constant="10" id="constraint-176" secondItem="boleta-items" secondAttribute="bottom" />
+              <constraint firstItem="boleta-subtotal-title" firstAttribute="width" constant="-24" id="constraint-177" secondItem="boleta-safe" secondAttribute="width" multiplier="0.6" />
+              <constraint firstItem="boleta-subtotal-title" firstAttribute="leading" constant="24" id="constraint-178" secondItem="boleta-safe" secondAttribute="leading" />
+              <constraint firstItem="boleta-subtotal-title" firstAttribute="height" constant="24" id="constraint-179" />
+              <constraint firstItem="boleta-subtotal-title" firstAttribute="top" constant="12" id="constraint-180" secondItem="boleta-linea" secondAttribute="bottom" />
+              <constraint firstItem="boleta-subtotal-value" firstAttribute="width" constant="-24" id="constraint-181" secondItem="boleta-safe" secondAttribute="width" multiplier="0.4" />
+              <constraint firstItem="boleta-subtotal-value" firstAttribute="trailing" constant="-24" id="constraint-182" secondItem="boleta-safe" secondAttribute="trailing" />
+              <constraint firstItem="boleta-subtotal-value" firstAttribute="height" constant="24" id="constraint-183" />
+              <constraint firstItem="boleta-subtotal-value" firstAttribute="top" constant="0" id="constraint-184" secondItem="boleta-subtotal-title" secondAttribute="top" />
+              <constraint firstItem="boleta-descuento-title" firstAttribute="width" constant="-24" id="constraint-185" secondItem="boleta-safe" secondAttribute="width" multiplier="0.6" />
+              <constraint firstItem="boleta-descuento-title" firstAttribute="leading" constant="24" id="constraint-186" secondItem="boleta-safe" secondAttribute="leading" />
+              <constraint firstItem="boleta-descuento-title" firstAttribute="height" constant="24" id="constraint-187" />
+              <constraint firstItem="boleta-descuento-title" firstAttribute="top" constant="12" id="constraint-188" secondItem="boleta-subtotal-title" secondAttribute="bottom" />
+              <constraint firstItem="boleta-descuento-value" firstAttribute="width" constant="-24" id="constraint-189" secondItem="boleta-safe" secondAttribute="width" multiplier="0.4" />
+              <constraint firstItem="boleta-descuento-value" firstAttribute="trailing" constant="-24" id="constraint-190" secondItem="boleta-safe" secondAttribute="trailing" />
+              <constraint firstItem="boleta-descuento-value" firstAttribute="height" constant="24" id="constraint-191" />
+              <constraint firstItem="boleta-descuento-value" firstAttribute="top" constant="0" id="constraint-192" secondItem="boleta-descuento-title" secondAttribute="top" />
+              <constraint firstItem="boleta-igv-title" firstAttribute="width" constant="-24" id="constraint-193" secondItem="boleta-safe" secondAttribute="width" multiplier="0.6" />
+              <constraint firstItem="boleta-igv-title" firstAttribute="leading" constant="24" id="constraint-194" secondItem="boleta-safe" secondAttribute="leading" />
+              <constraint firstItem="boleta-igv-title" firstAttribute="height" constant="24" id="constraint-195" />
+              <constraint firstItem="boleta-igv-title" firstAttribute="top" constant="12" id="constraint-196" secondItem="boleta-descuento-title" secondAttribute="bottom" />
+              <constraint firstItem="boleta-igv-value" firstAttribute="width" constant="-24" id="constraint-197" secondItem="boleta-safe" secondAttribute="width" multiplier="0.4" />
+              <constraint firstItem="boleta-igv-value" firstAttribute="trailing" constant="-24" id="constraint-198" secondItem="boleta-safe" secondAttribute="trailing" />
+              <constraint firstItem="boleta-igv-value" firstAttribute="height" constant="24" id="constraint-199" />
+              <constraint firstItem="boleta-igv-value" firstAttribute="top" constant="0" id="constraint-200" secondItem="boleta-igv-title" secondAttribute="top" />
+              <constraint firstItem="boleta-total-title" firstAttribute="width" constant="-24" id="constraint-201" secondItem="boleta-safe" secondAttribute="width" multiplier="0.6" />
+              <constraint firstItem="boleta-total-title" firstAttribute="leading" constant="24" id="constraint-202" secondItem="boleta-safe" secondAttribute="leading" />
+              <constraint firstItem="boleta-total-title" firstAttribute="height" constant="24" id="constraint-203" />
+              <constraint firstItem="boleta-total-title" firstAttribute="top" constant="12" id="constraint-204" secondItem="boleta-igv-title" secondAttribute="bottom" />
+              <constraint firstItem="boleta-total-value" firstAttribute="width" constant="-24" id="constraint-205" secondItem="boleta-safe" secondAttribute="width" multiplier="0.4" />
+              <constraint firstItem="boleta-total-value" firstAttribute="trailing" constant="-24" id="constraint-206" secondItem="boleta-safe" secondAttribute="trailing" />
+              <constraint firstItem="boleta-total-value" firstAttribute="height" constant="24" id="constraint-207" />
+              <constraint firstItem="boleta-total-value" firstAttribute="top" constant="0" id="constraint-208" secondItem="boleta-total-title" secondAttribute="top" />
+              <constraint firstItem="cerrar-boleta" firstAttribute="leading" constant="24" id="constraint-209" secondItem="boleta-safe" secondAttribute="leading" />
+              <constraint firstItem="cerrar-boleta" firstAttribute="trailing" constant="-24" id="constraint-210" secondItem="boleta-safe" secondAttribute="trailing" />
+              <constraint firstItem="cerrar-boleta" firstAttribute="height" constant="48" id="constraint-211" />
+              <constraint firstItem="cerrar-boleta" firstAttribute="top" constant="28" id="constraint-212" secondItem="boleta-total-title" secondAttribute="bottom" />
+              <constraint firstItem="boleta-items" firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="boleta-items-minheight" />
+              <constraint firstItem="boleta-importes" firstAttribute="height" secondItem="boleta-items" secondAttribute="height" id="boleta-items-sameheight" />
             </constraints>
           </view>
-          <navigationItem key="navigationItem" title="Boleta" id="boleta-navitem" />
+          <navigationItem key="navigationItem" title="Boleta" id="boleta-nav" />
           <connections>
-            <outlet property="boletaTextView" destination="boleta-texto" id="boleta-boletaTextView-outlet" />
+            <outlet property="clienteLabel" destination="boleta-cliente" id="boleta-clienteLabel-outlet" />
+            <outlet property="itemsLabel" destination="boleta-items" id="boleta-itemsLabel-outlet" />
+            <outlet property="importesLabel" destination="boleta-importes" id="boleta-importesLabel-outlet" />
+            <outlet property="subtotalLabel" destination="boleta-subtotal-value" id="boleta-subtotalLabel-outlet" />
+            <outlet property="descuentoLabel" destination="boleta-descuento-value" id="boleta-descuentoLabel-outlet" />
+            <outlet property="descuentoTituloLabel" destination="boleta-descuento-title" id="boleta-descuentoTituloLabel-outlet" />
+            <outlet property="igvLabel" destination="boleta-igv-value" id="boleta-igvLabel-outlet" />
+            <outlet property="totalLabel" destination="boleta-total-value" id="boleta-totalLabel-outlet" />
           </connections>
         </viewController>
-        <placeholder placeholderIdentifier="IBFirstResponder" id="boleta-first" userLabel="First Responder" sceneMemberID="firstResponder" />
+        <placeholder placeholderIdentifier="IBFirstResponder" id="boleta-first" sceneMemberID="firstResponder" />
       </objects>
-      <point key="canvasLocation" x="2400" y="300" />
+      <point key="canvasLocation" x="1950" y="350" />
     </scene>
   </scenes>
-  <resources>
-    <systemColor name="systemBackgroundColor">
-      <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
-    </systemColor>
-    <systemColor name="secondarySystemBackgroundColor">
-      <color white="0.95" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
-    </systemColor>
-    <systemColor name="labelColor">
-      <color white="0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
-    </systemColor>
-    <systemColor name="whiteColor">
-      <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
-    </systemColor>
-    <systemColor name="systemBlueColor">
-      <color red="0" green="0.4784313725" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB" />
-    </systemColor>
-  </resources>
 </document>

@@ -93,6 +93,14 @@ class CarritoModel {
             .joined(separator: "\n\n")
     }
 
+    func nombresLineas() -> String {
+        items.map { "\($0.producto.nombre) x\($0.cantidad)" }.joined(separator: "\n")
+    }
+
+    func importesLineas() -> String {
+        items.map { Moneda.formato($0.subtotal()) }.joined(separator: "\n")
+    }
+
     // Guarda valores inmutables ANTES de descontar stock y vaciar el carrito.
     // Se valida el conjunto completo antes de modificar cualquier producto.
     func confirmarCompra(cliente: ClienteModel) -> BoletaModel? {
@@ -101,7 +109,8 @@ class CarritoModel {
             return nil
         }
         let boleta = BoletaModel(cliente: cliente, categoria: categoriaCliente(),
-                                 lineas: detalleLineas(), subtotal: subtotal(),
+                                 lineas: detalleLineas(), nombresLineas: nombresLineas(),
+                                 importesLineas: importesLineas(), subtotal: subtotal(),
                                  porcentaje: porcentajeDescuento(), descuento: descuento(),
                                  igv: igv(), total: total())
         for item in items {
@@ -117,17 +126,22 @@ class BoletaModel {
     let cliente: ClienteModel
     let categoria: String
     let lineas: String
+    let nombresLineas: String
+    let importesLineas: String
     let subtotal: Double
     let porcentaje: Double
     let descuento: Double
     let igv: Double
     let total: Double
 
-    init(cliente: ClienteModel, categoria: String, lineas: String, subtotal: Double,
+    init(cliente: ClienteModel, categoria: String, lineas: String,
+         nombresLineas: String, importesLineas: String, subtotal: Double,
          porcentaje: Double, descuento: Double, igv: Double, total: Double) {
         self.cliente = cliente
         self.categoria = categoria
         self.lineas = lineas
+        self.nombresLineas = nombresLineas
+        self.importesLineas = importesLineas
         self.subtotal = subtotal
         self.porcentaje = porcentaje
         self.descuento = descuento

@@ -14,12 +14,12 @@ class DetalleViewController: UIViewController {
         super.viewWillAppear(animated)
         guard producto != nil, carrito != nil else { return }
         nombreLabel.text = producto.nombre
-        precioLabel.text = "Precio: \(Moneda.formato(producto.precio))"
+        precioLabel.text = Moneda.formato(producto.precio)
         actualizarCantidadYStock()
     }
 
     @IBAction func cantidadChanged(_ sender: UIStepper) {
-        cantidadLabel.text = "Cantidad: \(Int(sender.value))"
+        cantidadLabel.text = "\(Int(sender.value))"
     }
 
     @IBAction func agregarTapped(_ sender: UIButton) {
@@ -37,8 +37,7 @@ class DetalleViewController: UIViewController {
     }
 
     private func actualizarCantidadYStock() {
-        let reservada = carrito.cantidadReservada(de: producto)
-        stockLabel.text = "Stock: \(producto.stock) · Disponible: \(max(0, producto.stock - reservada))"
-        cantidadLabel.text = "Cantidad: \(Int(cantidadStepper.value))"
+        stockLabel.text = "\(producto.stock)"
+        cantidadLabel.text = "\(Int(cantidadStepper.value))"
     }
 }

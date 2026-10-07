@@ -46,6 +46,19 @@ class DatosClienteViewController: UIViewController, UITextFieldDelegate {
             destino.carrito = carrito
             destino.cliente = cliente
             destino.boleta = boleta
+            if let sheet = destino.sheetPresentationController {
+                if #available(iOS 16.0, *) {
+                    let altura = UISheetPresentationController.Detent.Identifier("boleta")
+                    sheet.detents = [.custom(identifier: altura) { contexto in
+                        min(550, contexto.maximumDetentValue)
+                    }, .large()]
+                    sheet.selectedDetentIdentifier = altura
+                } else {
+                    sheet.detents = [.large()]
+                }
+                sheet.prefersGrabberVisible = true
+                sheet.preferredCornerRadius = 20
+            }
         }
     }
 

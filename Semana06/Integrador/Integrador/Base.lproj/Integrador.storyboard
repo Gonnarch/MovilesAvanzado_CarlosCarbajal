@@ -212,18 +212,18 @@
                 <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
               </label>
               <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cantidad" textAlignment="left" lineBreakMode="tailTruncation" numberOfLines="1" translatesAutoresizingMaskIntoConstraints="NO" id="cantidad-title">
-                <rect key="frame" x="24.0" y="263.0" width="190.0" height="32.0" />
+                <rect key="frame" x="24.0" y="263.0" width="96" height="44" />
                 <fontDescription key="fontDescription" type="system" pointSize="16" />
                 <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
               </label>
-              <stepper opaque="NO" contentMode="scaleToFill" value="1" stepValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cantidad-stepper" minValue="1" maxValue="100">
-                <rect key="frame" x="272.0" y="263.0" width="94.0" height="32.0" />
+              <stepper opaque="NO" contentMode="scaleToFill" value="1" stepValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cantidad-stepper" minValue="1" maxValue="100" userInteractionEnabled="YES" enabled="YES">
+                <rect key="frame" x="246" y="263" width="120" height="44" />
                 <connections>
                   <action selector="cantidadChanged:" destination="detalle-vc" eventType="valueChanged" id="stepper-action" />
                 </connections>
               </stepper>
               <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="1" translatesAutoresizingMaskIntoConstraints="NO" id="detalle-cantidad">
-                <rect key="frame" x="226.0" y="263.0" width="36.0" height="32.0" />
+                <rect key="frame" x="200" y="263.0" width="36.0" height="44" />
                 <fontDescription key="fontDescription" type="system" pointSize="16" />
                 <color key="textColor" white="0.12" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" />
               </label>
@@ -267,16 +267,14 @@
               <constraint firstItem="detalle-stock-value" firstAttribute="trailing" constant="-24" id="constraint-50" secondItem="detalle-safe" secondAttribute="trailing" />
               <constraint firstItem="detalle-stock-value" firstAttribute="height" constant="24" id="constraint-51" />
               <constraint firstItem="detalle-stock-value" firstAttribute="top" constant="0" id="constraint-52" secondItem="detalle-stock-title" secondAttribute="top" />
-              <constraint firstItem="cantidad-title" firstAttribute="width" constant="190" id="constraint-53" />
+              <constraint firstItem="cantidad-title" firstAttribute="width" constant="96" id="constraint-53" />
               <constraint firstItem="cantidad-title" firstAttribute="leading" constant="24" id="constraint-54" secondItem="detalle-safe" secondAttribute="leading" />
-              <constraint firstItem="cantidad-title" firstAttribute="height" constant="32" id="constraint-55" />
+              <constraint firstItem="cantidad-title" firstAttribute="height" constant="44" id="constraint-55" />
               <constraint firstItem="cantidad-title" firstAttribute="top" constant="14" id="constraint-56" secondItem="detalle-stock-title" secondAttribute="bottom" />
-              <constraint firstItem="cantidad-stepper" firstAttribute="width" constant="94" id="constraint-57" />
               <constraint firstItem="cantidad-stepper" firstAttribute="trailing" constant="-24" id="constraint-58" secondItem="detalle-safe" secondAttribute="trailing" />
-              <constraint firstItem="cantidad-stepper" firstAttribute="height" constant="32" id="constraint-59" />
-              <constraint firstItem="cantidad-stepper" firstAttribute="top" constant="0" id="constraint-60" secondItem="cantidad-title" secondAttribute="top" />
+              <constraint firstItem="cantidad-stepper" firstAttribute="centerY" constant="0" id="constraint-60" secondItem="cantidad-title" secondAttribute="centerY" />
               <constraint firstItem="detalle-cantidad" firstAttribute="width" constant="36" id="constraint-61" />
-              <constraint firstItem="detalle-cantidad" firstAttribute="height" constant="32" id="constraint-62" />
+              <constraint firstItem="detalle-cantidad" firstAttribute="height" constant="44" id="constraint-62" />
               <constraint firstItem="detalle-cantidad" firstAttribute="trailing" constant="-10" id="constraint-63" secondItem="cantidad-stepper" secondAttribute="leading" />
               <constraint firstItem="detalle-cantidad" firstAttribute="top" constant="0" id="constraint-64" secondItem="cantidad-title" secondAttribute="top" />
               <constraint firstItem="agregar-carrito" firstAttribute="leading" constant="24" id="constraint-65" secondItem="detalle-safe" secondAttribute="leading" />

@@ -14,12 +14,20 @@ class DetalleViewController: UIViewController {
         super.viewDidLoad()
         // Configuración de comportamiento del control colocado manualmente en Storyboard.
         // A 1 unidad, el botón menos está deshabilitado por el límite mínimo.
-        cantidadStepper.minimumValue = 1
         cantidadStepper.maximumValue = 100
+        cantidadStepper.minimumValue = 1
         cantidadStepper.stepValue = 1
         cantidadStepper.value = 1
         cantidadStepper.isEnabled = true
         cantidadStepper.isUserInteractionEnabled = true
+        cantidadStepper.isContinuous = true
+        cantidadStepper.wraps = false
+        // Asegura la conexión del evento aunque se haya desconectado en Storyboard.
+        cantidadStepper.removeTarget(self, action: #selector(cantidadChanged(_:)), for: .valueChanged)
+        cantidadStepper.addTarget(self, action: #selector(cantidadChanged(_:)), for: .valueChanged)
+        cantidadStepper.setContentCompressionResistancePriority(.required, for: .horizontal)
+        cantidadStepper.setContentCompressionResistancePriority(.required, for: .vertical)
+        cantidadLabel.text = "1"
     }
 
     override func viewWillAppear(_ animated: Bool) {

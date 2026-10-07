@@ -105,3 +105,9 @@ Consulta [docs/requerimientos.md](docs/requerimientos.md).
 Se verificaron estáticamente el XML, los cinco tags, las conexiones de outlets y acciones, el único carrito, el único target, las referencias del proyecto y la consistencia de las constraints. El diseño usa títulos centrados, columnas de producto e importe, campos sin textos de ejemplo y botones redondeados como en la guía. Se reemplazaron los contenedores con espacios incorrectos y los recursos de color de la versión anterior. La captura solo mostraba el mensaje general CompileStoryboard, por lo que el error nativo aún debe confirmarse con el detalle del log o recompilando en Xcode. La compilación y la interacción real todavía deben probarse en Xcode; este entorno no dispone de Xcode ni simulador iOS. Los montos de la tabla son los resultados esperados del PDF.
 
 Los controladores no crean la interfaz en tiempo de ejecución. Las cinco pantallas se encuentran en el Storyboard.
+
+## Revisión del control de cantidad
+
+Se quitaron las restricciones rígidas 94×32 del Stepper para que UIKit use su tamaño natural. Se dejó habilitado y se conectó explícitamente Value Changed con cantidadChanged. No se crean botones ni vistas desde Swift. Esta edición del Storyboard es una corrección del archivo existente y no acredita un montaje manual en Xcode.
+
+Prueba pendiente en simulador: abrir un producto, pulsar más dos veces (1 → 2 → 3), pulsar menos (3 → 2), agregar y comprobar dos unidades en el carrito. Menos no puede bajar de 1. La causa exacta en el proyecto abierto por el usuario todavía no está confirmada; se corrigieron el tamaño y el evento del control del archivo entregado.

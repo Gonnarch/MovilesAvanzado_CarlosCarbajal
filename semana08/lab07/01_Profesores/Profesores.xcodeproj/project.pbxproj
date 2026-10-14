@@ -1,0 +1,31 @@
+// !$*UTF8*$!
+{ archiveVersion = 1; classes = {}; objectVersion = 56; objects = {
+DD2F86A6B087EEAC4DDEE1FB = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+6EB690AFE9DC75FD99BCCCD4 = { isa = PBXBuildFile; fileRef = DD2F86A6B087EEAC4DDEE1FB; };
+48D3117C5326A1BBCC950994 = { isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+36E9D40EC390A27416C095A9 = { isa = PBXBuildFile; fileRef = 48D3117C5326A1BBCC950994; };
+2B4C8DA81BF88147E43A763D = { isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+5515A0450A3AB0B5FF7728FD = { isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+EBCF02E3AEB32B4389472951 = { isa = PBXBuildFile; fileRef = 5515A0450A3AB0B5FF7728FD; };
+B13D3CA972F240A7A755215C = { isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+E10D80E20E28946F1E8E265A = { isa = PBXBuildFile; fileRef = B13D3CA972F240A7A755215C; };
+B9E2F52487CB17A4DD178977 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profesor.swift; sourceTree = "<group>"; };
+36AB5FAA556AB5365F552509 = { isa = PBXBuildFile; fileRef = B9E2F52487CB17A4DD178977; };
+82248E2DA1C0674C9A28F843 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+FF96EC7B3C03AF39A36126D8 = { isa = PBXBuildFile; fileRef = 82248E2DA1C0674C9A28F843; };
+9C5561DA019F81F344E56337 = { isa = PBXFileReference; explicitFileType = wrapper.application; path = Profesores.app; sourceTree = BUILT_PRODUCTS_DIR; };
+62A02B6D7292CB1DF4962E10 = { isa = PBXGroup; children = (DD2F86A6B087EEAC4DDEE1FB,48D3117C5326A1BBCC950994,2B4C8DA81BF88147E43A763D,5515A0450A3AB0B5FF7728FD,B13D3CA972F240A7A755215C,B9E2F52487CB17A4DD178977,82248E2DA1C0674C9A28F843,); path = Profesores; sourceTree = "<group>"; };
+3F99EAEF051EA9D74074A436 = { isa = PBXGroup; children = (9C5561DA019F81F344E56337,); name = Products; sourceTree = "<group>"; };
+232E225B81A32EF95C84C47B = { isa = PBXGroup; children = (62A02B6D7292CB1DF4962E10,3F99EAEF051EA9D74074A436,); sourceTree = "<group>"; };
+FF0623F868DCE451D6BA645C = { isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (6EB690AFE9DC75FD99BCCCD4,36AB5FAA556AB5365F552509,FF96EC7B3C03AF39A36126D8,); runOnlyForDeploymentPostprocessing = 0; };
+AC90D83AA23639246ABF4B5B = { isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (36E9D40EC390A27416C095A9,EBCF02E3AEB32B4389472951,E10D80E20E28946F1E8E265A,); runOnlyForDeploymentPostprocessing = 0; };
+2D6F9433FF7746B50CA19263 = { isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+252FA200EEF84115F4A6D528 = { isa = XCBuildConfiguration; buildSettings = { SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 15.0; SWIFT_VERSION = 5.0; CLANG_ENABLE_MODULES = YES; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; }; name = Debug; };
+FA082DCBB12A68A01085DB0C = { isa = XCBuildConfiguration; buildSettings = { SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 15.0; SWIFT_VERSION = 5.0; CLANG_ENABLE_MODULES = YES; SWIFT_OPTIMIZATION_LEVEL = "-O"; }; name = Release; };
+12BFFCB0FB5B7F5C6795D70C = { isa = XCConfigurationList; buildConfigurations = (252FA200EEF84115F4A6D528,FA082DCBB12A68A01085DB0C,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+45507C0A0BC7926323A229E8 = { isa = XCBuildConfiguration; buildSettings = { CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = Profesores/Info.plist; PRODUCT_BUNDLE_IDENTIFIER = pe.edu.tecsup.carbajal.profesores; PRODUCT_NAME = "$(TARGET_NAME)"; TARGETED_DEVICE_FAMILY = "1,2"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; }; name = Debug; };
+1EA8890AF0A1C43ED7DE2FC1 = { isa = XCBuildConfiguration; buildSettings = { CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = Profesores/Info.plist; PRODUCT_BUNDLE_IDENTIFIER = pe.edu.tecsup.carbajal.profesores; PRODUCT_NAME = "$(TARGET_NAME)"; TARGETED_DEVICE_FAMILY = "1,2"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; }; name = Release; };
+01F6FA459839B1A6CDC65EBC = { isa = XCConfigurationList; buildConfigurations = (45507C0A0BC7926323A229E8,1EA8890AF0A1C43ED7DE2FC1,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+5C86A7608741123307B257FA = { isa = PBXNativeTarget; buildConfigurationList = 01F6FA459839B1A6CDC65EBC; buildPhases = (FF0623F868DCE451D6BA645C,AC90D83AA23639246ABF4B5B,2D6F9433FF7746B50CA19263,); buildRules = (); dependencies = (); name = Profesores; productName = Profesores; productReference = 9C5561DA019F81F344E56337; productType = "com.apple.product-type.application"; };
+045F4887E6F7BE892C86C95B = { isa = PBXProject; attributes = { LastUpgradeCheck = 1600; }; buildConfigurationList = 12BFFCB0FB5B7F5C6795D70C; compatibilityVersion = "Xcode 14.0"; developmentRegion = es; knownRegions = (es,en,Base,); mainGroup = 232E225B81A32EF95C84C47B; productRefGroup = 3F99EAEF051EA9D74074A436; projectDirPath = ""; projectRoot = ""; targets = (5C86A7608741123307B257FA,); };
+}; rootObject = 045F4887E6F7BE892C86C95B; }

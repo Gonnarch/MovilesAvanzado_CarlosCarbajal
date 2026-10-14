@@ -1,0 +1,35 @@
+// !$*UTF8*$!
+{ archiveVersion = 1; classes = {}; objectVersion = 56; objects = {
+9A84F2DE9FADEFB0CF38856C = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+185E043EC2CECD4FC3AD5B6B = { isa = PBXBuildFile; fileRef = 9A84F2DE9FADEFB0CF38856C; };
+E11C5D6AB3B2BBBB2D3A0CA0 = { isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+1157CC0ED641A29A09C4DD89 = { isa = PBXBuildFile; fileRef = E11C5D6AB3B2BBBB2D3A0CA0; };
+679DD726F20814A9A91BD600 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cultura.swift; sourceTree = "<group>"; };
+7F8CDB9548BE6CD47604231A = { isa = PBXBuildFile; fileRef = 679DD726F20814A9A91BD600; };
+EB745365F71715D401F0076D = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleCulturaViewController.swift; sourceTree = "<group>"; };
+136DA6984CD23997AFDF56C4 = { isa = PBXBuildFile; fileRef = EB745365F71715D401F0076D; };
+AB3639089473E8B5C19B3A7D = { isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+9A0B3ECACD0399CCCE9D9396 = { isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+A39B60C95866246DD1B0C22D = { isa = PBXBuildFile; fileRef = 9A0B3ECACD0399CCCE9D9396; };
+639BAE5ADEE5F1E85752F485 = { isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+9F46AFBC67DE84211B615E30 = { isa = PBXBuildFile; fileRef = 639BAE5ADEE5F1E85752F485; };
+0B2981AD163D6BF5AF5626BE = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonasTableViewCell.swift; sourceTree = "<group>"; };
+8E649DF1B380137B03563B6C = { isa = PBXBuildFile; fileRef = 0B2981AD163D6BF5AF5626BE; };
+A3FB286F8CB8D8E6E5B1D23F = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+2F21AA93730A3EB6C32FECFB = { isa = PBXBuildFile; fileRef = A3FB286F8CB8D8E6E5B1D23F; };
+2F00E93D13E9F6381C0061B2 = { isa = PBXFileReference; explicitFileType = wrapper.application; path = CulturasPeruanas.app; sourceTree = BUILT_PRODUCTS_DIR; };
+18DB126EFDF02DC053A57789 = { isa = PBXGroup; children = (9A84F2DE9FADEFB0CF38856C,E11C5D6AB3B2BBBB2D3A0CA0,679DD726F20814A9A91BD600,EB745365F71715D401F0076D,AB3639089473E8B5C19B3A7D,9A0B3ECACD0399CCCE9D9396,639BAE5ADEE5F1E85752F485,0B2981AD163D6BF5AF5626BE,A3FB286F8CB8D8E6E5B1D23F,); path = CulturasPeruanas; sourceTree = "<group>"; };
+6728C98DE9A369C275722FE3 = { isa = PBXGroup; children = (2F00E93D13E9F6381C0061B2,); name = Products; sourceTree = "<group>"; };
+A9F257FE191019FD113CF83A = { isa = PBXGroup; children = (18DB126EFDF02DC053A57789,6728C98DE9A369C275722FE3,); sourceTree = "<group>"; };
+F5BE66C620DD918932C29565 = { isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (185E043EC2CECD4FC3AD5B6B,7F8CDB9548BE6CD47604231A,136DA6984CD23997AFDF56C4,8E649DF1B380137B03563B6C,2F21AA93730A3EB6C32FECFB,); runOnlyForDeploymentPostprocessing = 0; };
+A01FA56319BAFB6EA20691AB = { isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (1157CC0ED641A29A09C4DD89,A39B60C95866246DD1B0C22D,9F46AFBC67DE84211B615E30,); runOnlyForDeploymentPostprocessing = 0; };
+857FD1E5CAFD92DCD0CC8644 = { isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+38F5FB64E56DC45F8F6100E1 = { isa = XCBuildConfiguration; buildSettings = { SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 15.0; SWIFT_VERSION = 5.0; CLANG_ENABLE_MODULES = YES; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; }; name = Debug; };
+3A29328DE2586AF98941325D = { isa = XCBuildConfiguration; buildSettings = { SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 15.0; SWIFT_VERSION = 5.0; CLANG_ENABLE_MODULES = YES; SWIFT_OPTIMIZATION_LEVEL = "-O"; }; name = Release; };
+5F17E1E92455811AD7CDCAD0 = { isa = XCConfigurationList; buildConfigurations = (38F5FB64E56DC45F8F6100E1,3A29328DE2586AF98941325D,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+53798410C0F1DD9EA5ADC9C0 = { isa = XCBuildConfiguration; buildSettings = { CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = CulturasPeruanas/Info.plist; PRODUCT_BUNDLE_IDENTIFIER = pe.edu.tecsup.carbajal.culturasperuanas; PRODUCT_NAME = "$(TARGET_NAME)"; TARGETED_DEVICE_FAMILY = "1,2"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; }; name = Debug; };
+B83B425A362F6EA6D170E91B = { isa = XCBuildConfiguration; buildSettings = { CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = CulturasPeruanas/Info.plist; PRODUCT_BUNDLE_IDENTIFIER = pe.edu.tecsup.carbajal.culturasperuanas; PRODUCT_NAME = "$(TARGET_NAME)"; TARGETED_DEVICE_FAMILY = "1,2"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; }; name = Release; };
+0EB21BE8EFC7DA84D89139F3 = { isa = XCConfigurationList; buildConfigurations = (53798410C0F1DD9EA5ADC9C0,B83B425A362F6EA6D170E91B,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+61DCB07D5DE3FCA77CCD21EE = { isa = PBXNativeTarget; buildConfigurationList = 0EB21BE8EFC7DA84D89139F3; buildPhases = (F5BE66C620DD918932C29565,A01FA56319BAFB6EA20691AB,857FD1E5CAFD92DCD0CC8644,); buildRules = (); dependencies = (); name = CulturasPeruanas; productName = CulturasPeruanas; productReference = 2F00E93D13E9F6381C0061B2; productType = "com.apple.product-type.application"; };
+E436F833565024DBB405C423 = { isa = PBXProject; attributes = { LastUpgradeCheck = 1600; }; buildConfigurationList = 5F17E1E92455811AD7CDCAD0; compatibilityVersion = "Xcode 14.0"; developmentRegion = es; knownRegions = (es,en,Base,); mainGroup = A9F257FE191019FD113CF83A; productRefGroup = 6728C98DE9A369C275722FE3; projectDirPath = ""; projectRoot = ""; targets = (61DCB07D5DE3FCA77CCD21EE,); };
+}; rootObject = E436F833565024DBB405C423; }

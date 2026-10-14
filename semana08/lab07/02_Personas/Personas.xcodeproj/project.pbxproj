@@ -1,0 +1,31 @@
+// !$*UTF8*$!
+{ archiveVersion = 1; classes = {}; objectVersion = 56; objects = {
+0D3F368289C5E1F23ED660D7 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+E24515DBA4F5D76489D9AB7E = { isa = PBXBuildFile; fileRef = 0D3F368289C5E1F23ED660D7; };
+5641FD24222F78201BEDEBFC = { isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+7CE2CA5069F22CF16940E372 = { isa = PBXBuildFile; fileRef = 5641FD24222F78201BEDEBFC; };
+FCE0D1A56D260349054F5D1E = { isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+476F2779D25FDB3C9CE8DD1C = { isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+604EDBB9C5FC1BB16700F2ED = { isa = PBXBuildFile; fileRef = 476F2779D25FDB3C9CE8DD1C; };
+2E5E96A94DC68B00C6217A49 = { isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+EF1C40E1349E3CE1A46D5D08 = { isa = PBXBuildFile; fileRef = 2E5E96A94DC68B00C6217A49; };
+3CF7A2CB0099B3810CF35F76 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonasTableViewCell.swift; sourceTree = "<group>"; };
+8AD71DCD26D244AF940884AD = { isa = PBXBuildFile; fileRef = 3CF7A2CB0099B3810CF35F76; };
+4E1B63B9BA5F82BCB73EFEC7 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+062B9EE4FBC55A956505A9F6 = { isa = PBXBuildFile; fileRef = 4E1B63B9BA5F82BCB73EFEC7; };
+C36B795523B9B4E3351456F0 = { isa = PBXFileReference; explicitFileType = wrapper.application; path = Personas.app; sourceTree = BUILT_PRODUCTS_DIR; };
+EDBCAABEB670BAA35293EE7E = { isa = PBXGroup; children = (0D3F368289C5E1F23ED660D7,5641FD24222F78201BEDEBFC,FCE0D1A56D260349054F5D1E,476F2779D25FDB3C9CE8DD1C,2E5E96A94DC68B00C6217A49,3CF7A2CB0099B3810CF35F76,4E1B63B9BA5F82BCB73EFEC7,); path = Personas; sourceTree = "<group>"; };
+4E7BB4F95551E0FE1E3017B5 = { isa = PBXGroup; children = (C36B795523B9B4E3351456F0,); name = Products; sourceTree = "<group>"; };
+C6B16B2CF1A45D8F8BD7D944 = { isa = PBXGroup; children = (EDBCAABEB670BAA35293EE7E,4E7BB4F95551E0FE1E3017B5,); sourceTree = "<group>"; };
+EFED7732187C02C6446B75C0 = { isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (E24515DBA4F5D76489D9AB7E,8AD71DCD26D244AF940884AD,062B9EE4FBC55A956505A9F6,); runOnlyForDeploymentPostprocessing = 0; };
+4D496A40E11623C07B70B053 = { isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (7CE2CA5069F22CF16940E372,604EDBB9C5FC1BB16700F2ED,EF1C40E1349E3CE1A46D5D08,); runOnlyForDeploymentPostprocessing = 0; };
+841E967806EAD32D68D5216D = { isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+90D26FBCAB71577D6EAB880E = { isa = XCBuildConfiguration; buildSettings = { SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 15.0; SWIFT_VERSION = 5.0; CLANG_ENABLE_MODULES = YES; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; }; name = Debug; };
+73CB3BB351EA587D05C415C5 = { isa = XCBuildConfiguration; buildSettings = { SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 15.0; SWIFT_VERSION = 5.0; CLANG_ENABLE_MODULES = YES; SWIFT_OPTIMIZATION_LEVEL = "-O"; }; name = Release; };
+9835FE08241096214308E978 = { isa = XCConfigurationList; buildConfigurations = (90D26FBCAB71577D6EAB880E,73CB3BB351EA587D05C415C5,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+46AD3328683EE7788F70A2C1 = { isa = XCBuildConfiguration; buildSettings = { CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = Personas/Info.plist; PRODUCT_BUNDLE_IDENTIFIER = pe.edu.tecsup.carbajal.personas; PRODUCT_NAME = "$(TARGET_NAME)"; TARGETED_DEVICE_FAMILY = "1,2"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; }; name = Debug; };
+7EC26363D50D09B29DD6C0E4 = { isa = XCBuildConfiguration; buildSettings = { CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = Personas/Info.plist; PRODUCT_BUNDLE_IDENTIFIER = pe.edu.tecsup.carbajal.personas; PRODUCT_NAME = "$(TARGET_NAME)"; TARGETED_DEVICE_FAMILY = "1,2"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; }; name = Release; };
+5DBA357247F8C66D3904DDB3 = { isa = XCConfigurationList; buildConfigurations = (46AD3328683EE7788F70A2C1,7EC26363D50D09B29DD6C0E4,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+16EC41869F29AA01C3AA235D = { isa = PBXNativeTarget; buildConfigurationList = 5DBA357247F8C66D3904DDB3; buildPhases = (EFED7732187C02C6446B75C0,4D496A40E11623C07B70B053,841E967806EAD32D68D5216D,); buildRules = (); dependencies = (); name = Personas; productName = Personas; productReference = C36B795523B9B4E3351456F0; productType = "com.apple.product-type.application"; };
+70B725FD07423D7207433020 = { isa = PBXProject; attributes = { LastUpgradeCheck = 1600; }; buildConfigurationList = 9835FE08241096214308E978; compatibilityVersion = "Xcode 14.0"; developmentRegion = es; knownRegions = (es,en,Base,); mainGroup = C6B16B2CF1A45D8F8BD7D944; productRefGroup = 4E7BB4F95551E0FE1E3017B5; projectDirPath = ""; projectRoot = ""; targets = (16EC41869F29AA01C3AA235D,); };
+}; rootObject = 70B725FD07423D7207433020; }

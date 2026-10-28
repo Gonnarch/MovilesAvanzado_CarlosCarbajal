@@ -4,12 +4,17 @@ Autor: Carlos Carbajal. Curso: Móviles Avanzado. Semana 10.
 
 ## Objetivo y alcance
 
-Desarrollar un archivo Excel editable que estime numéricamente la Compensación
-por Tiempo de Servicios del régimen laboral general privado en Perú.
-Al modificar los datos de entrada se actualizarán los cálculos mediante fórmulas.
+Desarrollar una aplicación SwiftUI y un archivo Excel editable para calcular
+la Compensación por Tiempo de Servicios. El Excel corresponde al régimen general
+privado; la aplicación conserva opciones adicionales con alcance explícito.
+Al modificar los datos se actualizarán los resultados.
 Talana se utiliza como referencia de organización de los campos.
 
-La entrega de CTS comprende únicamente `CTS_Automatica.xlsx` y este documento.
+La entrega de CTS comprende tres elementos: `Proyecto/CTSPeru.xcodeproj` con
+sus fuentes en `Proyecto/CTSPeru`, `CTS_Automatica.xlsx` y este documento.
+Abre el proyecto en Xcode 15 o posterior con un simulador iOS 17 o posterior.
+Las referencias a celdas de la tabla corresponden al Excel; la aplicación usa
+campos equivalentes en sus secciones.
 Se supone que la jornada, el derecho al beneficio y la clasificación de los
 conceptos remunerativos han sido verificados previamente.
 
@@ -32,9 +37,15 @@ conceptos remunerativos han sido verificados previamente.
 | RF13 | Validar fechas y datos. | Rechaza ingreso posterior al semestre y valores inválidos. Ingreso día 31 o febrero parcial exige tiempo manual validado; falta de mes mínimo en modo Fechas indica acumulación. |
 | RF14 | Recalcular al editar. | Cambiar sueldo de 3000 a 4000, en modo Estimada con seis meses y sin adicionales, cambia la gratificación a 4000 y la CTS a 2333.33. |
 
+| RF15 | Entregar un proyecto SwiftUI completo. | Incluye archivo .xcodeproj, esquema compartido, punto de entrada App, vista CTS y utilidades. Se abre sin añadir paquetes externos. |
+| RF16 | Conservar las opciones adicionales de la aplicación. | Permite gratificación histórica validada, ausencias de gratificación, cese, principal variable, conceptos semestrales/anuales y selección de régimen. CAS, 276, construcción y otros requieren revisión y no muestran un importe inventado. |
+
 ## Requerimientos no funcionales
 
 - Utilizar un archivo `.xlsx` de una hoja, sin macros, base de datos ni conexión a internet.
+- Implementar la aplicación en SwiftUI para iOS 17+, con cálculos separados de la presentación y actualización al editar.
+- Mantener el proyecto completo dentro de `Proyecto`, sin copias sueltas duplicadas.
+- La compilación y ejecución de SwiftUI en Xcode siguen pendientes; la revisión estructural no se presenta como ejecución.
 - Mantener etiquetas en español, celdas editables amarillas y fórmulas visibles.
 - Almacenar importes y fechas como valores numéricos; mostrar moneda con dos decimales.
 - Redondear la gratificación estimada y la CTS final al céntimo, conservando precisión intermedia en la base.
@@ -44,13 +55,16 @@ conceptos remunerativos han sido verificados previamente.
 
 ## Fuera del alcance
 
-Proyecto o código Swift de CTS, otras hojas o versiones del Excel, regímenes
-especiales, principal variable por comisión/destajo, múltiples complementos
-mezclados, arrastres e intereses por mora. El archivo no determina por sí solo
-el derecho a asignación familiar ni clasifica licencias o ausencias médicas.
+No se entregan versiones anteriores del Excel, código suelto duplicado ni
+anexos adicionales de CTS. El Excel no calcula regímenes especiales ni principal
+variable por comisión/destajo; la aplicación dispone de funciones adicionales,
+pero tampoco ofrece cobertura universal. Se excluyen múltiples complementos
+mezclados sin clasificación, arrastres e intereses por mora. No se determina por
+sí solo el derecho a asignación familiar ni se clasifican licencias o ausencias médicas.
 
-La gratificación estimada supone sueldo constante y meses calendario completos
-sin ausencias descontables. Si hubo cambios de sueldo, variables o descuentos
+La gratificación estimada del Excel supone sueldo constante y meses calendario
+completos sin ausencias descontables. La aplicación permite registrar por separado
+días no computables para su estimación o su cálculo histórico. Si hubo cambios de sueldo, variables o descuentos
 en su semestre, se debe usar el importe realmente percibido. Un corte futuro
 representa una proyección. No se afirma cobertura universal de casos laborales.
 

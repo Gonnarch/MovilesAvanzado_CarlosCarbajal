@@ -1,6 +1,7 @@
-28/10/2026: alcance corregido según lo solicitado.
-La carpeta 06_CTS contiene únicamente CTS_Automatica.xlsx y requerimientos.md.
-El RF/RNF sigue la estructura de Semana04/docs/requerimientos.md (Metro de Lima).
-Se retiraron de la publicación el proyecto Swift de CTS, sus copias de código,
-el Excel anterior y los documentos adicionales. Se actualizaron enlaces y pruebas
-compartidas para conservar solamente las actividades SwiftUI restantes.
+28/10/2026: entrega de CTS corregida.
+06_CTS contiene los tres entregables solicitados:
+1. Proyecto SwiftUI completo en Proyecto/CTSPeru.xcodeproj y Proyecto/CTSPeru.
+2. CTS_Automatica.xlsx con cálculos numéricos.
+3. requerimientos.md con RF/RNF en el formato de Metro de Lima.
+Se restaura la última versión del proyecto, con período y gratificación automática.
+Compilación y ejecución de SwiftUI pendientes en Xcode.

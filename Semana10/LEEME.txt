@@ -1,4 +1,4 @@
 Abre INDICE.html para recorrer las actividades en orden.
-CTS se entrega únicamente como 06_CTS/CTS_Automatica.xlsx y 06_CTS/requerimientos.md.
+CTS incluye Proyecto/CTSPeru.xcodeproj con sus fuentes, CTS_Automatica.xlsx y requerimientos.md dentro de 06_CTS.
 Las demás actividades mantienen sus siete proyectos SwiftUI independientes.
 Las vistas son referencias; la ejecución en Xcode está pendiente.

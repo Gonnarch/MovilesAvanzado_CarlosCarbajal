@@ -1,0 +1,8 @@
+# Archivos locales de Xcode y compilación
+.DS_Store
+DerivedData/
+build/
+xcuserdata/
+*.xcuserstate
+pruebas_s08
+*.inspect.ndjson

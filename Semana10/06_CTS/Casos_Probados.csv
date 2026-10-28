@@ -1,0 +1,147 @@
+Caso,Escenario,Cambios de celda CTS,D10:I10,Esperado,Obtenido,Estado,Coincide
+
+C01,General: 3000 + 3000/6; 6 meses,{},[],1750,1750,CALCULADO,True
+
+C02,Trunco: 3 meses y 15 días,"{""B15"": ""Sí"", ""B16"": 3, ""B17"": 15}",[],1020.83,1020.83,CALCULADO,True
+
+C03,Cinco días no computables,"{""B18"": 5}",[],1701.39,1701.39,CALCULADO,True
+
+C04,Familiar vigente 123; grati julio 3113,"{""B20"": 123, ""B22"": 3113}",[],1820.92,1820.92,CALCULADO,True
+
+C05,Complemento regular: tres meses,{},"[300, 0, 600, 0, 900, 0]",1900,1900,CALCULADO,True
+
+C06,Complemento en dos meses: excluido,{},"[300, 0, 600, 0, 0, 0]",1750,1750,CALCULADO,True
+
+C07,Principal variable: total 24000 / 6,"{""B22"": 4000, ""B25"": ""Variable"", ""B26"": 24000, ""B27"": 180}",[],2333.33,2333.33,CALCULADO,True
+
+C08,Principal variable trunco: 12000/90×30,"{""B16"": 3, ""B22"": 0, ""B25"": ""Variable"", ""B26"": 12000, ""B27"": 90}",[],1000,1000,CALCULADO,True
+
+C09,Pequeña: grati media 1500,"{""B10"": ""Pequeña REMYPE"", ""B22"": 1500}",[],812.5,812.5,CALCULADO,True
+
+C10,Pequeña: quedan 2 remuneraciones diarias,"{""B10"": ""Pequeña REMYPE"", ""B22"": 1500, ""B28"": 2}",[],216.67,216.67,CALCULADO,True
+
+C11,Micro especial: régimen confirmado,"{""B10"": ""Micro REMYPE""}",[],0,0,SIN DERECHO,True
+
+C12,Hogar con condiciones verificadas,"{""B10"": ""Hogar""}",[],1750,1750,CALCULADO,True
+
+C13,Régimen o historial sin verificar,"{""B11"": ""No""}",[],No determinado,No determinado,REVISAR,True
+
+C14,Sin mes mínimo: continúa,"{""B12"": ""No"", ""B16"": 0, ""B17"": 20}",[],No determinado,No determinado,ACUMULAR,True
+
+C15,Sin mes mínimo: cesa,"{""B12"": ""No"", ""B15"": ""Sí"", ""B16"": 0, ""B17"": 20}",[],No determinado,No determinado,SIN MES MÍNIMO,True
+
+C16,RIA con CTS incluida,"{""B14"": ""Sí""}",[],No determinado,No determinado,INCLUIDA EN RIA,True
+
+C17,Jornada no verificada,"{""B13"": ""No""}",[],No determinado,No determinado,REVISAR JORNADA,True
+
+C18,CAS: no aplicar fórmula privada,"{""B10"": ""CAS""}",[],No determinado,No determinado,REVISAR,True
+
+C19,Público 276: revisión específica,"{""B10"": ""Público 276""}",[],No determinado,No determinado,REVISAR,True
+
+C20,Construcción: revisión específica,"{""B10"": ""Construcción civil""}",[],No determinado,No determinado,REVISAR,True
+
+C21,Agrario: básica 1230 y 30 días,"{""B10"": ""Agrario prorrateado""}",[],119.56,119.56,COMPONENTE,True
+
+C22,Agrario: básica 1500 y 15 días,"{""B10"": ""Agrario prorrateado"", ""B30"": 1500, ""B31"": 15}",[],72.9,72.9,COMPONENTE,True
+
+C23,Rechaza sueldo negativo,"{""B19"": -1}",[],No determinado,No determinado,DATOS INVÁLIDOS,True
+
+C24,Rechaza meses fraccionarios,"{""B16"": 2.5}",[],No determinado,No determinado,DATOS INVÁLIDOS,True
+
+C25,Rechaza días adicionales = 30,"{""B17"": 30}",[],No determinado,No determinado,DATOS INVÁLIDOS,True
+
+C26,Rechaza ausencias mayores al período,"{""B18"": 181}",[],No determinado,No determinado,DATOS INVÁLIDOS,True
+
+C27,Rechaza sueldo vacío; no convertir a cero,"{""B19"": null}",[],No determinado,No determinado,DATOS INVÁLIDOS,True
+
+C28,Un mes de vínculo: un mes computable,"{""B16"": 1, ""B22"": 0}",[],250,250,CALCULADO,True
+
+C29,Ingreso sin gratificación percibida,"{""B22"": 0}",[],1500,1500,CALCULADO,True
+
+C30,Anual percibido 1200 / 12,"{""B24"": 1200}",[],1800,1800,CALCULADO,True
+
+C31,Pequeña con tope agotado,"{""B10"": ""Pequeña REMYPE"", ""B28"": 0}",[],0,0,CALCULADO,True
+
+C32,Variable tres meses; período tres meses,"{""B16"": 3, ""B22"": 0}","[300, 300, 300, 0, 0, 0]",825,825,CALCULADO,True
+
+C33,Campo agrario vacío no bloquea general,"{""B30"": null}",[],1750,1750,CALCULADO,True
+
+C34,Principal variable: base fija vacía ignorada,"{""B19"": null, ""B22"": 4000, ""B25"": ""Variable"", ""B26"": 24000, ""B27"": 180}",[],2333.33,2333.33,CALCULADO,True
+
+C35,Falta monto de un mes complementario,{},"[0, 0, 0, null, 0, 0]",No determinado,No determinado,DATOS INVÁLIDOS,True
+
+C36,Cero días netos con mes de vínculo,"{""B18"": 180}",[],0,0,CALCULADO,True
+
+C37,Tope MYPE inválido,"{""B10"": ""Pequeña REMYPE"", ""B28"": 91}",[],No determinado,No determinado,DATOS INVÁLIDOS,True
+
+C38,Datos de régimen no calculado no dan cero,"{""B10"": ""Otros""}",[],No determinado,No determinado,REVISAR,True
+
+C39,"Cambio sueldo a 4000, misma grati 3000","{""B19"": 4000}",[],2250,2250,CALCULADO,True
+
+C40,Agrario selecciona dato faltante,"{""B10"": ""Agrario prorrateado"", ""B30"": null}",[],No determinado,No determinado,DATOS INVÁLIDOS,True
+
+C41,Texto pegado en meses se rechaza,"{""B16"": ""abc""}",[],No determinado,No determinado,DATOS INVÁLIDOS,True
+
+C42,Divisor no seleccionado con texto no bloquea,"{""B27"": ""abc""}",[],1750,1750,CALCULADO,True
+
+C43,Agrario con campos generales vacíos,"{""B10"": ""Agrario prorrateado"", ""B16"": null, ""B19"": null, ""B22"": null}",[],119.56,119.56,COMPONENTE,True
+
+C44,Texto en complemento se rechaza,{},"[0, 0, ""abc"", 0, 0, 0]",No determinado,No determinado,DATOS INVÁLIDOS,True
+
+C45,Régimen desconocido no calcula,"{""B10"": ""No identificado""}",[],No determinado,No determinado,REVISAR,True
+
+C46,Confirmación vacía no calcula,"{""B11"": null}",[],No determinado,No determinado,REVISAR,True
+
+C47,Tope pequeña vacío no equivale a cero,"{""B10"": ""Pequeña REMYPE"", ""B28"": null}",[],No determinado,No determinado,DATOS INVÁLIDOS,True
+
+C48,Divisor variable cero se rechaza,"{""B25"": ""Variable"", ""B27"": 0}",[],No determinado,No determinado,DATOS INVÁLIDOS,True
+
+A01,Fechas: semestre completo,"{""asistente"": {""5"": ""Fechas""}, ""cts"": {}}",[],1750,1750,CALCULADO,True
+
+A02,Fechas: ingreso 16 julio,"{""asistente"": {""5"": ""Fechas"", ""6"": 46219}, ""cts"": {}}",[],1020.83,1020.83,CALCULADO,True
+
+A03,Fechas: cese 15 agosto,"{""asistente"": {""5"": ""Fechas"", ""8"": 46249}, ""cts"": {""15"": ""Sí""}}",[],1020.83,1020.83,CALCULADO,True
+
+A04,Fechas: febrero completo no pierde dos días,"{""asistente"": {""5"": ""Fechas"", ""6"": 45658, ""7"": 45962, ""8"": 46081}, ""cts"": {}}",[],1166.67,1166.67,CALCULADO,True
+
+A05,Fecha ingreso posterior al corte,"{""asistente"": {""5"": ""Fechas"", ""6"": 46327}, ""cts"": {}}",[],No determinado,No determinado,DATOS INVÁLIDOS,True
+
+A06,Fecha como texto se rechaza,"{""asistente"": {""5"": ""Fechas"", ""6"": ""no es fecha""}, ""cts"": {}}",[],No determinado,No determinado,DATOS INVÁLIDOS,True
+
+A07,Inicio día 31 requiere revisión,"{""asistente"": {""5"": ""Fechas"", ""6"": 46234}, ""cts"": {}}",[],No determinado,No determinado,REVISAR FECHAS,True
+
+A08,Febrero parcial requiere revisión,"{""asistente"": {""5"": ""Fechas"", ""6"": 45658, ""7"": 45962, ""8"": 46068}, ""cts"": {}}",[],No determinado,No determinado,REVISAR FECHAS,True
+
+A09,Ingreso octubre sin mes mínimo,"{""asistente"": {""5"": ""Fechas"", ""6"": 46311}, ""cts"": {}}",[],No determinado,No determinado,ACUMULAR,True
+
+A10,Histórica completa confirmada,"{""asistente"": {""10"": ""Histórica"", ""14"": ""Sí""}, ""cts"": {}}",[],1750,1750,CALCULADO,True
+
+A11,Histórica por tres meses completos,"{""asistente"": {""10"": ""Histórica"", ""12"": 3, ""14"": ""Sí""}, ""cts"": {}}",[],1625,1625,CALCULADO,True
+
+A12,Histórica con seis días no computables,"{""asistente"": {""10"": ""Histórica"", ""13"": 6, ""14"": ""Sí""}, ""cts"": {}}",[],1741.67,1741.67,CALCULADO,True
+
+A13,Histórica pequeña media gratificación,"{""asistente"": {""10"": ""Histórica"", ""14"": ""Sí""}, ""cts"": {""10"": ""Pequeña REMYPE""}}",[],812.5,812.5,CALCULADO,True
+
+A14,Histórica sin confirmar boleta,"{""asistente"": {""10"": ""Histórica""}, ""cts"": {}}",[],No determinado,No determinado,CONFIRMAR PERCIBIDO,True
+
+A15,Histórica con meses decimales,"{""asistente"": {""10"": ""Histórica"", ""12"": 2.5, ""14"": ""Sí""}, ""cts"": {}}",[],No determinado,No determinado,DATOS INVÁLIDOS,True
+
+A16,Histórica sin base,"{""asistente"": {""10"": ""Histórica"", ""11"": null, ""14"": ""Sí""}, ""cts"": {}}",[],No determinado,No determinado,DATOS INVÁLIDOS,True
+
+A17,Fechas y grati juntos,"{""asistente"": {""5"": ""Fechas"", ""6"": 46219, ""10"": ""Histórica"", ""12"": 0, ""14"": ""Sí""}, ""cts"": {}}",[],875,875,CALCULADO,True
+
+A18,Modo inexistente se rechaza,"{""asistente"": {""5"": ""Otro""}, ""cts"": {}}",[],No determinado,No determinado,REVISAR,True
+
+A19,Fechas ignora tiempo manual inválido,"{""asistente"": {""5"": ""Fechas""}, ""cts"": {""16"": ""abc"", ""17"": null}}",[],1750,1750,CALCULADO,True
+
+A20,Histórica ignora grati manual vacía,"{""asistente"": {""10"": ""Histórica"", ""14"": ""Sí""}, ""cts"": {""22"": null}}",[],1750,1750,CALCULADO,True
+
+A21,Fecha serial negativa rechazada,"{""asistente"": {""5"": ""Fechas"", ""6"": -999999}, ""cts"": {}}",[],No determinado,No determinado,DATOS INVÁLIDOS,True
+
+A22,Fecha serial enorme rechazada,"{""asistente"": {""5"": ""Fechas"", ""7"": 999999999}, ""cts"": {}}",[],No determinado,No determinado,DATOS INVÁLIDOS,True
+
+A23,Fecha con fracción de día rechazada,"{""asistente"": {""5"": ""Fechas"", ""8"": 46326.5}, ""cts"": {}}",[],No determinado,No determinado,DATOS INVÁLIDOS,True
+
+A24,Febrero bisiesto completo,"{""asistente"": {""5"": ""Fechas"", ""6"": 44927, ""7"": 45231, ""8"": 45351}, ""cts"": {}}",[],1166.67,1166.67,CALCULADO,True
+
+A25,Histórica faltas exceden meses,"{""asistente"": {""10"": ""Histórica"", ""12"": 1, ""13"": 31, ""14"": ""Sí""}, ""cts"": {}}",[],No determinado,No determinado,DATOS INVÁLIDOS,True

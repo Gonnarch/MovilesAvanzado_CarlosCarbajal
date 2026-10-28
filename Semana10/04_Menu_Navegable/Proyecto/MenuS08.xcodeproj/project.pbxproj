@@ -1,0 +1,30 @@
+// !$*UTF8*$!
+{ archiveVersion = 1; classes = {}; objectVersion = 56; objects = {
+B16C52769C0118EE04EAE8AC = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuPrincipal.swift"; sourceTree = "<group>"; };
+D02BCD99AA96B4E5F5CEDB53 = { isa = PBXBuildFile; fileRef = B16C52769C0118EE04EAE8AC; };
+E6675F4539818D970966DDBF = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView.swift"; sourceTree = "<group>"; };
+26C8D88B7DF8C2E3D420E190 = { isa = PBXBuildFile; fileRef = E6675F4539818D970966DDBF; };
+7DAD5908C88505FACFD84081 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ventana02.swift"; sourceTree = "<group>"; };
+7DD1C1B5C945807D1728F004 = { isa = PBXBuildFile; fileRef = 7DAD5908C88505FACFD84081; };
+35825F1A12774FF761D89312 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ventana03.swift"; sourceTree = "<group>"; };
+934C3B02FDDB3712296AF14F = { isa = PBXBuildFile; fileRef = 35825F1A12774FF761D89312; };
+943A604748E7520322A6432B = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Utilidades.swift"; sourceTree = "<group>"; };
+C542D232C3A125A3B3A45E93 = { isa = PBXBuildFile; fileRef = 943A604748E7520322A6432B; };
+ACEEF9E2DAF64E77792229FF = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuS08App.swift"; sourceTree = "<group>"; };
+A596C18204956E1500B49997 = { isa = PBXBuildFile; fileRef = ACEEF9E2DAF64E77792229FF; };
+90E6A51114C4BCFD199DEC2C = { isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MenuS08.app; sourceTree = BUILT_PRODUCTS_DIR; };
+84BCFB3ABDD04414AD0EEFC2 = { isa = PBXGroup; children = (B16C52769C0118EE04EAE8AC,E6675F4539818D970966DDBF,7DAD5908C88505FACFD84081,35825F1A12774FF761D89312,943A604748E7520322A6432B,ACEEF9E2DAF64E77792229FF,); path = MenuS08; sourceTree = "<group>"; };
+BF73D262350D3138BA3E3EB9 = { isa = PBXGroup; children = (90E6A51114C4BCFD199DEC2C,); name = Products; sourceTree = "<group>"; };
+09FC431203F3B669E6161127 = { isa = PBXGroup; children = (84BCFB3ABDD04414AD0EEFC2,BF73D262350D3138BA3E3EB9,); sourceTree = "<group>"; };
+9AABA8ABB133963132785B1C = { isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (D02BCD99AA96B4E5F5CEDB53,26C8D88B7DF8C2E3D420E190,7DD1C1B5C945807D1728F004,934C3B02FDDB3712296AF14F,C542D232C3A125A3B3A45E93,A596C18204956E1500B49997,); runOnlyForDeploymentPostprocessing = 0; };
+526BD6829010DA2035AB32E1 = { isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+840F6A2BE3AC55D49482CD38 = { isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+9CE66A82CBABFE908A05E60F = { isa = PBXNativeTarget; buildConfigurationList = 14A27BDD1470C81DDE6BE49C; buildPhases = (9AABA8ABB133963132785B1C,526BD6829010DA2035AB32E1,840F6A2BE3AC55D49482CD38,); buildRules = (); dependencies = (); name = MenuS08; productName = MenuS08; productReference = 90E6A51114C4BCFD199DEC2C; productType = "com.apple.product-type.application"; };
+658C92D54373F0D0649A329A = { isa = XCBuildConfiguration; buildSettings = { CLANG_ENABLE_MODULES = YES; SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SWIFT_VERSION = 5.0; }; name = Debug; };
+85ACA872EE142BD1BD4C455C = { isa = XCBuildConfiguration; buildSettings = { CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = YES; INFOPLIST_KEY_CFBundleDisplayName = "MenuS08"; INFOPLIST_KEY_UILaunchScreen_Generation = YES; INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES; PRODUCT_BUNDLE_IDENTIFIER = "edu.laboratorio.s08.menus08"; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 5.0; IPHONEOS_DEPLOYMENT_TARGET = 17.0; TARGETED_DEVICE_FAMILY = "1,2"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; ENABLE_PREVIEWS = YES; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; }; name = Debug; };
+A2692331221DCCF7C41B9052 = { isa = XCBuildConfiguration; buildSettings = { CLANG_ENABLE_MODULES = YES; SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SWIFT_VERSION = 5.0; }; name = Release; };
+405546EBE2047269CA10E7E7 = { isa = XCBuildConfiguration; buildSettings = { CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = YES; INFOPLIST_KEY_CFBundleDisplayName = "MenuS08"; INFOPLIST_KEY_UILaunchScreen_Generation = YES; INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES; PRODUCT_BUNDLE_IDENTIFIER = "edu.laboratorio.s08.menus08"; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 5.0; IPHONEOS_DEPLOYMENT_TARGET = 17.0; TARGETED_DEVICE_FAMILY = "1,2"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; ENABLE_PREVIEWS = YES; SWIFT_OPTIMIZATION_LEVEL = "-O"; }; name = Release; };
+BED91D36BC8A211EF6C36B9D = { isa = XCConfigurationList; buildConfigurations = (658C92D54373F0D0649A329A,A2692331221DCCF7C41B9052,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+14A27BDD1470C81DDE6BE49C = { isa = XCConfigurationList; buildConfigurations = (85ACA872EE142BD1BD4C455C,405546EBE2047269CA10E7E7,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+0DB19ACE4CE31E23C458109B = { isa = PBXProject; attributes = { LastUpgradeCheck = 1600; }; buildConfigurationList = BED91D36BC8A211EF6C36B9D; compatibilityVersion = "Xcode 14.0"; developmentRegion = es; hasScannedForEncodings = 0; knownRegions = (es,en,Base); mainGroup = 09FC431203F3B669E6161127; productRefGroup = BF73D262350D3138BA3E3EB9; projectDirPath = ""; projectRoot = ""; targets = (9CE66A82CBABFE908A05E60F,); };
+}; rootObject = 0DB19ACE4CE31E23C458109B; }

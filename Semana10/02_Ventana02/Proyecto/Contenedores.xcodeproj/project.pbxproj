@@ -1,0 +1,22 @@
+// !$*UTF8*$!
+{ archiveVersion = 1; classes = {}; objectVersion = 56; objects = {
+54DC85AC853C86831FEF24D6 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ventana02.swift"; sourceTree = "<group>"; };
+F1D0841F87363521C5E49E43 = { isa = PBXBuildFile; fileRef = 54DC85AC853C86831FEF24D6; };
+E1941AE72DE7DA0ECBCB1975 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContenedoresApp.swift"; sourceTree = "<group>"; };
+6677C84B9F8EAC0A3665864F = { isa = PBXBuildFile; fileRef = E1941AE72DE7DA0ECBCB1975; };
+6D4162C44D94CC0A4420F324 = { isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contenedores.app; sourceTree = BUILT_PRODUCTS_DIR; };
+065DCE5F02CF1F0945C6E883 = { isa = PBXGroup; children = (54DC85AC853C86831FEF24D6,E1941AE72DE7DA0ECBCB1975,); path = Contenedores; sourceTree = "<group>"; };
+935A9C4F80C473402799DCF0 = { isa = PBXGroup; children = (6D4162C44D94CC0A4420F324,); name = Products; sourceTree = "<group>"; };
+0C1BDA087692C0D545189FAB = { isa = PBXGroup; children = (065DCE5F02CF1F0945C6E883,935A9C4F80C473402799DCF0,); sourceTree = "<group>"; };
+9E93FBF21D3434C7B7536A33 = { isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (F1D0841F87363521C5E49E43,6677C84B9F8EAC0A3665864F,); runOnlyForDeploymentPostprocessing = 0; };
+B74B0565E52708CBC980DA29 = { isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+2E697773BA8E4D836422ED77 = { isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+C2168FFF02706366130F1C05 = { isa = PBXNativeTarget; buildConfigurationList = 42A1581D6F9C0710DD69E477; buildPhases = (9E93FBF21D3434C7B7536A33,B74B0565E52708CBC980DA29,2E697773BA8E4D836422ED77,); buildRules = (); dependencies = (); name = Contenedores; productName = Contenedores; productReference = 6D4162C44D94CC0A4420F324; productType = "com.apple.product-type.application"; };
+D127DDD5DDE2F5619ECD3B21 = { isa = XCBuildConfiguration; buildSettings = { CLANG_ENABLE_MODULES = YES; SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SWIFT_VERSION = 5.0; }; name = Debug; };
+3761BE98E518B023ED133D77 = { isa = XCBuildConfiguration; buildSettings = { CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = YES; INFOPLIST_KEY_CFBundleDisplayName = "Contenedores"; INFOPLIST_KEY_UILaunchScreen_Generation = YES; INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES; PRODUCT_BUNDLE_IDENTIFIER = "edu.laboratorio.s08.contenedores"; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 5.0; IPHONEOS_DEPLOYMENT_TARGET = 17.0; TARGETED_DEVICE_FAMILY = "1,2"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; ENABLE_PREVIEWS = YES; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; }; name = Debug; };
+C90D5FC9119B8E6855ED0043 = { isa = XCBuildConfiguration; buildSettings = { CLANG_ENABLE_MODULES = YES; SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SWIFT_VERSION = 5.0; }; name = Release; };
+FDCDD8AA03DEF934EBE52D80 = { isa = XCBuildConfiguration; buildSettings = { CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = YES; INFOPLIST_KEY_CFBundleDisplayName = "Contenedores"; INFOPLIST_KEY_UILaunchScreen_Generation = YES; INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES; PRODUCT_BUNDLE_IDENTIFIER = "edu.laboratorio.s08.contenedores"; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 5.0; IPHONEOS_DEPLOYMENT_TARGET = 17.0; TARGETED_DEVICE_FAMILY = "1,2"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; ENABLE_PREVIEWS = YES; SWIFT_OPTIMIZATION_LEVEL = "-O"; }; name = Release; };
+BDA44C719CDA995FFF665D14 = { isa = XCConfigurationList; buildConfigurations = (D127DDD5DDE2F5619ECD3B21,C90D5FC9119B8E6855ED0043,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+42A1581D6F9C0710DD69E477 = { isa = XCConfigurationList; buildConfigurations = (3761BE98E518B023ED133D77,FDCDD8AA03DEF934EBE52D80,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+6128ED4A0F19B356ABA2E693 = { isa = PBXProject; attributes = { LastUpgradeCheck = 1600; }; buildConfigurationList = BDA44C719CDA995FFF665D14; compatibilityVersion = "Xcode 14.0"; developmentRegion = es; hasScannedForEncodings = 0; knownRegions = (es,en,Base); mainGroup = 0C1BDA087692C0D545189FAB; productRefGroup = 935A9C4F80C473402799DCF0; projectDirPath = ""; projectRoot = ""; targets = (C2168FFF02706366130F1C05,); };
+}; rootObject = 6128ED4A0F19B356ABA2E693; }

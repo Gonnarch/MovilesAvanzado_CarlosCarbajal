@@ -1,0 +1,24 @@
+// !$*UTF8*$!
+{ archiveVersion = 1; classes = {}; objectVersion = 56; objects = {
+CE27040FEF6D859102A4F8B6 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CuentasView.swift"; sourceTree = "<group>"; };
+E9C20F4ADFBB979C36D67F5D = { isa = PBXBuildFile; fileRef = CE27040FEF6D859102A4F8B6; };
+AE047719A6D939EE8FFEA013 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Utilidades.swift"; sourceTree = "<group>"; };
+925414661E342DC97FD72092 = { isa = PBXBuildFile; fileRef = AE047719A6D939EE8FFEA013; };
+6DEA9E7221111B45E110C25A = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CuentasS08App.swift"; sourceTree = "<group>"; };
+D7FC72552CE2D48049084AAB = { isa = PBXBuildFile; fileRef = 6DEA9E7221111B45E110C25A; };
+9253F7377B195D8FAC77F9A8 = { isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CuentasS08.app; sourceTree = BUILT_PRODUCTS_DIR; };
+E8F4C380493F3FF8D70F9C55 = { isa = PBXGroup; children = (CE27040FEF6D859102A4F8B6,AE047719A6D939EE8FFEA013,6DEA9E7221111B45E110C25A,); path = CuentasS08; sourceTree = "<group>"; };
+720B2007A9974A5BD79BE291 = { isa = PBXGroup; children = (9253F7377B195D8FAC77F9A8,); name = Products; sourceTree = "<group>"; };
+C21AB4E20929DCE244D24AAE = { isa = PBXGroup; children = (E8F4C380493F3FF8D70F9C55,720B2007A9974A5BD79BE291,); sourceTree = "<group>"; };
+59228F83CCF1A279676C8E53 = { isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (E9C20F4ADFBB979C36D67F5D,925414661E342DC97FD72092,D7FC72552CE2D48049084AAB,); runOnlyForDeploymentPostprocessing = 0; };
+8390332456B51246CC978026 = { isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+4B47303C243E9799C733A51C = { isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+E621409F3622CCAA6058267B = { isa = PBXNativeTarget; buildConfigurationList = 0C3F14417CE9959501AE27F2; buildPhases = (59228F83CCF1A279676C8E53,8390332456B51246CC978026,4B47303C243E9799C733A51C,); buildRules = (); dependencies = (); name = CuentasS08; productName = CuentasS08; productReference = 9253F7377B195D8FAC77F9A8; productType = "com.apple.product-type.application"; };
+BAC0BF3719D764588D7F7A9E = { isa = XCBuildConfiguration; buildSettings = { CLANG_ENABLE_MODULES = YES; SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SWIFT_VERSION = 5.0; }; name = Debug; };
+16A34E6AF56DFC165EA76F30 = { isa = XCBuildConfiguration; buildSettings = { CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = YES; INFOPLIST_KEY_CFBundleDisplayName = "CuentasS08"; INFOPLIST_KEY_UILaunchScreen_Generation = YES; INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES; PRODUCT_BUNDLE_IDENTIFIER = "edu.laboratorio.s08.cuentass08"; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 5.0; IPHONEOS_DEPLOYMENT_TARGET = 17.0; TARGETED_DEVICE_FAMILY = "1,2"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; ENABLE_PREVIEWS = YES; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; }; name = Debug; };
+0D5EA527B444CEA5E54A3533 = { isa = XCBuildConfiguration; buildSettings = { CLANG_ENABLE_MODULES = YES; SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SWIFT_VERSION = 5.0; }; name = Release; };
+E17FFA1CB48A1850BE885AB9 = { isa = XCBuildConfiguration; buildSettings = { CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = YES; INFOPLIST_KEY_CFBundleDisplayName = "CuentasS08"; INFOPLIST_KEY_UILaunchScreen_Generation = YES; INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES; PRODUCT_BUNDLE_IDENTIFIER = "edu.laboratorio.s08.cuentass08"; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 5.0; IPHONEOS_DEPLOYMENT_TARGET = 17.0; TARGETED_DEVICE_FAMILY = "1,2"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; ENABLE_PREVIEWS = YES; SWIFT_OPTIMIZATION_LEVEL = "-O"; }; name = Release; };
+863E1BF55001858E90FC6338 = { isa = XCConfigurationList; buildConfigurations = (BAC0BF3719D764588D7F7A9E,0D5EA527B444CEA5E54A3533,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+0C3F14417CE9959501AE27F2 = { isa = XCConfigurationList; buildConfigurations = (16A34E6AF56DFC165EA76F30,E17FFA1CB48A1850BE885AB9,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+8892DE1105CCE481A93C1ACF = { isa = PBXProject; attributes = { LastUpgradeCheck = 1600; }; buildConfigurationList = 863E1BF55001858E90FC6338; compatibilityVersion = "Xcode 14.0"; developmentRegion = es; hasScannedForEncodings = 0; knownRegions = (es,en,Base); mainGroup = C21AB4E20929DCE244D24AAE; productRefGroup = 720B2007A9974A5BD79BE291; projectDirPath = ""; projectRoot = ""; targets = (E621409F3622CCAA6058267B,); };
+}; rootObject = 8892DE1105CCE481A93C1ACF; }

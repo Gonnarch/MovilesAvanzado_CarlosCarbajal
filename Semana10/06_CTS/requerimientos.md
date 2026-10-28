@@ -13,8 +13,7 @@ Talana se utiliza como referencia de organización de los campos.
 La entrega de CTS comprende tres elementos: `Proyecto/CTSPeru.xcodeproj` con
 sus fuentes en `Proyecto/CTSPeru`, `CTS_Automatica.xlsx` y este documento.
 Abre el proyecto en Xcode 15 o posterior con un simulador iOS 17 o posterior.
-Las referencias a celdas de la tabla corresponden al Excel; la aplicación usa
-campos equivalentes en sus secciones.
+Las referencias a celdas de la tabla corresponden al Excel. La aplicación conserva sus controles propios, incluido el tiempo manual validado y los meses de gratificación; el Excel calcula esos meses desde las fechas.
 Se supone que la jornada, el derecho al beneficio y la clasificación de los
 conceptos remunerativos han sido verificados previamente.
 
@@ -23,18 +22,18 @@ conceptos remunerativos han sido verificados previamente.
 | ID | Requerimiento | Criterio de aceptación |
 | --- | --- | --- |
 | RF01 | Seleccionar período de depósito. | Mayo del año elegido comprende noviembre del año anterior a abril; noviembre comprende mayo a octubre. |
-| RF02 | Calcular tiempo desde el ingreso. | En modo Fechas, considera el ingreso dentro del semestre, incluye ambos extremos y convierte cada mes completo a 30 días equivalentes. |
-| RF03 | Permitir tiempo validado manualmente. | En modo Manual admite meses enteros de 0 a 6 y días de 0 a 29, con total de 1 a 180 días equivalentes. Tres meses y diez días equivalen a 100. |
+| RF02 | Calcular tiempo desde el ingreso. | El Excel considera el ingreso dentro del semestre, incluye ambos extremos y convierte cada mes completo a 30 días equivalentes. |
+| RF03 | Derivar meses y días automáticamente en Excel. | B27 y B28 muestran el desglose del período calculado desde las fechas; no existen entradas manuales de meses ni días adicionales. Tres meses y diez días equivalen a 100 días convencionales. |
 | RF04 | Descontar días no computables. | Resta las ausencias ingresadas del tiempo equivalente. Rechaza negativos, fracciones y ausencias superiores al período. |
 | RF05 | Registrar sueldo, asignación familiar y fijos. | Suma los tres conceptos mensuales en la remuneración computable. Cero es válido cuando un concepto no corresponde; un dato requerido vacío solicita completarlo. |
-| RF06 | Estimar gratificación automáticamente. | En modo Estimada calcula (sueldo + asignación familiar histórica + fijos históricos) × meses completos / 6. Sueldo 3000, sin adicionales y tres meses produce 1500. |
-| RF07 | Usar la gratificación realmente percibida. | En modo Percibida utiliza B20 y no modifica ese importe al cambiar el sueldo. Se registra sin bonificación extraordinaria. |
-| RF08 | Mantener independientes los períodos. | Los meses de gratificación se ingresan en B21; no se infieren de los meses/días CTS. Un error en el tiempo CTS no borra una gratificación válida. |
-| RF09 | Separar asignación familiar actual e histórica. | B17 se usa en CTS y B22 en la gratificación estimada; no se calcula la asignación como porcentaje del sueldo. |
+| RF06 | Estimar gratificación automáticamente. | En modo Estimada calcula (sueldo + asignación familiar histórica + fijos históricos) × (meses completos / 6 − días no computables de gratificación / 180). Sueldo 3000, sin adicionales y tres meses produce 1500. |
+| RF07 | Usar la gratificación realmente percibida. | En modo Percibida utiliza B14 y no modifica ese importe al cambiar el sueldo. Se registra sin bonificación extraordinaria. |
+| RF08 | Mantener independientes los períodos. | E10 calcula los meses calendario completos del semestre de gratificación desde el ingreso; no se infieren de los meses/días CTS. Un error en el tiempo CTS no borra una gratificación válida. |
+| RF09 | Separar asignación familiar actual e histórica. | B11 se usa en CTS y B15 en la gratificación estimada; no se calcula la asignación como porcentaje del sueldo. |
 | RF10 | Evaluar un complemento variable mensual. | Registra un mismo concepto en seis casillas. Lo incluye si tiene importe positivo en tres meses o más; divide su suma entre los meses equivalentes del período liquidado. En un semestre completo, divide entre seis. |
 | RF11 | Calcular y mostrar la CTS. | Base = sueldo + asignación familiar + fijos + promedio variable + gratificación / 6. CTS = base × días netos / 360, redondeada a dos decimales. Con sueldo 3000, gratificación 3000, seis meses y cero faltas, obtiene 1750. |
 | RF12 | Mostrar el desglose numérico. | Presenta gratificación usada, su sexta parte, meses con variable, promedio variable, base computable y días antes/después de faltas. |
-| RF13 | Validar fechas y datos. | Rechaza ingreso posterior al semestre y valores inválidos. Ingreso día 31 o febrero parcial exige tiempo manual validado; falta de mes mínimo en modo Fechas indica acumulación. |
+| RF13 | Validar fechas y datos. | Rechaza ingreso posterior al semestre y valores inválidos. En el Excel, ingreso día 31 o febrero parcial bloquea el resultado y muestra REVISIÓN DE FECHA; estos casos requieren revisión externa. Falta de mes mínimo indica acumulación. |
 | RF14 | Recalcular al editar. | Cambiar sueldo de 3000 a 4000, en modo Estimada con seis meses y sin adicionales, cambia la gratificación a 4000 y la CTS a 2333.33. |
 
 | RF15 | Entregar un proyecto SwiftUI completo. | Incluye archivo .xcodeproj, esquema compartido, punto de entrada App, vista CTS y utilidades. Se abre sin añadir paquetes externos. |
@@ -46,12 +45,13 @@ conceptos remunerativos han sido verificados previamente.
 - Implementar la aplicación en SwiftUI para iOS 17+, con cálculos separados de la presentación y actualización al editar.
 - Mantener el proyecto completo dentro de `Proyecto`, sin copias sueltas duplicadas.
 - La compilación y ejecución de SwiftUI en Xcode siguen pendientes; la revisión estructural no se presenta como ejecución.
-- Mantener etiquetas en español, celdas editables amarillas y fórmulas visibles.
+- Mantener tablas compactas con bordes, encabezados azules, celdas editables amarillas y total verde. No incluir párrafos indicativos ni comentarios dentro de la hoja.
+- Mantener etiquetas en español y fórmulas visibles.
 - Almacenar importes y fechas como valores numéricos; mostrar moneda con dos decimales.
 - Redondear la gratificación estimada y la CTS final al céntimo, conservando precisión intermedia en la base.
 - Mostrar mensajes específicos cuando falten datos, sin sustituir una entrada inválida por cero.
 - Mantener la documentación RF/RNF en Markdown, con la estructura del documento de Metro de Lima.
-- Verificar cambios de sueldo, tiempo, asignación, fijos, variables y entradas inválidas. Se ejecutaron 34 escenarios del Excel con el motor de hojas disponible; no se afirma recálculo probado en Excel de escritorio.
+- Verificar cambios de sueldo, tiempo, asignación, fijos, variables y entradas inválidas. Se ejecutaron 32 escenarios del Excel con el motor de hojas disponible; no se afirma recálculo probado en Excel de escritorio.
 
 ## Fuera del alcance
 
@@ -63,9 +63,7 @@ mezclados sin clasificación, arrastres e intereses por mora. No se determina po
 sí solo el derecho a asignación familiar ni se clasifican licencias o ausencias médicas.
 
 La gratificación estimada del Excel supone sueldo constante y meses calendario
-completos sin ausencias descontables. La aplicación permite registrar por separado
-días no computables para su estimación o su cálculo histórico. Si hubo cambios de sueldo, variables o descuentos
-en su semestre, se debe usar el importe realmente percibido. Un corte futuro
+completos; permite descontar ausencias registradas por separado en B17. Si hubo cambios de sueldo o remuneración variable en su semestre, se debe usar el importe realmente percibido. Un corte futuro
 representa una proyección. No se afirma cobertura universal de casos laborales.
 
 ## Fuentes

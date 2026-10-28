@@ -19,14 +19,14 @@ Cada actividad tiene su propio proyecto Xcode dentro de `Proyecto`. Abre uno de 
 ## CTS: proyecto Swift, Excel y requerimientos
 
 - [Proyecto SwiftUI](06_CTS/Proyecto/CTSPeru.xcodeproj): abre `CTSPeru.xcodeproj` en Xcode 15+ y selecciona un simulador iOS 17+. Las fuentes están en `Proyecto/CTSPeru`.
-- [CTS_Automatica.xlsx](06_CTS/CTS_Automatica.xlsx): cálculos numéricos automáticos en una hoja.
+- [CTS_Automatica.xlsx](06_CTS/CTS_Automatica.xlsx): tablas numéricas con bordes y colores; meses calculados desde las fechas, sin ingreso manual ni párrafos de instrucciones.
 - [requerimientos.md](06_CTS/requerimientos.md): objetivo, RF con criterios de aceptación, RNF, exclusiones y fuentes, con la estructura de Metro de Lima.
 
 La carpeta CTS contiene estos tres entregables. El proyecto restaurado conserva sus últimos cambios: período Mayo/Noviembre, asignación familiar, fijos, variables, fechas y gratificación estimada, percibida o histórica. Las demás actividades conservan sus proyectos.
 
 ## Verificación
 
-El Excel de CTS se probó con 34 escenarios de recálculo en el motor de hojas disponible, no en Excel de escritorio. Su alcance está en el documento de requerimientos.
+El Excel de CTS se probó con 32 escenarios de recálculo en el motor de hojas disponible, no en Excel de escritorio. Su alcance está en el documento de requerimientos.
 
 Los ocho proyectos, incluido CTS, se revisaron estructuralmente. La compilación de SwiftUI y la ejecución de las pruebas nativas requieren Xcode y siguen pendientes. Las imágenes son vistas de referencia, no capturas del simulador.
 

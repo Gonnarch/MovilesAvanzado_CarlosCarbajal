@@ -1,27 +1,6 @@
-ACTUALIZACIÓN FUNCIONAL — 28/10/2026
-Investigación normativa con corte al 27/10/2026.
-
-Se mantienen las nueve actividades en orden y los ocho proyectos separados.
-CTS: nuevo modo de fechas y cálculo de gratificación histórica en Excel y SwiftUI.
-Fechas: ingreso, inicio de semestre y corte/cese; incluye ambos extremos.
-Gratificación: RC histórica, meses calendario completos y ausencias clasificadas;
-requiere confirmar que el monto coincide con lo realmente percibido.
-La remuneración histórica y la clasificación laboral requieren datos del usuario.
-
-PRUEBAS EJECUTADAS
-73 escenarios sobre el cálculo del Excel: coinciden.
-86 comprobaciones independientes de aritmética y archivos: coinciden.
-Estas incluyen 37 comparaciones de importes Excel contra cálculo decimal independiente.
-No sumar estas cifras como si fueran escenarios diferentes: existe solapamiento.
-Se revisaron ocho proyectos, referencias, archivos y esquemas.
-Se conservan AN = 0 sin eliminar y EsSalud como aporte del empleador.
-
-LÍMITES
-SwiftUI no compilado ni ejecutado en este equipo Windows.
-Excel recalculado con motor de hojas de cálculo; Excel de escritorio pendiente.
-No se afirma cobertura universal ni funcionamiento de interfaz verificado en iOS.
-Inicio día 31, febrero parcial, arrastres y regímenes no automatizados piden revisión.
-Se mantienen para después la explicación línea por línea, comparación Buk,
-tabla específica de faltas y ejecución Xcode, según la prioridad indicada.
-
-Abre INDICE.html y VERIFICACION.html para revisar los entregables y evidencias.
+28/10/2026: alcance corregido según lo solicitado.
+La carpeta 06_CTS contiene únicamente CTS_Automatica.xlsx y requerimientos.md.
+El RF/RNF sigue la estructura de Semana04/docs/requerimientos.md (Metro de Lima).
+Se retiraron de la publicación el proyecto Swift de CTS, sus copias de código,
+el Excel anterior y los documentos adicionales. Se actualizaron enlaces y pruebas
+compartidas para conservar solamente las actividades SwiftUI restantes.

@@ -1,7 +1,4 @@
-ABRE INDICE.html para recorrer las actividades en orden.
-
-Cada carpeta contiene su explicación y proyecto independiente.
-CTS incluye Excel, SwiftUI suelto, proyecto, documentación, RF/RNF y casos.
-Las vistas son representaciones de referencia; no capturas del simulador.
-Consulta VERIFICACION.html para distinguir pruebas realizadas y pendientes.
-Se requiere una Mac con Xcode para compilar y ejecutar SwiftUI.
+Abre INDICE.html para recorrer las actividades en orden.
+CTS se entrega únicamente como 06_CTS/CTS_Automatica.xlsx y 06_CTS/requerimientos.md.
+Las demás actividades mantienen sus siete proyectos SwiftUI independientes.
+Las vistas son referencias; la ejecución en Xcode está pendiente.

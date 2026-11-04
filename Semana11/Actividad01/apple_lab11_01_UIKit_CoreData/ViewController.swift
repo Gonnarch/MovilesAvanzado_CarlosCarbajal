@@ -28,7 +28,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         mostrarRutaBaseDeDatos()
         cargarInfoCoreData()
 
-
+        // PRUEBA: buscar contactos que contengan "juan"
+        //contactos = buscarContactos(texto: "juan")
+        //TablaContacto.reloadData()
+        // Descomenta una sola vez para comprobar la relación y vuelve a comentarla.
+        // print("INICIANDO PRUEBA DE RELACIÓN")
+        // probarRelacion()
     }
 
     // MARK: - Conexión con Core Data

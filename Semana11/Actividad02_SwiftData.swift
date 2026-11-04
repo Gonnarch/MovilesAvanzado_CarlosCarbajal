@@ -132,6 +132,7 @@ struct ContentView: View {
                 }
                 .onDelete(perform: deleteAlumnos)
             }
+            .searchable(text: $busqueda, prompt: "Buscar por apellido")
             .navigationTitle("Alumnos")
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) { EditButton() }
@@ -140,7 +141,12 @@ struct ContentView: View {
                         Label("Nuevo Alumno", systemImage: "plus")
                     }
                 }
-
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button { asignarCursoDemo() } label: {
+                        Label("Curso demo", systemImage: "book")
+                    }
+                    .disabled(alumnos.isEmpty)
+                }
             }
         } detail: {
             if let alumno = alumnoSeleccionado {
@@ -150,11 +156,14 @@ struct ContentView: View {
                     Text("Apellido: \(alumno.apellido)")
                     Text("DNI: \(alumno.dni)")
                     Text("Curso: \(alumno.curso?.nombre ?? "Sin curso")")
+                    Button("Editar") { alumnoAEditar = alumno }
+                        .buttonStyle(.borderedProminent)
                 }
                 .padding()
             } else { Text("Selecciona un alumno") }
         }
         .sheet(isPresented: $mostrarFormulario) { NuevoAlumnoView() }
+        .sheet(item: $alumnoAEditar) { EditarAlumnoView(alumno: $0) }
         .alert("Error de persistencia", isPresented: Binding(
             get: { error != nil }, set: { if !$0 { error = nil } })) {
             Button("Aceptar", role: .cancel) { error = nil }

@@ -89,7 +89,7 @@ final class ContactosAppDelegate: UIResponder, UIApplicationDelegate {
 
 // MARK: - Pantalla principal y conexión (pasos 4 y 5)
 final class ViewController: UIViewController, UITableViewDataSource,
-                            UITableViewDelegate {
+                            UITableViewDelegate, UISearchResultsUpdating {
     let TablaContacto = UITableView(frame: .zero, style: .insetGrouped)
     var contactos: [Contacto] = []
     private let buscador = UISearchController(searchResultsController: nil)
@@ -109,8 +109,19 @@ final class ViewController: UIViewController, UITableViewDataSource,
         ])
         TablaContacto.dataSource = self
         TablaContacto.delegate = self
-        navigationItem.rightBarButtonItem = UIBarButtonItem(
-            barButtonSystemItem: .add, target: self, action: #selector(agregarContacto(_:)))
+        navigationItem.rightBarButtonItems = [
+            UIBarButtonItem(barButtonSystemItem: .add, target: self,
+                            action: #selector(agregarContacto(_:))),
+            UIBarButtonItem(image: UIImage(systemName: "person.3"), style: .plain,
+                            target: self, action: #selector(asignarGrupo)),
+            UIBarButtonItem(image: UIImage(systemName: "line.3.horizontal.decrease.circle"),
+                            style: .plain, target: self, action: #selector(alternarGrupo))
+        ]
+        buscador.searchResultsUpdater = self
+        buscador.obscuresBackgroundDuringPresentation = false
+        buscador.searchBar.placeholder = "Buscar por nombre"
+        navigationItem.searchController = buscador
+        definesPresentationContext = true
         mostrarRutaBaseDeDatos()
         cargarInfoCoreData()
     }
@@ -134,6 +145,13 @@ final class ViewController: UIViewController, UITableViewDataSource,
     func cargarInfoCoreData() {
         let request = NSFetchRequest<Contacto>(entityName: "Contacto")
         request.sortDescriptors = [NSSortDescriptor(key: "nombre", ascending: true)]
+        var filtros: [NSPredicate] = []
+        let texto = buscador.searchBar.text ?? ""
+        if !texto.isEmpty {
+            filtros.append(NSPredicate(format: "nombre CONTAINS[cd] %@", texto))
+        }
+        if soloAmigos { filtros.append(NSPredicate(format: "grupo.nombre == %@", "Amigos")) }
+        if !filtros.isEmpty { request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: filtros) }
         do {
             contactos = try conexion().fetch(request)
             TablaContacto.reloadData() // UIKit necesita refrescar la tabla.
@@ -207,4 +225,43 @@ final class ViewController: UIViewController, UITableViewDataSource,
         if editingStyle == .delete { eliminarContacto(at: indexPath) }
     }
 
+    // MARK: - Filtro y relación (pasos 11 y 12)
+    func buscarContactos(texto: String) throws -> [Contacto] {
+        let request = NSFetchRequest<Contacto>(entityName: "Contacto")
+        request.predicate = NSPredicate(format: "nombre CONTAINS[cd] %@", texto)
+        request.sortDescriptors = [NSSortDescriptor(key: "nombre", ascending: true)]
+        return try conexion().fetch(request)
+    }
+    func contactosDelGrupo(_ nombreGrupo: String) throws -> [Contacto] {
+        let request = NSFetchRequest<Contacto>(entityName: "Contacto")
+        request.predicate = NSPredicate(format: "grupo.nombre == %@", nombreGrupo)
+        return try conexion().fetch(request)
+    }
+    func updateSearchResults(for searchController: UISearchController) { cargarInfoCoreData() }
+    @objc private func alternarGrupo() {
+        soloAmigos.toggle()
+        navigationItem.prompt = soloAmigos ? "Filtro: Amigos" : nil
+        cargarInfoCoreData()
+    }
+    @objc private func asignarGrupo() { probarRelacion() }
+    func probarRelacion() {
+        guard let primero = contactos.first else { informar("Agrega un contacto primero."); return }
+        let contexto = conexion()
+        let request = NSFetchRequest<Grupo>(entityName: "Grupo")
+        request.predicate = NSPredicate(format: "nombre == %@", "Amigos")
+        request.fetchLimit = 1
+        do {
+            // Reutilizar el grupo permite repetir la demostración sin duplicarlo.
+            let grupo = try contexto.fetch(request).first
+                ?? (NSEntityDescription.insertNewObject(forEntityName: "Grupo", into: contexto) as! Grupo)
+            grupo.nombre = "Amigos"
+            primero.grupo = grupo // Core Data mantiene el inverso contactos.
+            try contexto.save()
+            print("El grupo Amigos tiene \(grupo.contactos?.count ?? 0) contacto(s)")
+            cargarInfoCoreData()
+        } catch {
+            contexto.rollback()
+            informar("Error en la relación: \(error.localizedDescription)")
+        }
+    }
 }

@@ -41,7 +41,7 @@ Monitor 24 pulgadas y Teclado mecánico.
 | 1 | `mtorres` se crea y entra directo; `MTORRES` muestra "Ese usuario ya existe" y Registrarme queda desactivado | `B2_registro`, `B2_usuario_repetido` | ✔ |
 | 2 | "Usuario o clave incorrectos"; no entra | `B1_login_error` | ✔ |
 | 3 | 1,200.00 · 216.00 · 1,416.00 · Aprobada · stock 50 · costo prom. 112.00 · vence 17/12/2026 | `B5_compra_credito`, `B5_compra_registrada` | ✔ |
-| 4 | Al contado: "Aprobada · pagada al contado"; no aparece en Por pagar | `B8_por_pagar_vencida` (no figura) | ✔ |
+| 4 | Al contado: "Aprobada · pagada al contado"; no aparece en Por pagar | `B5_compra_contado` | ✔ |
 | 5 | Total 7,080.00, aviso y "Enviar a aprobación"; queda Pendiente; inventario sin cambio | `B5_enviar_aprobacion` | ✔ |
 | 6 | Vista previa 40 → 90 u. y 110.00 → 115.56; tras aprobar: stock 90, costo 115.56, aparece en Por pagar | `B7_aprobar`, `B3_productos_tras_aprobar` | ✔ |
 | 7 | Sin motivo el botón Rechazar está desactivado; con motivo queda Rechazada; el comprador ve "Motivo: Precio alto"; la silla sigue con 8 u. | `B7_rechazo_sin_motivo`, `B6_mis_compras_rechazada` | ✔ |

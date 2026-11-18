@@ -16,6 +16,7 @@ Tomadas el 17/11/2026 al ejecutar la app desde Xcode y seguir los casos de prueb
 | `B4_no_se_puede_borrar.jpg` | Caso 10 · borrado bloqueado |
 | `B5_compra_credito.jpg` | Caso 3 · 10 × 120.00 a crédito: 1,200.00 · 216.00 · 1,416.00 |
 | `B5_compra_registrada.jpg` | Caso 3 · Aprobada, stock 50, costo promedio 112.00, vence 17/12/2026 |
+| `B5_compra_contado.jpg` | Caso 4 · al contado queda "pagada al contado" |
 | `B5_enviar_aprobacion.jpg` | Caso 5 · total 7,080.00, aviso y "Enviar a aprobación" |
 | `B6_mis_compras_todas.jpg` | Caso 9 · el comprador solo ve sus compras, sin Pagar |
 | `B6_mis_compras_rechazada.jpg` | Caso 7 · el comprador ve el motivo del rechazo |

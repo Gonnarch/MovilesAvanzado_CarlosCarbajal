@@ -175,7 +175,8 @@ struct ListaPorPagar: View {
                 }
             } footer: {
                 if !visibles.isEmpty {
-                    Text("\(filtro.rawValue): \(Moneda.formato(visibles.reduce(0) { $0 + $1.total })). Desliza a la izquierda para pagar.")
+                    Text("\(filtro.rawValue): \(Moneda.formato(visibles.reduce(0) { $0 + $1.total }))."
+                         + (filtro == .pagadas ? "" : " Desliza a la izquierda para pagar."))
                 }
             }
         }

@@ -7,5 +7,7 @@ struct ComprasApp: App {
         WindowGroup {
             Text("Compras")
         }
+        // Contenedor persistente para toda la app (archivo ComprasData.sqlite)
+        .modelContainer(ModelContainerProvider.shared.container)
     }
 }

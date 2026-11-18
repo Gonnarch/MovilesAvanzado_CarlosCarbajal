@@ -71,7 +71,7 @@ struct LoginView: View {
                         Text("¿No tienes cuenta?")
                             .foregroundStyle(.secondary)
                         NavigationLink("Crear cuenta") {
-                            Text("Registro")
+                            RegistroView()
                         }
                         .fontWeight(.semibold)
                     }

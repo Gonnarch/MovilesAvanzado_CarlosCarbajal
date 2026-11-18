@@ -11,7 +11,7 @@ struct MainTabView: View {
             if usuario.esSupervisor {
                 PantallaPendiente(titulo: "Resumen")
                     .tabItem { Label("Resumen", systemImage: "chart.bar.xaxis") }
-                PantallaPendiente(titulo: "Aprobar")
+                AprobarView()
                     .tabItem { Label("Aprobar", systemImage: "checkmark.seal") }
                 PantallaPendiente(titulo: "Por pagar")
                     .tabItem { Label("Por pagar", systemImage: "creditcard") }

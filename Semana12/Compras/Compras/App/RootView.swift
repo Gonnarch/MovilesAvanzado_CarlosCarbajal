@@ -9,7 +9,8 @@ struct RootView: View {
     var body: some View {
         Group {
             if let usuario = sesion.usuario {
-                Text("Hola, \(usuario.nombre) (\(usuario.rol))")
+                MainTabView(usuario: usuario)
+                    .id(usuario.persistentModelID) // Al cambiar de usuario se reinician las pestañas
             } else {
                 LoginView()
             }

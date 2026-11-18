@@ -28,3 +28,32 @@ python3 Semana12/docs/verificar_reglas.py
 
 Detener la app (■) y ejecutarla de nuevo: usuarios, proveedores, productos y compras siguen ahí.
 En la consola de Xcode aparece `Base de datos SQLite en: …/ComprasData.sqlite`.
+
+## Resultados de la ejecución (17/11/2026 · Xcode · simulador iPhone 17 Pro, iOS 26.5)
+
+La app compiló sin errores y se ejecutaron los 11 casos en una sola corrida, sin reinstalar. Para
+que los casos 5 y 6 partan de stock 40 y costo 110.00 (como en la guía), el supervisor creó el
+producto **Monitor 27 pulgadas** (stock 40, costo 110.00). Los casos 3 y 4 se hicieron sobre
+Monitor 24 pulgadas y Teclado mecánico.
+
+| N.º | Resultado obtenido | Evidencia | ✔ |
+| --- | --- | --- | --- |
+| 1 | `mtorres` se crea y entra directo; `MTORRES` muestra "Ese usuario ya existe" y Registrarme queda desactivado | `B2_registro`, `B2_usuario_repetido` | ✔ |
+| 2 | "Usuario o clave incorrectos"; no entra | `B1_login_error` | ✔ |
+| 3 | 1,200.00 · 216.00 · 1,416.00 · Aprobada · stock 50 · costo prom. 112.00 · vence 17/12/2026 | `B5_compra_credito`, `B5_compra_registrada` | ✔ |
+| 4 | Al contado: "Aprobada · pagada al contado"; no aparece en Por pagar | `B8_por_pagar_vencida` (no figura) | ✔ |
+| 5 | Total 7,080.00, aviso y "Enviar a aprobación"; queda Pendiente; inventario sin cambio | `B5_enviar_aprobacion` | ✔ |
+| 6 | Vista previa 40 → 90 u. y 110.00 → 115.56; tras aprobar: stock 90, costo 115.56, aparece en Por pagar | `B7_aprobar`, `B3_productos_tras_aprobar` | ✔ |
+| 7 | Sin motivo el botón Rechazar está desactivado; con motivo queda Rechazada; el comprador ve "Motivo: Precio alto"; la silla sigue con 8 u. | `B7_rechazo_sin_motivo`, `B6_mis_compras_rechazada` | ✔ |
+| 8 | Aparece en Vencidas con VENCIDA; al pagar pasa a Pagadas y el total por pagar baja de 8,531.40 a 8,496.00 | `B8_por_pagar_vencida`, `B8_pagadas` | ✔ |
+| 9 | El comprador solo ve sus 4 compras; al deslizar no hay Pagar | `B6_mis_compras_todas` | ✔ |
+| 10 | "No se puede borrar: … tiene 2 compra(s) registrada(s)" | `B4_no_se_puede_borrar` | ✔ |
+| 11 | "La clave debe tener al menos 6 caracteres"; no se crea | `B2_clave_corta` | ✔ |
+
+Crédito fiscal en el Resumen al terminar: **S/ 1,517.40** (216.00 + 216.00 + 1,080.00 + 5.40).
+
+### Correcciones hechas al probar
+
+- En el registro, iOS mostraba "¿Usar contraseña segura?" sobre el formulario y borraba lo
+  escrito: los campos usan ahora `.textContentType(.oneTimeCode)`.
+- En Por pagar ▸ Pagadas ya no aparece el texto "Desliza a la izquierda para pagar".

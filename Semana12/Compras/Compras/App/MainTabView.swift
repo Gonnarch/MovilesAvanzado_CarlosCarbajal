@@ -17,12 +17,12 @@ struct MainTabView: View {
                     .tabItem { Label("Por pagar", systemImage: "creditcard") }
                 ProductosView()
                     .tabItem { Label("Productos", systemImage: "shippingbox") }
-                PantallaPendiente(titulo: "Proveedores")
+                ProveedoresView()
                     .tabItem { Label("Proveedores", systemImage: "building.2") }
             } else {
                 ProductosView()
                     .tabItem { Label("Productos", systemImage: "shippingbox") }
-                PantallaPendiente(titulo: "Proveedores")
+                ProveedoresView()
                     .tabItem { Label("Proveedores", systemImage: "building.2") }
                 PantallaPendiente(titulo: "Compra")
                     .tabItem { Label("Compra", systemImage: "cart.badge.plus") }

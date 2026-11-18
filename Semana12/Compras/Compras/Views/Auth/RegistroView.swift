@@ -37,6 +37,7 @@ struct RegistroView: View {
                 TextField("Usuario", text: $usuario)
                     .textInputAutocapitalization(.never)
                     .autocorrectionDisabled()
+                    .textContentType(.oneTimeCode)
             } header: {
                 Text("Usuario")
             } footer: {
@@ -50,8 +51,11 @@ struct RegistroView: View {
 
             // ④ Clave (mínimo 6) y su confirmación
             Section {
+                // .oneTimeCode evita que iOS tape el formulario con "¿Usar contraseña segura?"
                 SecureField("Clave", text: $clave)
+                    .textContentType(.oneTimeCode)
                 SecureField("Confirmar clave", text: $confirmacion)
+                    .textContentType(.oneTimeCode)
             } header: {
                 Text("Clave")
             } footer: {

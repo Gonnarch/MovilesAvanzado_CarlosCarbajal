@@ -9,7 +9,7 @@ struct MainTabView: View {
     var body: some View {
         TabView {
             if usuario.esSupervisor {
-                PantallaPendiente(titulo: "Resumen")
+                ResumenView()
                     .tabItem { Label("Resumen", systemImage: "chart.bar.xaxis") }
                 AprobarView()
                     .tabItem { Label("Aprobar", systemImage: "checkmark.seal") }
@@ -29,20 +29,6 @@ struct MainTabView: View {
                 MisComprasView()
                     .tabItem { Label("Mis compras", systemImage: "list.bullet.rectangle") }
             }
-        }
-    }
-}
-
-/// Marcador temporal mientras se construye cada pantalla.
-struct PantallaPendiente: View {
-    let titulo: String
-
-    var body: some View {
-        NavigationStack {
-            ContentUnavailableView(titulo, systemImage: "hammer",
-                                   description: Text("Pantalla en construcción"))
-                .navigationTitle(titulo)
-                .conAvatar()
         }
     }
 }

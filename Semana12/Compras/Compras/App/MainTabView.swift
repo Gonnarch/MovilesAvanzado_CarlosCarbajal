@@ -26,7 +26,7 @@ struct MainTabView: View {
                     .tabItem { Label("Proveedores", systemImage: "building.2") }
                 NuevaCompraView()
                     .tabItem { Label("Compra", systemImage: "cart.badge.plus") }
-                PantallaPendiente(titulo: "Mis compras")
+                MisComprasView()
                     .tabItem { Label("Mis compras", systemImage: "list.bullet.rectangle") }
             }
         }

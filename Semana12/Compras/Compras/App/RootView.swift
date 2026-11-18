@@ -11,7 +11,7 @@ struct RootView: View {
             if let usuario = sesion.usuario {
                 Text("Hola, \(usuario.nombre) (\(usuario.rol))")
             } else {
-                Text("Login")
+                LoginView()
             }
         }
         .task {

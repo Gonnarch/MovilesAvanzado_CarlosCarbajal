@@ -26,8 +26,8 @@ struct AuthView: View {
     var body: some View {
         ZStack {
             if isSignedIn {
-                // Signed in view
-                welcomeScreen
+                // Show MessagesView when signed in
+                MessagesView()
                     .transition(.move(edge: .trailing).combined(with: .opacity))
             } else {
                 loginScreen
@@ -184,72 +184,6 @@ struct AuthView: View {
                 .stroke(Color.white.opacity(0.15), lineWidth: 1)
         )
         .shadow(color: .black.opacity(0.3), radius: 20, y: 10)
-    }
-
-    // MARK: - Pantalla de bienvenida (sesión iniciada)
-    private var welcomeScreen: some View {
-        ZStack {
-            AnimatedBackground()
-
-            VStack(spacing: 24) {
-                Spacer()
-
-                ZStack {
-                    Circle()
-                        .fill(Theme.gradient)
-                        .frame(width: 120, height: 120)
-                        .shadow(color: Theme.orange.opacity(0.6), radius: 28)
-                    Image(systemName: "checkmark.seal.fill")
-                        .font(.system(size: 56, weight: .bold))
-                        .foregroundColor(.white)
-                }
-
-                VStack(spacing: 8) {
-                    Text("Welcome!")
-                        .font(.system(size: 38, weight: .heavy, design: .rounded))
-                        .foregroundColor(.white)
-                    Text("You are signed in")
-                        .font(.headline)
-                        .foregroundColor(.green)
-                }
-
-                HStack(spacing: 12) {
-                    AvatarView(email: Auth.auth().currentUser?.email ?? "?", size: 40)
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text("Sesión activa")
-                            .font(.caption)
-                            .foregroundColor(.white.opacity(0.5))
-                        Text(Auth.auth().currentUser?.email ?? "")
-                            .font(.subheadline.weight(.semibold))
-                            .foregroundColor(.white)
-                            .lineLimit(1)
-                    }
-                    Spacer()
-                }
-                .padding(16)
-                .background(.ultraThinMaterial,
-                            in: RoundedRectangle(cornerRadius: 20, style: .continuous))
-                .overlay(
-                    RoundedRectangle(cornerRadius: 20, style: .continuous)
-                        .stroke(Color.white.opacity(0.15), lineWidth: 1)
-                )
-
-                Button {
-                    signOut()
-                } label: {
-                    HStack(spacing: 8) {
-                        Image(systemName: "rectangle.portrait.and.arrow.right")
-                        Text("Sign Out")
-                    }
-                }
-                .buttonStyle(SignOutButtonStyle())
-
-                Spacer()
-                footer
-            }
-            .padding(.horizontal, 24)
-            .padding(.bottom, 30)
-        }
     }
 
     private var footer: some View {

@@ -40,7 +40,9 @@ struct ContentView: View {
                                 .listRowInsets(EdgeInsets(top: 5, leading: 0, bottom: 5, trailing: 0))
                                 .swipeActions {
                                     Button(role: .destructive) {
-                                        viewModel.deleteUser(id: user.id)
+                                        Task {
+                                            await viewModel.deleteUser(id: user.id)
+                                        }
                                     } label: {
                                         Label("Eliminar", systemImage: "trash")
                                     }
@@ -56,6 +58,9 @@ struct ContentView: View {
                         .listStyle(.plain)
                         .scrollContentBackground(.hidden)
                         .padding(.bottom, 70)
+                        .refreshable {
+                            await viewModel.fetchUsers()
+                        }
                     }
                 }
                 .padding(.horizontal)
@@ -80,7 +85,9 @@ struct ContentView: View {
             }
             .navigationTitle("Usuarios")
             .onAppear {
-                viewModel.fetchUsers()
+                Task {
+                    await viewModel.fetchUsers()
+                }
             }
             // Lee editingUser en el body para que el sheet reciba el usuario actualizado
             // (sin esto SwiftUI puede abrir "Nuevo Usuario" al tocar Editar)
@@ -89,11 +96,15 @@ struct ContentView: View {
                 if let user = editingUser {
                     UserFormView(name: user.name, email: user.email, isEditing: true) { name, email in
                         let updated = User(id: user.id, name: name, email: email)
-                        viewModel.updateUser(user: updated)
+                        Task {
+                            await viewModel.updateUser(user: updated)
+                        }
                     }
                 } else {
                     UserFormView(name: "", email: "", isEditing: false) { name, email in
-                        viewModel.createUser(name: name, email: email)
+                        Task {
+                            await viewModel.createUser(name: name, email: email)
+                        }
                     }
                 }
             }
@@ -118,7 +129,7 @@ private struct ResumenCard: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 4) {
-                Text("GET · POST · PUT · DELETE")
+                Text("async / await · URLSession")
                     .font(.caption.weight(.semibold))
                     .foregroundColor(.white.opacity(0.8))
                 Text("\(total) usuarios")

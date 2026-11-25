@@ -1,0 +1,314 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E4684F751241EA7499E31511 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5F45D17BAAE4417EF9CF3A /* User.swift */; };
+		D453DEB6998A7208D57B8F8B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33CE0A8F2C24E243225B61C /* ContentView.swift */; };
+		28894ED077D9232443D64CF5 /* UserFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5722EC91101651DB5A316741 /* UserFormView.swift */; };
+		E4AC7557D4278F34DF6DCDA5 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D622C585C9BF225DE4DD28B /* UserViewModel.swift */; };
+		3E2598A334F0D77ACC2514CD /* Semana13_MetodosAPIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30DAF0E35B53D8EC02BB3B1 /* Semana13_MetodosAPIApp.swift */; };
+		45B08BDBA6E49D101A29256C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F2D2A0D7BE4D40583F41FE8 /* Assets.xcassets */; };
+		564AD454C6356E1DFC613B0F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7058B7770A8A18F26D659A7 /* Preview Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		51A3D06EFCE186AD0F9FF368 /* Semana13_MetodosAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Semana13_MetodosAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC5F45D17BAAE4417EF9CF3A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E33CE0A8F2C24E243225B61C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5722EC91101651DB5A316741 /* UserFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFormView.swift; sourceTree = "<group>"; };
+		2D622C585C9BF225DE4DD28B /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		A30DAF0E35B53D8EC02BB3B1 /* Semana13_MetodosAPIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Semana13_MetodosAPIApp.swift; sourceTree = "<group>"; };
+		6F2D2A0D7BE4D40583F41FE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C7058B7770A8A18F26D659A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8579E7D9C297C6A7932A80D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6B109D0CAC24260212A0F3B2 = {
+			isa = PBXGroup;
+			children = (
+				97996BFF581F259C9536858F /* Semana13_MetodosAPI */,
+				BE7E679A5A2EAA0F13564AD6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BE7E679A5A2EAA0F13564AD6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				51A3D06EFCE186AD0F9FF368 /* Semana13_MetodosAPI.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		97996BFF581F259C9536858F /* Semana13_MetodosAPI */ = {
+			isa = PBXGroup;
+			children = (
+				63F8B4579BC57A315E65D49F /* Models */,
+				1BE665251D583EEE5544F7BF /* Preview Content */,
+				FE52E611E5D58F439D27CBB6 /* View */,
+				EB23CABF1A8F652A5C4AE523 /* ViewModels */,
+				6F2D2A0D7BE4D40583F41FE8 /* Assets.xcassets */,
+				A30DAF0E35B53D8EC02BB3B1 /* Semana13_MetodosAPIApp.swift */,
+			);
+			path = Semana13_MetodosAPI;
+			sourceTree = "<group>";
+		};
+		63F8B4579BC57A315E65D49F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FC5F45D17BAAE4417EF9CF3A /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FE52E611E5D58F439D27CBB6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E33CE0A8F2C24E243225B61C /* ContentView.swift */,
+				5722EC91101651DB5A316741 /* UserFormView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EB23CABF1A8F652A5C4AE523 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				2D622C585C9BF225DE4DD28B /* UserViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1BE665251D583EEE5544F7BF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C7058B7770A8A18F26D659A7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		15843D7FF31DDBBDD84596AD /* Semana13_MetodosAPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 989B4A9CFDC71F0AC1C90AAE /* Build configuration list for PBXNativeTarget "Semana13_MetodosAPI" */;
+			buildPhases = (
+				91675A500FE014DB232FE0FD /* Sources */,
+				8579E7D9C297C6A7932A80D8 /* Frameworks */,
+				00B3EA1F98CE85CBA671DEC4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Semana13_MetodosAPI;
+			productName = Semana13_MetodosAPI;
+			productReference = 51A3D06EFCE186AD0F9FF368 /* Semana13_MetodosAPI.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB0ABA768E7911ED205D73C3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					15843D7FF31DDBBDD84596AD = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = E374E1B7FC653994EED31CC2 /* Build configuration list for PBXProject "Semana13_MetodosAPI" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6B109D0CAC24260212A0F3B2;
+			productRefGroup = BE7E679A5A2EAA0F13564AD6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				15843D7FF31DDBBDD84596AD /* Semana13_MetodosAPI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00B3EA1F98CE85CBA671DEC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				564AD454C6356E1DFC613B0F /* Preview Assets.xcassets in Resources */,
+				45B08BDBA6E49D101A29256C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		91675A500FE014DB232FE0FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4684F751241EA7499E31511 /* User.swift in Sources */,
+				D453DEB6998A7208D57B8F8B /* ContentView.swift in Sources */,
+				28894ED077D9232443D64CF5 /* UserFormView.swift in Sources */,
+				E4AC7557D4278F34DF6DCDA5 /* UserViewModel.swift in Sources */,
+				3E2598A334F0D77ACC2514CD /* Semana13_MetodosAPIApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		63C432D984F0AF1D1314FCD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		026519FA80A399CE09CB649E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		01E64FC36315226CFCC0AD1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Semana13_MetodosAPI/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "pe.edu.tecsup.carloscarbajal.Semana13_MetodosAPI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ABD90ABDDCF70503354DE74D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Semana13_MetodosAPI/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "pe.edu.tecsup.carloscarbajal.Semana13_MetodosAPI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E374E1B7FC653994EED31CC2 /* Build configuration list for PBXProject "Semana13_MetodosAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63C432D984F0AF1D1314FCD4 /* Debug */,
+				026519FA80A399CE09CB649E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		989B4A9CFDC71F0AC1C90AAE /* Build configuration list for PBXNativeTarget "Semana13_MetodosAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01E64FC36315226CFCC0AD1B /* Debug */,
+				ABD90ABDDCF70503354DE74D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB0ABA768E7911ED205D73C3 /* Project object */;
+}

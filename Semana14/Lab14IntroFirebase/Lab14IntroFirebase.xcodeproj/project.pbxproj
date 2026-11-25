@@ -9,11 +9,13 @@
 		62ADFAF7EDC910F8379C61C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4C8F32E95A9FD25E99B0F8 /* ContentView.swift */; };
 		40A37E8EB9EA12E4DEA96EA6 /* Lab14IntroFirebaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lab14IntroFirebaseApp.swift"; sourceTree = "<group>"; };
 		F459FD2F71DD879DBAF6B5D6 /* Lab14IntroFirebaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A37E8EB9EA12E4DEA96EA6 /* Lab14IntroFirebaseApp.swift */; };
+		72E5D15B542CECD5967F2F27 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theme.swift"; sourceTree = "<group>"; };
+		A55376DB9A850FBEC27D5DCD /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E5D15B542CECD5967F2F27 /* Theme.swift */; };
 		BE471734216310C4D69C4A16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets.xcassets"; sourceTree = "<group>"; };
 		2B4A2C08D382ED0CB67D3F18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE471734216310C4D69C4A16 /* Assets.xcassets */; };
 		428B29EED1634EE1902DFC6B /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6A7D9509EC33F6FDDAC7A617 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 428B29EED1634EE1902DFC6B /* GoogleService-Info.plist */; };
-		CA452AC6DB53E1C10D6D7F5F /* Lab14IntroFirebase */ = {isa = PBXGroup; children = (1A4C8F32E95A9FD25E99B0F8,40A37E8EB9EA12E4DEA96EA6,BE471734216310C4D69C4A16,428B29EED1634EE1902DFC6B,); path = "Lab14IntroFirebase"; sourceTree = "<group>"; };
+		CA452AC6DB53E1C10D6D7F5F /* Lab14IntroFirebase */ = {isa = PBXGroup; children = (1A4C8F32E95A9FD25E99B0F8,40A37E8EB9EA12E4DEA96EA6,72E5D15B542CECD5967F2F27,BE471734216310C4D69C4A16,428B29EED1634EE1902DFC6B,); path = "Lab14IntroFirebase"; sourceTree = "<group>"; };
 		D2A57DC1D883FD21FB995169 /* Lab14IntroFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lab14IntroFirebase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3936A56E033FE156B0D38F79 /* Products */ = {isa = PBXGroup; children = (D2A57DC1D883FD21FB995169,); name = Products; sourceTree = "<group>"; };
 		B19911C44BD755AB4F173858 = {isa = PBXGroup; children = (CA452AC6DB53E1C10D6D7F5F,3936A56E033FE156B0D38F79,); sourceTree = "<group>"; };
@@ -26,7 +28,7 @@
 		696F4014B2A2D2F90F99C304 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 3E355AA8EA435476AC584500 /* FirebaseDatabase */; };
 		BD3BF404D6DB6662C6342E0E /* FirebaseFirestore */ = {isa = XCSwiftPackageProductDependency; package = BC127F89CB05EF117F37602B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */; productName = FirebaseFirestore; };
 		013CFA8B87FD55797F0290F7 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = BD3BF404D6DB6662C6342E0E /* FirebaseFirestore */; };
-		F37F801ADEA753D69F245CAA /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (62ADFAF7EDC910F8379C61C6,F459FD2F71DD879DBAF6B5D6,); runOnlyForDeploymentPostprocessing = 0; };
+		F37F801ADEA753D69F245CAA /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (62ADFAF7EDC910F8379C61C6,F459FD2F71DD879DBAF6B5D6,A55376DB9A850FBEC27D5DCD,); runOnlyForDeploymentPostprocessing = 0; };
 		33F142212957EABBFDC6831F /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (2B4A2C08D382ED0CB67D3F18,6A7D9509EC33F6FDDAC7A617,); runOnlyForDeploymentPostprocessing = 0; };
 		FA6BB2E26A0CCFEF79A2DF42 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (E32D5571967EF95C937C4A49,6CA1DFDC63949A5A4AC80AA0,696F4014B2A2D2F90F99C304,013CFA8B87FD55797F0290F7,); runOnlyForDeploymentPostprocessing = 0; };
 		42AEFBAE01D2DFD981F7DA7D /* Lab14IntroFirebase */ = {isa = PBXNativeTarget; buildConfigurationList = 42E7EF3662A4459C9C98F897; buildPhases = (F37F801ADEA753D69F245CAA,FA6BB2E26A0CCFEF79A2DF42,33F142212957EABBFDC6831F,); buildRules = (); dependencies = (); name = Lab14IntroFirebase; packageProductDependencies = (A672A6F6E1584F63E8AC27FD,917E4878B32DCD832F9A8A89,3E355AA8EA435476AC584500,BD3BF404D6DB6662C6342E0E,); productName = Lab14IntroFirebase; productReference = D2A57DC1D883FD21FB995169; productType = "com.apple.product-type.application"; };
